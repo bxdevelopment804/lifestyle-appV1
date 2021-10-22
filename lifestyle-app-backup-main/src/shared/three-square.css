@@ -1,0 +1,117 @@
+#three-square-container {
+	/* display: flex; */
+	position: relative;
+	/* height: 400px; */
+	/* height: 43vh; */
+	max-height: 625px;
+	/* height: 60vh; */
+	/* width: 300px; */
+	max-width: 390px;
+	width: 23vw;
+	/* border: solid green; */
+	justify-content: left;
+	text-align: left;
+	margin-bottom: 2vh;
+}
+
+#three-square-section {
+	font-size: large;
+	font-variant-caps: all-petite-caps;
+	color: red;
+	font-weight: 600;
+}
+
+#three-square-title {
+	font-size: xx-large;
+	font-weight: 700;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#three-square-section,
+#three-square-title,
+#three-square-description,
+#three-square-author {
+	margin-top: 20px;
+}
+
+#three-square-photo {
+	width: 23vw;
+	max-width: 390px;
+	/* height: 23vw; */
+}
+
+/* Laptops and Larger - GREY */
+@media (max-width: 1024px) {
+	#three-square-title {
+		font-size: x-large;
+	}
+	#three-square-section,
+	#three-square-title,
+	#three-square-description,
+	#three-square-author {
+		margin-top: 1px;
+	}
+	#three-square-container {
+		margin-bottom: 0vh;
+	}
+}
+
+/* Tablets - LIGHT BLUE */
+@media (max-width: 768px) and (min-width: 481px) {
+	#three-square-container {
+		/* display: flex; */
+		position: relative;
+		/* max-height: 500px; */
+		width: 72vw;
+		max-width: 555px;
+		/* border: solid green; */
+		margin-bottom: 40px;
+		/* min-height: 400px; */
+		/* height: 175vw; */
+		/* margin: auto; */
+	}
+
+	#three-square-photo {
+		/* position: absolute; */
+		width: 100%;
+		max-width: 555px;
+		/* border: solid orange; */
+	}
+	#three-square-title {
+		font-size: large;
+	}
+}
+
+/* Mobile - GREEN */
+@media (max-width: 480px) {
+	#three-square-container {
+		position: relative;
+		width: 72vw;
+		max-width: 555px;
+		/* border: solid green; */
+		min-width: 230px;
+		margin-bottom: 10px;
+		/* display: flex; */
+		/* max-height: 500px; */
+		/* min-height: 400px; */
+		/* height: 175vw; */
+		/* margin: auto; */
+	}
+
+	#three-square-photo {
+		width: 100%;
+		min-width: 230px;
+		/* max-width: 555px; */
+		/* position: absolute; */
+		/* border: solid orange; */
+	}
+
+	#three-square-title {
+		font-size: medium;
+	}
+
+	#three-square-description,
+	#three-square-author {
+		font-size: small;
+	}
+}

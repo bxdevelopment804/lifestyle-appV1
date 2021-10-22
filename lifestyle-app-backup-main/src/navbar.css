@@ -1,0 +1,246 @@
+#container {
+	border: 1px;
+	border-style: hidden;
+	width: calc(100vw - 2px);
+	height: 84px;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	/* border: solid blue; */
+	border-bottom: solid 1px grey;
+	/* overflow: hidden; */
+}
+
+.navButton {
+	display: flex;
+	position: relative;
+	/* margin: 1%; */
+	margin: 20px;
+	font-weight: 700;
+	/* text-decoration: none; */
+	/* border-bottom: none; */
+	/* background-color: rgba(0, 0, 0, 0.1); */
+	/* border: solid pink; */
+	height: 84px;
+	align-items: center;
+	padding: 0px 5px;
+	/* color: black; */
+	box-sizing: border-box;
+}
+
+.navButton:hover {
+	border-left: solid 1px grey;
+	border-right: solid 1px grey;
+}
+
+.navLink {
+	color: black;
+}
+
+.navLink:hover {
+	background-color: white;
+	color: red;
+	/* color: red !important; */
+}
+
+#logo {
+	position: relative;
+	height: 84px;
+	/* border: solid; */
+}
+
+#mobile-menu {
+	/* display: none; */
+	visibility: hidden;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+#recipeTypes {
+	/* Below line needed to make invisible initially */
+	display: none;
+	/* display: flex; */
+	position: absolute;
+	flex-direction: column;
+	/* left: 0px; */
+	top: 90px;
+	width: 160px;
+	border: solid grey 1px;
+	/* border-right: solid 1px grey;
+	border-bottom: solid 1px grey;
+	border-left: solid 1px grey; */
+	list-style-type: none;
+	margin: -5.5px;
+	padding: 5px;
+	z-index: 0.9;
+	background-color: white;
+	text-align: left;
+	color: black;
+	/* position: relative; */
+	/* padding-top: 50px; */
+	/* list-style: none; */
+	/* top: 60px; */
+	/* height: 40px; */
+	box-sizing: border-box;
+}
+
+#weightLossRecipeTypes {
+	/* Below line needed to make invisible initially */
+	display: none;
+	/* display: flex; */
+	position: absolute;
+	flex-direction: column;
+	/* left: 1px; */
+	top: 90px;
+	width: 161px;
+	border: solid grey 1px;
+	/* border-right: solid 1px grey;
+	border-bottom: solid 1px grey;
+	border-left: solid 1px grey;
+	list-style-type: none; */
+	margin: -6px -5.5px;
+	padding: 6px;
+	z-index: 0.9;
+	background-color: white;
+	text-align: left;
+	color: black;
+	/* position: relative; */
+	/* padding-top: 50px; */
+	/* list-style: none; */
+	/* top: 60px; */
+	/* height: 40px; */
+	box-sizing: border-box;
+}
+
+.recipeMenuItem:hover {
+	color: red;
+}
+
+#recipes {
+	/* display: flex; */
+	/* display: block; */
+	/* position: relative; */
+	/* flex-direction: column; */
+	/* align-items: center; */
+	/* justify-content: center; */
+	/* margin: auto; */
+	/* border: solid green; */
+	/* height: 150px; */
+	/* height: 84px; */
+	/* top: 80%; */
+	/* margin-top: 157px; */
+	/* padding-top: 84px; */
+}
+
+.navButton:hover #recipeTypes {
+	display: flex;
+	z-index: 1;
+	/* height: 20px; */
+}
+.navButton:hover #weightLossRecipeTypes {
+	display: flex;
+	z-index: 1;
+	/* height: 20px; */
+}
+.navButton:hover {
+	/* margin-bottom: 0.5px; */
+	/* z-index: 1;
+	background-color: white; */
+}
+
+/* #recipeLink {
+	position: relative;
+	display: flex;
+	align-items: center;
+} */
+
+#recipeSubTypes {
+	display: none;
+	position: absolute;
+	left: 154px;
+	list-style-type: none;
+	margin: 0px -0.5px;
+	padding: 0px;
+	z-index: 1;
+	border: solid 1px grey;
+	/* border-top: solid 1px grey;
+	border-right: solid 1px grey;
+	border-bottom: solid 1px grey; */
+	width: 150px;
+	/* top: -30%; */
+	top: 0px;
+	background-color: white;
+	color: black;
+}
+
+.recipeMenuItem:hover #recipeSubTypes {
+	display: block;
+}
+
+.recipeSubItem:hover {
+	color: red;
+}
+
+.recipeMenuItem {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 150px;
+	/* border: solid blue; */
+	margin-left: 0px;
+}
+
+.recipeSubItem {
+	/* padding-left: 10px; */
+}
+
+#meal-planning {
+	/* border: solid blue; */
+}
+
+@media (max-width: 1350px) {
+	.navButton {
+		display: none;
+	}
+
+	#logo {
+		position: absolute;
+		left: 2%;
+		top: 0px;
+	}
+
+	#container {
+		border: 1px;
+		/* border-style: hidden; */
+		/* border: solid red; */
+		width: calc(100vw - 2px);
+		height: 83px;
+		display: flex;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		/* overflow: hidden; */
+	}
+
+	#mobile-menu {
+		/* display: inline-flex; */
+		position: absolute;
+		visibility: visible;
+		/* border: solid red; */
+		width: 100px;
+		height: auto;
+		right: 2%;
+		font-size: xx-large;
+	}
+}
+
+/* Mobile - GREEN */
+@media (max-width: 480px) {
+	#mobile-menu {
+		position: absolute;
+		right: 15px;
+	}
+}
