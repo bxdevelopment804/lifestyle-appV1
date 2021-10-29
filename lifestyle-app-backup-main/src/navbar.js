@@ -192,7 +192,13 @@ const Navbar = () => {
 					</ul>
 				</div>
 				<div id='shop' className='navButton'>
+				<Link
+						to='/shop'
+						className='navLink'
+						style={{ textDecoration: 'none' }}
+					>
 					Shop
+					</Link>
 				</div>
 				<div id='search' className='navButton'>
 					Search

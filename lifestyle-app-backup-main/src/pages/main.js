@@ -53,6 +53,7 @@ import FiveWFHStretches from './fiveWFHStretches';
 import HowSleepChanges from './howSleepChanges';
 import MenWomenStress from './menWomenStress';
 import SaunaHealthLongevity from './saunaHealthLongevity';
+import Shop from './shop';
 
 const Main = () => {
 	return (
@@ -120,6 +121,8 @@ const Main = () => {
 				<Route path='/howSleepChanges' component={HowSleepChanges} />
 				<Route path='/menWomenStress' component={MenWomenStress} />
 				<Route path='/saunaHealthLongevity' component={SaunaHealthLongevity} />
+				<Route path='/shop' component={Shop} />
+				
 				<Route exact path='/' component={Home} />
 			</Switch>
 		</main>
