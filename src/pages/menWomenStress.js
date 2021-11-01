@@ -223,7 +223,7 @@ const MenWomenStress = () => {
 			</p>
 
 			<div id='articleSection'>
-				<div id='block26' className='instructionItem'>
+				<div id='block26'>
 					<div id='signup-bar'>
 						<h1 id='signup-header-h1'>SAVE YOUR FAVORITE RECIPES</h1>
 						<h3 id='signup-header-h3'>

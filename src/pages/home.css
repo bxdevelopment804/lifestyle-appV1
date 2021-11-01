@@ -664,4 +664,7 @@
 		/* margin: 7px auto; */
 		font-size: large;
 	}
+	.linkItems {
+		margin: 0px 20px;
+	}
 }

@@ -53,11 +53,21 @@ const Footer = (props) => {
 				Privacy Policy &nbsp; Terms &nbsp; Disclaimer &nbsp; Sitemap
 			</div>
 			<div id='iconsWithLogIn' className='footerItem'>
-				<FontAwesomeIcon icon={faFacebook} className='iconItem' />
-				<FontAwesomeIcon icon={faTwitter} className='iconItem' />
-				<FontAwesomeIcon icon={faInstagram} className='iconItem' />
-				<FontAwesomeIcon icon={faPinterest} className='iconItem' />
-				<FontAwesomeIcon icon={faYoutube} className='iconItem' />
+				<a href='https://www.facebook.com/'>
+					<FontAwesomeIcon icon={faFacebook} className='iconItem' />
+				</a>
+				<a href='https://twitter.com'>
+					<FontAwesomeIcon icon={faTwitter} className='iconItem' />
+				</a>
+				<a href='https://www.instagram.com/'>
+					<FontAwesomeIcon icon={faInstagram} className='iconItem' />
+				</a>
+				<a href='https://www.pinterest.com/'>
+					<FontAwesomeIcon icon={faPinterest} className='iconItem' />
+				</a>
+				<a href='https://www.youtube.com/'>
+					<FontAwesomeIcon icon={faYoutube} className='iconItem' />
+				</a>
 				<FontAwesomeIcon icon={faRss} className='iconItem' />
 			</div>
 			<div id='signatureBlock' className='footerItem'>

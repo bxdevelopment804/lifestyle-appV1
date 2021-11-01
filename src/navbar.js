@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-	BrowserRouter as Router,
-	Route,
+	// BrowserRouter as Router,
+	// Route,
 	// Redirect,
-	Switch,
+	// Switch,
 	Link,
 } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {
+	faBars,
+	faChevronDown,
+	faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import './navbar.css';
 
 const Navbar = () => {
+	const [mobileMenuActivated, setMobileMenuActivated] = useState(false);
+
+	const handleDropdown = () => {
+		setMobileMenuActivated(!mobileMenuActivated);
+	};
+
 	return (
 		<div>
 			<div id='container'>
@@ -249,10 +259,17 @@ const Navbar = () => {
 				<div id='login' className='navButton'>
 					Log In
 				</div>
-
-				<div id='mobile-menu'>
-					<FontAwesomeIcon icon={faBars} className='barsIcon' />
-				</div>
+				{mobileMenuActivated == false && (
+					<div id='mobile-menu' onClick={handleDropdown}>
+						<FontAwesomeIcon icon={faBars} className='barsIcon' />
+					</div>
+				)}
+				{mobileMenuActivated == true && (
+					<div id='mobile-menu' onClick={handleDropdown}>
+						{/* <FontAwesomeIcon icon={faBars} className='barsIcon' /> */}
+						<FontAwesomeIcon icon={faTimes} className='closeIcon' />
+					</div>
+				)}
 			</div>
 		</div>
 	);

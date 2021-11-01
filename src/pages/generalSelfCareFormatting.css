@@ -98,9 +98,9 @@
 	margin: auto;
 }
 
-#image1,
-#image2,
-#image3 {
+#image1
+/*#image2,
+#image3*/ {
 	/* width: 96vw; */
 	width: 72vw;
 	max-width: 1200px;
@@ -141,19 +141,19 @@
 }
 /* -------------------------------------- */
 
-#headerContainer {
+/* #headerContainer {
 	display: grid;
 	grid-template-columns: 1.5fr 1fr;
 	grid-auto-rows: minmax(30px, auto);
 	justify-content: center;
 	margin: 20px 0;
 	gap: 30px;
-	row-gap: 5px;
-	/* width: 770px; */
-	width: 67vw;
+	row-gap: 5px; */
+/* width: 770px; */
+/* width: 67vw;
 	max-width: 770px;
 	margin: auto;
-}
+} */
 
 /* Didn't work */
 /* #articleSection {
@@ -193,7 +193,7 @@
 	line-height: 50px;
 	font-size: larger;
 }
-#reviewarticle,
+/* #reviewarticle,
 #pinarticle {
 	background-color: red;
 	color: aliceblue;
@@ -204,33 +204,33 @@
 #printarticle {
 	font-size: larger;
 	line-height: 50px;
-}
+} */
 
 /* Red placeholder for five star rating */
-#rating2 {
+/* #rating2 {
 	display: flex;
 	position: relative;
 	background-color: red;
 	color: aliceblue;
-	/* border: solid green; */
+	border: solid green;
 	height: 40px;
 	align-items: center;
-	/* text-indent: 2vw; */
-	/* width: 770px; */
+	text-indent: 2vw;
+	width: 770px;
 	width: 67vw;
 	max-width: 770px;
 	margin: 10px auto 20px;
-	/* margin: auto; */
-}
+	margin: auto;
+} */
 
 #block4 {
 	display: grid;
 	grid-template-columns: repeat(3, 33%);
 }
 
-.cookTimes {
+/* .cookTimes {
 	font-weight: 700px;
-}
+} */
 
 #block5,
 #block6,
@@ -253,29 +253,29 @@
 	color: red;
 }
 
-#block15 {
+/* #block15 {
 	font-size: larger;
 	line-height: 50px;
-}
-.printIcon {
+} */
+/* .printIcon {
 	font-size: 30px;
 	font-weight: 100;
 	color: grey;
-}
+} */
 
-#instructionContainer {
+/* #instructionContainer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-auto-rows: minmax(30px, auto);
 	justify-content: center;
 	margin: 20px 0;
 	gap: 30px;
-	row-gap: 5px;
-	/* width: 770px; */
-	width: 67vw;
+	row-gap: 5px; */
+/* width: 770px; */
+/* width: 67vw;
 	max-width: 770px;
 	margin: 20px auto;
-}
+} */
 
 /* .instructionItem {
 	border: solid blue;
@@ -311,7 +311,7 @@
 }
 
 /* Individual instructions */
-#block20 {
+/* #block20 {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	font-size: larger;
@@ -321,7 +321,7 @@
 .instruction {
 	margin-bottom: 10px;
 	text-indent: 10px;
-}
+} */
 
 /* Instagram block */
 #block24 {
@@ -332,9 +332,9 @@
 	align-items: center;
 	justify-content: center;
 }
-#instagramPlaceholder {
-	/* border: solid green; */
-	display: flex;
+/* #instagramPlaceholder { */
+/* border: solid green; */
+/* display: flex;
 	height: 100px;
 	width: 100px;
 	align-items: center;
@@ -347,15 +347,15 @@
 .instagramIcon {
 	font-size: 60px;
 	color: rgb(126, 9, 9);
-}
+} */
 
 /* For more tasty articles... */
-#block25 {
+/* #block25 {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	font-size: large;
 	text-align: left;
-}
+} */
 
 /* Red sign up bar */
 #block26 {
@@ -364,7 +364,7 @@
 }
 
 /* Social media buttons  */
-#block28 {
+/* #block28 {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	display: flex;
@@ -373,9 +373,9 @@
 .socialMediaButtons {
 	display: flex;
 	height: 44px;
-	width: 31%;
-	/* border: solid blue; */
-	border-radius: 10px;
+	width: 31%; */
+/* border: solid blue; */
+/* border-radius: 10px;
 	color: aliceblue;
 	align-items: center;
 	justify-content: center;
@@ -393,7 +393,7 @@
 }
 .icon {
 	font-size: xx-large;
-}
+} */
 
 /* Footer author info */
 #footerAuthContainer {
@@ -584,7 +584,7 @@
 	/* .instruction {
 		font-size: medium;
 	} */
-	#block28 {
+	/* #block28 {
 		display: flex;
 		flex-direction: column;
 		margin: auto;
@@ -593,7 +593,7 @@
 	.socialMediaButtons {
 		width: 200px;
 		margin-bottom: 10px;
-	}
+	} */
 	#signup-header-h3 {
 		margin-top: 0px 0px;
 	}
@@ -604,5 +604,100 @@
 	#postButton {
 		display: flex;
 		align-items: center;
+	}
+}
+
+/* Mobile - GREEN */
+@media (max-width: 480px) {
+	#pageContainer {
+		width: 92vw;
+		margin: auto;
+	}
+
+	#sectionTitle {
+		margin: 8px 0px 8px;
+	}
+
+	#headerContainer {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		grid-auto-rows: minmax(30px, auto);
+		justify-content: center;
+		margin: 20px 0;
+		gap: 30px;
+		row-gap: 5px;
+		/* width: 770px; */
+		width: 87vw;
+		max-width: 770px;
+		margin: auto;
+		/* border: solid green 1px; */
+	}
+
+	#videoHeader {
+		width: 92vw;
+	}
+
+	#instructionContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: minmax(30px, auto);
+		justify-content: center;
+		margin: 20px 0;
+		gap: 30px;
+		row-gap: 5px;
+		/* width: 770px; */
+		width: 87vw;
+		max-width: 770px;
+		margin: 20px auto;
+		/* border: solid green 1px; */
+	}
+	/* 
+	.socialMediaButtons {
+		display: flex;
+		height: 44px;
+		width: 100%; */
+	/* border: solid blue; */
+	/* border-radius: 10px;
+		color: aliceblue;
+		align-items: center;
+		justify-content: center;
+		font-size: larger;
+		font-weight: 700;
+	} */
+
+	/* #block29 {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 1;
+		grid-row-end: 4;
+		display: flex;
+		object-fit: cover; */
+	/* border: solid green; */
+	/* width: calc(770px / 5); */
+	/* width: calc(67vw / 5); */
+	/* max-width: 770px;
+		border-radius: 100%;
+		display: flex;
+		flex-direction: column;
+	} */
+
+	#footerAuthContainer {
+		width: 87vw;
+	}
+
+	#postButton {
+		display: flex;
+		width: 100%;
+		/* width: 277px; */
+		justify-content: center;
+		align-items: center;
+		height: 50px;
+		/* margin: auto; */
+		background-color: red;
+		color: aliceblue;
+		font-size: xx-large;
+		font-weight: 700;
+		grid-column-start: 1;
+		grid-column-end: -1;
 	}
 }

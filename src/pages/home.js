@@ -429,11 +429,21 @@ const Home = () => {
 				</div>
 				<h2>Featured On</h2>
 				<div id='linkBanner'>
-					<FontAwesomeIcon icon={faBlogger} className='linkItems' />
-					<FontAwesomeIcon icon={faDelicious} className='linkItems' />
-					<FontAwesomeIcon icon={faGoodreads} className='linkItems' />
-					<FontAwesomeIcon icon={faRedditSquare} className='linkItems' />
-					<FontAwesomeIcon icon={faTiktok} className='linkItems' />
+					<a href='https://www.blogger.com'>
+						<FontAwesomeIcon icon={faBlogger} className='linkItems' />
+					</a>
+					<a href='https://www.delicious.com.au'>
+						<FontAwesomeIcon icon={faDelicious} className='linkItems' />
+					</a>
+					<a href='https://www.goodreads.com/'>
+						<FontAwesomeIcon icon={faGoodreads} className='linkItems' />
+					</a>
+					<a href='https://www.reddit.com/'>
+						<FontAwesomeIcon icon={faRedditSquare} className='linkItems' />
+					</a>
+					<a href='https://www.tiktok.com/en/'>
+						<FontAwesomeIcon icon={faTiktok} className='linkItems' />
+					</a>
 				</div>
 			</div>
 		</div>
