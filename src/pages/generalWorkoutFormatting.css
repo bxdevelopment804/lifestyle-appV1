@@ -651,4 +651,11 @@
 		grid-column-start: 1;
 		grid-column-end: -1;
 	}
+
+	/* #block29 {
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		border: solid blue 1px;
+	} */
 }

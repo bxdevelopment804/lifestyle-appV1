@@ -1,0 +1,6 @@
+.starContainer {
+	display: flex;
+	/* border: solid blue; */
+	align-items: center;
+	font-size: larger;
+}

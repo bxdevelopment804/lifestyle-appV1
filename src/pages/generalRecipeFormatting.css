@@ -378,7 +378,8 @@
 }
 .instruction {
 	margin-bottom: 10px;
-	text-indent: 10px;
+	/* text-indent: 10px; */
+	padding-left: 5px;
 }
 
 /* Nutrition information */
@@ -750,6 +751,13 @@
 
 	#recipeButton {
 		display: block;
+		/* position: relative;
+		width: 100vw; */
+	}
+
+	#authorBlock {
+		/* border: solid royalblue 1px; */
+		width: 92vw;
 	}
 
 	#description,
@@ -907,6 +915,13 @@
 	#block32 {
 		grid-column-start: 1;
 		grid-column-end: -1;
+	}
+
+	#block29 {
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		border: solid blue 1px;
 	}
 
 	#postButton {

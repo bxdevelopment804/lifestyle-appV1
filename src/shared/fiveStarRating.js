@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RatingStar from './ratingStar';
 import './ratingStar.css';
+import './fiveStarRating.css';
 
 const FiveStarRating = (props) => {
 	// const [gradeIndex, setGradeIndex] = useState(-1);
@@ -11,6 +12,8 @@ const FiveStarRating = (props) => {
 	// const changeGradeIndex = (index) => {
 	// 	setGradeIndex(index);
 	// };
+
+	const currentRating = Number(props.gradeIndex) + 1;
 
 	return (
 		<div className='starContainer'>
@@ -29,6 +32,12 @@ const FiveStarRating = (props) => {
 					/>
 				))}
 			</div>
+			{props.numOfRatings == 0 && <div>&nbsp; No Ratings Yet</div>}
+			{props.numOfRatings != 0 && (
+				<div>
+					&nbsp; {props.averageRating} stars with {props.numOfRatings} votes
+				</div>
+			)}
 		</div>
 	);
 };

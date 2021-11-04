@@ -618,6 +618,13 @@
 		margin: 8px 0px 8px;
 	}
 
+	#authorBlock,
+	#date,
+	#description {
+		width: 92vw;
+		text-align: left;
+	}
+
 	#headerContainer {
 		display: grid;
 		grid-template-columns: 1.5fr 1fr;
@@ -680,6 +687,15 @@
 		display: flex;
 		flex-direction: column;
 	} */
+
+	#block29 {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		border: solid blue 1px;
+	}
 
 	#footerAuthContainer {
 		width: 87vw;

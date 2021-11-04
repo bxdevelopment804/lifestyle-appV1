@@ -21,10 +21,15 @@ const GreenTeaNoodles = () => {
 	}, []);
 
 	const [gradeIndex, setGradeIndex] = useState(-1);
+	const [numOfRatings, setNumOfRatings] = useState(5);
+	const [totalOfRatings, setTotalOfRatings] = useState(18);
+	const averageRating = totalOfRatings / numOfRatings;
 
 	const changeGradeIndex = (index) => {
 		setGradeIndex(index);
 	};
+
+	const updateAverageRating = () => {};
 
 	return (
 		<div id='pageContainer'>
@@ -34,6 +39,12 @@ const GreenTeaNoodles = () => {
 				<FiveStarRating
 					gradeIndex={gradeIndex}
 					changeGradeIndex={changeGradeIndex}
+					numOfRatings={numOfRatings}
+					setNumOfRatings={setNumOfRatings}
+					totalOfRatings={totalOfRatings}
+					setTotalOfRatings={setTotalOfRatings}
+					updateAverageRating={updateAverageRating}
+					averageRating={averageRating}
 				/>
 			</div>
 			<div id='authorBlock'>
@@ -113,6 +124,12 @@ const GreenTeaNoodles = () => {
 					<FiveStarRating
 						gradeIndex={gradeIndex}
 						changeGradeIndex={changeGradeIndex}
+						numOfRatings={numOfRatings}
+						setNumOfRatings={setNumOfRatings}
+						totalOfRatings={totalOfRatings}
+						setTotalOfRatings={setTotalOfRatings}
+						updateAverageRating={updateAverageRating}
+						averageRating={averageRating}
 					/>
 				</div>
 				<div id='headerContainer'>
@@ -466,6 +483,12 @@ const GreenTeaNoodles = () => {
 							<FiveStarRating
 								gradeIndex={gradeIndex}
 								changeGradeIndex={changeGradeIndex}
+								numOfRatings={numOfRatings}
+								setNumOfRatings={setNumOfRatings}
+								totalOfRatings={totalOfRatings}
+								setTotalOfRatings={setTotalOfRatings}
+								updateAverageRating={updateAverageRating}
+								averageRating={averageRating}
 							/>
 						</div>
 					</div>
