@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
   faChevronDown,
+  faChevronUp,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -11,10 +12,57 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css';
 
 const Navbar = () => {
+  //State for hiding and showing the mobile dropdown menu
   const [mobileMenuActivated, setMobileMenuActivated] = useState(false);
   const handleMobileMenu = () => {
     setMobileMenuActivated(!mobileMenuActivated);
   };
+
+  //State for hiding and showing the second levels of the mobile dropdown menu
+  const [secondaryRecipeMenuActivated, setSecondaryRecipeMenuActivated] =
+    useState(false);
+  const handleSecondaryRecipeMenu = () => {
+    setSecondaryRecipeMenuActivated(!secondaryRecipeMenuActivated);
+  };
+
+  const [
+    secondaryMealPlanningMenuActivated,
+    setSecondaryMealPlanningMenuActivated,
+  ] = useState(false);
+  const handleSecondaryMealPlanningMenu = () => {
+    setSecondaryMealPlanningMenuActivated(!secondaryMealPlanningMenuActivated);
+  };
+
+  //State for hiding and showing the third levels of the mobile dropdown menu
+  const [tertiaryMealTypeMenuActivated, setTertiaryMealTypeMenuActivated] =
+    useState(false);
+  const handleTertiaryMealTypeMenu = () => {
+    setTertiaryMealTypeMenuActivated(!tertiaryMealTypeMenuActivated);
+  };
+
+  const [tertiaryDishTypeMenuActivated, setTertiaryDishTypeMenuActivated] =
+    useState(false);
+  const handleTertiaryDishTypeMenu = () => {
+    setTertiaryDishTypeMenuActivated(!tertiaryDishTypeMenuActivated);
+  };
+
+  const [tertiaryMethodMenuActivated, setTertiaryMethodMenuActivated] =
+    useState(false);
+  const handleTertiaryMethodMenu = () => {
+    setTertiaryMethodMenuActivated(!tertiaryMethodMenuActivated);
+  };
+
+  const [tertiaryDietTypeMenuActivated, setTertiaryDietTypeMenuActivated] =
+    useState(false);
+  const handleTertiaryDietTypeMenu = () => {
+    setTertiaryDietTypeMenuActivated(!tertiaryDietTypeMenuActivated);
+  };
+
+  // const [tertiaryMobileMenuActivated, setTertiaryMobileMenuActivated] =
+  //   useState(false);
+  // const handleTertiaryMobileMenu = () => {
+  //   setTertiaryMobileMenuActivated(!tertiaryMobileMenuActivated);
+  // };
 
   return (
     <div>
@@ -236,18 +284,205 @@ const Navbar = () => {
                 <li className='mobileNavButton'>
                   <div>Recipes</div>
                   <div>
-                    <FontAwesomeIcon icon={faChevronDown} />
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      onClick={handleSecondaryRecipeMenu}
+                    />
                   </div>
                 </li>
               </Link>
+              {secondaryRecipeMenuActivated && (
+                <div className='secondaryMobileMenu'>
+                  {/* Meal Type Tertiary Menus */}
+                  {!tertiaryMealTypeMenuActivated && (
+                    <div className='secondaryMobileItem'>
+                      <div>Meal Type</div>
+                      <div>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          onClick={handleTertiaryMealTypeMenu}
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {tertiaryMealTypeMenuActivated && (
+                    <div>
+                      <div className='secondaryMobileItem'>
+                        <div>Meal Type</div>
+                        <div>
+                          <FontAwesomeIcon
+                            icon={faChevronUp}
+                            onClick={handleTertiaryMealTypeMenu}
+                          />
+                        </div>
+                      </div>
+                      <div className='tertiaryMobileMenu'>
+                        <div className='tertiaryMobileItem'>Appetizers</div>
+                        <div className='tertiaryMobileItem'>Breakfast</div>
+                        <div className='tertiaryMobileItem'>Lunch</div>
+                        <div className='tertiaryMobileItem'>Dinner</div>
+                        <div className='tertiaryMobileItem'>Dessert</div>
+                        <div className='tertiaryMobileItem'>Drinks</div>
+                        <div className='tertiaryMobileItem'>Sides</div>
+                        <div className='tertiaryMobileItem'>Snacks</div>
+                        <div className='tertiaryMobileItem'>Dog Recipes</div>
+                        <div className='tertiaryMobileItem'>Holidays</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Dish Type Tertiary Menus */}
+                  {!tertiaryDishTypeMenuActivated && (
+                    <div className='secondaryMobileItem'>
+                      <div>Dish Type</div>
+                      <div>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          onClick={handleTertiaryDishTypeMenu}
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {tertiaryDishTypeMenuActivated && (
+                    <div>
+                      <div className='secondaryMobileItem'>
+                        <div>Dish Type</div>
+                        <div>
+                          <FontAwesomeIcon
+                            icon={faChevronUp}
+                            onClick={handleTertiaryDishTypeMenu}
+                          />
+                        </div>
+                      </div>
+                      <div className='tertiaryMobileMenu'>
+                        <div className='tertiaryMobileItem'>Baked Goods</div>
+                        <div className='tertiaryMobileItem'>Bowls</div>
+                        <div className='tertiaryMobileItem'>Burgers</div>
+                        <div className='tertiaryMobileItem'>Casseroles</div>
+                        <div className='tertiaryMobileItem'>Condiments</div>
+                        <div className='tertiaryMobileItem'>
+                          Dressings & Vinaigrettes
+                        </div>
+                        <div className='tertiaryMobileItem'>Ice Cream</div>
+                        <div className='tertiaryMobileItem'>
+                          One-Pot & Skillet
+                        </div>
+                        <div className='tertiaryMobileItem'>Pasta Dishes</div>
+                        <div className='tertiaryMobileItem'>Pizza</div>
+                        <div className='tertiaryMobileItem'>Salads</div>
+                        <div className='tertiaryMobileItem'>Sandwiches</div>
+                        <div className='tertiaryMobileItem'>
+                          Soup, Stew, & Chili
+                        </div>
+                        <div className='tertiaryMobileItem'>Tacos</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Method Tertiary Menus */}
+                  {!tertiaryMethodMenuActivated && (
+                    <div className='secondaryMobileItem'>
+                      <div>Method</div>
+                      <div>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          onClick={handleTertiaryMethodMenu}
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {tertiaryMethodMenuActivated && (
+                    <div>
+                      <div className='secondaryMobileItem'>
+                        <div>Method</div>
+                        <div>
+                          <FontAwesomeIcon
+                            icon={faChevronUp}
+                            onClick={handleTertiaryMethodMenu}
+                          />
+                        </div>
+                      </div>
+                      <div className='tertiaryMobileMenu'>
+                        <div className='tertiaryMobileItem'>Baking</div>
+                        <div className='tertiaryMobileItem'>
+                          Barbeque & Grilling
+                        </div>
+                        <div className='tertiaryMobileItem'>Instant Pot</div>
+                        <div className='tertiaryMobileItem'>No-Cook</div>
+                        <div className='tertiaryMobileItem'>Roasting</div>
+                        <div className='tertiaryMobileItem'>Slow Cooker</div>
+                        <div className='tertiaryMobileItem'>Stove Top</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Diet Type Tertiary Menus */}
+                  {!tertiaryDietTypeMenuActivated && (
+                    <div className='secondaryMobileItem'>
+                      <div>Diet Type</div>
+                      <div>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          onClick={handleTertiaryDietTypeMenu}
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {tertiaryDietTypeMenuActivated && (
+                    <div>
+                      <div className='secondaryMobileItem'>
+                        <div>Diet Type</div>
+                        <div>
+                          <FontAwesomeIcon
+                            icon={faChevronUp}
+                            onClick={handleTertiaryDietTypeMenu}
+                          />
+                        </div>
+                      </div>
+                      <div className='tertiaryMobileMenu'>
+                        <div className='tertiaryMobileItem'>Dairy-Free</div>
+                        <div className='tertiaryMobileItem'>
+                          Diabetic-Friendly
+                        </div>
+                        <div className='tertiaryMobileItem'>Gluten-Free</div>
+                        <div className='tertiaryMobileItem'>Keto</div>
+                        <div className='tertiaryMobileItem'>Low-Carb</div>
+                        <div className='tertiaryMobileItem'>Paleo</div>
+                        <div className='tertiaryMobileItem'>Plant-Base</div>
+                        <div className='tertiaryMobileItem'>Vegetarian</div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div>Recipe Index</div>
+                  <div>Recipe Videos</div>
+                </div>
+              )}
               <Link to='/mealPlanning'>
                 <li className='mobileNavButton'>
                   <div>Meal Planning</div>
                   <div>
-                    <FontAwesomeIcon icon={faChevronDown} />
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      onClick={setSecondaryMealPlanningMenuActivated}
+                    />
                   </div>
                 </li>
               </Link>
+
+              {/* ------------------- */}
+              {/* Stopping Point - 11/4/21 */}
+              {/* ------------------- */}
+
+              {/* {secondaryMealPlanningMenuActivated && (
+                <div className='secondaryMobileMenu'>
+                  <div className='secondaryMobileItem'>
+                    <div>Meal Planning #1</div>
+                    <div>Meal Planning #2</div>
+                    <div>Meal Planning #3</div>
+                  </div>
+                </div>
+              )} */}
               <Link to='/weightLoss'>
                 <li className='mobileNavButton'>
                   <div>Weight Loss</div>

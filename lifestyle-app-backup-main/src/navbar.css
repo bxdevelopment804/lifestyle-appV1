@@ -257,16 +257,17 @@
 
   #mobileNavButtonList {
     display: flex;
-    position: relative;
-    flex-direction: column;
     /* position: relative; */
+    position: absolute;
+    flex-direction: column;
     /* border: solid blue 1px; */
     /* width: 125px; */
     width: auto;
     width: 100vw;
     /* right: 0px; */
     /* left: 0px; */
-    top: 190px;
+    /* top: 190px; */
+    top: 84px;
     background-color: white;
     text-align: right;
     /* justify-self: center; */
@@ -325,11 +326,34 @@
     min-width: 320px;
   }
 
-  /* #testTitle,
-  #testIcon {
+  .secondaryMobileMenu {
+    /* display: flex; */
+    /* position: relative; */
+    /* border: solid red 1px; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    /* height: 20px; */
+    border-bottom: solid grey 1px;
+    padding: 6px 0px 6px 20px;
+    /* align-items: center;
+    justify-content: space-between; */
+    text-align: left;
+  }
+
+  .secondaryMobileItem {
     display: flex;
-    position: relative;
-  } */
+    align-items: center;
+    justify-content: space-between;
+    /* border: solid red; */
+  }
+
+  .tertiaryMobileItem {
+    display: flex;
+    padding: 3px 0px 3px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* Mobile - GREEN */
