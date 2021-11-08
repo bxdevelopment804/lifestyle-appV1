@@ -1,0 +1,138 @@
+#hoverIcon-photo {
+	/* position: absolute; */
+	/* width: calc(72vw / 4);
+	height: calc(72vw / 4); */
+	height: 250px;
+	width: 100%;
+	/* opacity: 100%; */
+	opacity: 75%;
+	background-color: #cccccc;
+}
+
+#hoverIcon-photo:hover {
+	opacity: 100%;
+}
+
+#hoverIcon-container {
+	/* display: inline-flex; */
+	display: flex;
+	position: relative;
+	/* border: solid red; */
+	/* width: calc(72vw / 4); */
+	width: 100%;
+	/* margin: auto; */
+}
+
+#hoverIcon-title {
+	position: relative;
+	display: inline-flex;
+	/* bottom: calc(((72vw / 4) / 2) + 1em); */
+	/* right: 15vw; */
+	/* width: 0px; */
+	margin: auto;
+	/* border: solid blue; */
+	color: aliceblue;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: xx-large;
+	background-color: rgba(0, 0, 0, 0.3);
+	/* border: solid red; */
+	/* height: 1em; */
+	/* bottom: calc(125px + 1rem); */
+	bottom: calc(125px + 1rem);
+}
+
+/* Desktops - YELLOW*/
+@media (max-width: 1200px) and (min-width: 1025px) {
+	#hoverIcon-container {
+		display: flex;
+		position: relative;
+		height: 200px;
+		/* border: solid orange; */
+	}
+	#hoverIcon-photo {
+		position: relative;
+		/* height: 100%; */
+		/* Height 100 works for some reason */
+		height: 200px;
+		/* height: auto; */
+		/* border: red; */
+	}
+
+	#hoverIcon-title {
+		position: relative;
+		display: flex;
+		/* align-self: center; */
+		justify-content: center;
+		align-content: center;
+		margin-top: 17px;
+		/* bottom: calc((200px / 2) - 1rem); */
+		/* top: 50% - 1rem; */
+		/* border: solid red; */
+		/* margin: auto; */
+	}
+}
+
+/* Laptops - GREY*/
+@media (max-width: 1024px) and (min-width: 769px) {
+	#hoverIcon-title {
+		position: relative;
+		/* display: inline-flex; */
+		font-size: x-large;
+		bottom: 10vw;
+		/* top: calc(((150px / 2) - 1rem - 10px)); */
+		/* top: 3vw; */
+		/* bottom: calc(125px + 1rem); */
+		/* margin-top: -10px; */
+		/* margin: auto; */
+	}
+	#hoverIcon-photo {
+		/* height: 100%; */
+		/* height: 180px; */
+		height: 15vw;
+		/* border: red; */
+	}
+	#hoverIcon-container {
+		/* height: 100%; */
+		/* border: solid purple; */
+		/* height: 18px; */
+		height: 15vw;
+	}
+}
+
+/* Tablets - LIGHT BLUE*/
+@media (max-width: 768px) and (min-width: 481px) {
+	#hoverIcon-title {
+		font-size: x-large;
+		bottom: 20vw;
+	}
+	#hoverIcon-container {
+		/* height: calc(1.41465vw + 31.4221); */
+		height: 32.5vw;
+	}
+	#hoverIcon-photo {
+		/* height: calc((1.41465vw + 31.4221) / 2); */
+		/* height: calc(32.5vw / 2); */
+		height: 32.5vw;
+	}
+}
+
+/* Mobile - GREEN */
+@media (max-width: 480px) {
+	#hoverIcon-title {
+		font-size: x-large;
+		bottom: 20vw;
+	}
+	#hoverIcon-container {
+		/* height: calc(1.41465vw + 31.4221); */
+		height: 32.5vw;
+		min-width: 120px;
+		min-height: 105px;
+	}
+	#hoverIcon-photo {
+		/* height: calc((1.41465vw + 31.4221) / 2); */
+		/* height: calc(32.5vw / 2); */
+		height: 32.5vw;
+		min-width: 120px;
+		min-height: 105px;
+	}
+}
