@@ -2,17 +2,18 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import SingleSquare from '../shared/single-square';
+import SingleSquareCropped from '../shared/single-square-cropped';
 
 import './generalCompilationFormatting.css';
 
-const Sides = () => {
+const Paleo = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
 	return (
 		<div>
-			<h1 id='compilationTitle'>Sides</h1>
+			<h1 id='compilationTitle'>Paleo</h1>
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
@@ -37,57 +38,35 @@ const Sides = () => {
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
-					<Link to='/wildRiceSoup'>
+					<Link to='/honeyDijonChicken'>
 						<SingleSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
-							section='Plant-Based Recipes'
-							title='Creamy Wild Rice Soup'
-							description='	It’s like a chicken noodle soup but better.'
-							author='Carla Christian'
+							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Sheet-Pan-Honey-Mustard-Chicken-3-400x500-circle.jpg'
+							section='Meal Planning'
+							title='Honey Dijon Chicken'
+							description='A delicious meal that comes together in 30 minutes.'
+							author='Taylor Stinson'
 						/>
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
-					<Link to='/veganBakedPotato'>
+					<Link to='/indianChickenBowl'>
 						<SingleSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
-							section='Plant-Based Recipes'
-							title='"Nacho" Vegan Baked Potato'
-							description='This recipe makes a great go-to meal when things are busy.'
-							author='Andrea Duclos'
+							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Chicken-Tandoori-Meal-Prep-Bowls-14-400x500-circle.jpg'
+							section='Meal Planning'
+							title='Indian Inspired Chicken Bowls'
+							description="These are a tasty sheet pan meal idea ready in 45 minutes – they've even got pakoras!"
+							author='Taylor Stinson'
 						/>
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
-					<Link to='/veganMacaroniCheese'>
+					<Link to='/koreanChickenBowl'>
 						<SingleSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
-							section='Plant-Based Recipes'
-							title='Stove-Top Vegan Macaroni and Cheese'
-							description='This classic vegan mac and cheese is ultra cheesy, saucy and creamy.'
-							author='Molly Patrick'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/zucchiniNoodleCaprese'>
-						<SingleSquare
-							url='https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2014/10/zucchini-noodle-caprese-6-300x300.jpg'
-							section='Weight Loss Recipes'
-							title='Zucchini Noodle Caprese'
-							description='This zucchini noodle caprese is a delicious, healthy salad made from zucchini noodles and a few simple, fresh ingredients.'
-							author='Lisa Bryan'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/greekSalad'>
-						<SingleSquare
-							url='https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/08/Greek-Salad-450x450.jpg'
-							section='Weight Loss Recipes'
-							title='Greek Salad'
-							description='This salad is easy to make and bursting with flavor.'
-							author='Lisa Bryan'
+							url='https://thegirlonbloor.com/wp-content/uploads/2017/12/Korean-Chicken-Meal-Prep-Bowls-3-500x500.jpg'
+							section='Meal Planning'
+							title='Korean Inspired Chicken Bowls'
+							description='These are a healthy make ahead lunch idea made up of chicken thighs, sesame coleslaw and jasmine rice!'
+							author='Taylor Stinson'
 						/>
 					</Link>
 				</div>
@@ -98,17 +77,6 @@ const Sides = () => {
 							section='Weight Loss Recipes'
 							title='Salmon Avocado Salad'
 							description='This salmon avocado salad is a healthy salad recipe that is big on nutrients and flavor.'
-							author='Lisa Bryan'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/tacoSalad'>
-						<SingleSquare
-							url='https://downshiftology.com/wp-content/uploads/2020/06/Taco-Salad-6-300x300.jpg'
-							section='Weight Loss Recipes'
-							title='Taco Salad'
-							description='Loaded with crisp vegetables, seasoned ground beef, and taco classics such as homemade salsa, cilantro and avocado.'
 							author='Lisa Bryan'
 						/>
 					</Link>
@@ -139,4 +107,4 @@ const Sides = () => {
 		</div>
 	);
 };
-export default Sides;
+export default Paleo;

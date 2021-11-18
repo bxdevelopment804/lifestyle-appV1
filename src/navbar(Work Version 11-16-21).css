@@ -130,21 +130,21 @@
 	color: red;
 }
 
-/* #recipes { */
-/* display: flex; */
-/* display: block; */
-/* position: relative; */
-/* flex-direction: column; */
-/* align-items: center; */
-/* justify-content: center; */
-/* margin: auto; */
-/* border: solid green; */
-/* height: 150px; */
-/* height: 84px; */
-/* top: 80%; */
-/* margin-top: 157px; */
-/* padding-top: 84px; */
-/* } */
+#recipes {
+	/* display: flex; */
+	/* display: block; */
+	/* position: relative; */
+	/* flex-direction: column; */
+	/* align-items: center; */
+	/* justify-content: center; */
+	/* margin: auto; */
+	/* border: solid green; */
+	/* height: 150px; */
+	/* height: 84px; */
+	/* top: 80%; */
+	/* margin-top: 157px; */
+	/* padding-top: 84px; */
+}
 
 .navButton:hover #recipeTypes {
 	display: flex;
@@ -156,11 +156,11 @@
 	z-index: 1;
 	/* height: 20px; */
 }
-/* .navButton:hover { */
-/* margin-bottom: 0.5px; */
-/* z-index: 1;
+.navButton:hover {
+	/* margin-bottom: 0.5px; */
+	/* z-index: 1;
 	background-color: white; */
-/* } */
+}
 
 /* #recipeLink {
 	position: relative;
@@ -205,13 +205,13 @@
 	margin-left: 0px;
 }
 
-/* .recipeSubItem {
-  padding-left: 10px;
-} */
+.recipeSubItem {
+	/* padding-left: 10px; */
+}
 
-/* #meal-planning {
-  border: solid blue;
-} */
+#meal-planning {
+	/* border: solid blue; */
+}
 
 .mobileNavButton,
 .secondaryMobileItem,
@@ -226,21 +226,21 @@
 		display: none;
 	}
 
-	/* .mobileNavButton, */
-	/* .secondaryMobileItem/, */
-	/* .secondaryMobileMenu, */
-	/* .tertiaryMobileItem { */
-	/* display: none; */
-	/* visibility: visible; */
-	/* } */
+	.mobileNavButton,
+.secondaryMobileItem,
+/* .secondaryMobileMenu, */
+.tertiaryMobileItem {
+		/* display: none; */
+		/* visibility: visible; */
+	}
 
 	/* ---------------
-  Leave off point 11/8/21
-  --------------- */
+Leave off point 11/8/21
+--------------- */
 	/* .mobileNavButton:hover {
-      transform: translateY(2px);
-      color: red;
-    } */
+    transform: translateY(2px);
+    color: red;
+  } */
 
 	.chevron:hover {
 		transform: translateY(2px);

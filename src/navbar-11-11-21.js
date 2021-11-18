@@ -364,123 +364,69 @@ const Navbar = () => {
 					<ul id='recipeTypes' className='menuType'>
 						<li className='recipeMenuItem'>
 							Meal Type
-							<FontAwesomeIcon icon={faChevronRight} />
+							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
 							<ul id='recipeSubTypes'>
-								<Link to='/appetizers'>
-									<li className='recipeSubItem'>Appetizers</li>
-								</Link>
-								<Link to='/breakfast'>
-									<li className='recipeSubItem'>Breakfast</li>
-								</Link>
-								<Link to='/lunch'>
-									<li className='recipeSubItem'>Lunch</li>
-								</Link>
-								<Link to='/dinner'>
-									<li className='recipeSubItem'>Dinner</li>
-								</Link>
-								<Link to='/dessert'>
-									<li className='recipeSubItem'>Dessert</li>
-								</Link>
-								{/* <li className='recipeSubItem'>Drinks</li> */}
-								<Link to='/sides'>
-									<li className='recipeSubItem'>Sides</li>
-								</Link>
-								{/* <li className='recipeSubItem'>Snacks</li> */}
-								{/* <li className='recipeSubItem'>Dog Recipes</li> */}
-								{/* <li className='recipeSubItem'>Holidays</li> */}
+								<li className='recipeSubItem'>Appetizers</li>
+								<li className='recipeSubItem'>Breakfast</li>
+								<li className='recipeSubItem'>Lunch</li>
+								<li className='recipeSubItem'>Dinner</li>
+								<li className='recipeSubItem'>Dessert</li>
+								<li className='recipeSubItem'>Drinks</li>
+								<li className='recipeSubItem'>Sides</li>
+								<li className='recipeSubItem'>Snacks</li>
+								<li className='recipeSubItem'>Dog Recipes</li>
+								<li className='recipeSubItem'>Holidays</li>
 							</ul>
 						</li>
 						<li className='recipeMenuItem'>
 							Dish Type
 							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
 							<ul id='recipeSubTypes'>
-								{/* <li className='recipeSubItem'>Baked Goods</li> */}
-								<Link to='/bowls'>
-									<li className='recipeSubItem'>Bowls</li>
-								</Link>
-								<Link to='/burgers'>
-									<li className='recipeSubItem'>Burgers</li>
-								</Link>
-								{/* <li className='recipeSubItem'>Casseroles</li> */}
-								{/* <li className='recipeSubItem'>Condiments</li> */}
-								{/* <li className='recipeSubItem'>Dressings & Vinaigrettes</li> */}
-								{/* <li className='recipeSubItem'>Ice Cream</li> */}
-								<Link to='/onePotOrSkillet'>
-									<li className='recipeSubItem'>One-Pot & Skillet</li>
-								</Link>
-								<Link to='/pastaDishes'>
-									<li className='recipeSubItem'>Pasta Dishes</li>
-								</Link>
-								<Link to='/pizza'>
-									<li className='recipeSubItem'>Pizza</li>
-								</Link>
-								<Link to='/salads'>
-									<li className='recipeSubItem'>Salads</li>
-								</Link>
-								<Link to='/sandwiches'>
-									<li className='recipeSubItem'>Sandwiches</li>
-								</Link>
-								<Link to='/soupStewChili'>
-									<li className='recipeSubItem'>Soup, Stew, & Chili</li>
-								</Link>
-								<Link to='/tacosBurritos'>
-									<li className='recipeSubItem'>Tacos & Burritos</li>
-								</Link>
+								<li className='recipeSubItem'>Baked Goods</li>
+								<li className='recipeSubItem'>Bowls</li>
+								<li className='recipeSubItem'>Burgers</li>
+								<li className='recipeSubItem'>Casseroles</li>
+								<li className='recipeSubItem'>Condiments</li>
+								<li className='recipeSubItem'>Dressings & Vinaigrettes</li>
+								<li className='recipeSubItem'>Ice Cream</li>
+								<li className='recipeSubItem'>One-Pot & Skillet</li>
+								<li className='recipeSubItem'>Pasta Dishes</li>
+								<li className='recipeSubItem'>Pizza</li>
+								<li className='recipeSubItem'>Salads</li>
+								<li className='recipeSubItem'>Sandwiches</li>
+								<li className='recipeSubItem'>Soup, Stew, & Chili</li>
+								<li className='recipeSubItem'>Tacos</li>
 							</ul>
 						</li>
 						<li className='recipeMenuItem'>
 							Method
-							<FontAwesomeIcon icon={faChevronRight} />
+							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
 							<ul id='recipeSubTypes'>
-								<Link to='/baking'>
-									<li className='recipeSubItem'>Baking</li>
-								</Link>
-								<Link to='/bbqGrilling'>
-									<li className='recipeSubItem'>Barbeque & Grilling</li>
-								</Link>
-								<Link to='/instapot'>
-									<li className='recipeSubItem'>Instant Pot</li>
-								</Link>
-								<Link to='/noCook'>
-									<li className='recipeSubItem'>No-Cook</li>
-								</Link>
-								{/* <li className='recipeSubItem'>Roasting</li> */}
-								{/* <li className='recipeSubItem'>Slow Cooker</li> */}
-								<Link to='/stoveTop'>
-									<li className='recipeSubItem'>Stove Top</li>
-								</Link>
+								<li className='recipeSubItem'>Baking</li>
+								<li className='recipeSubItem'>Barbeque & Grilling</li>
+								<li className='recipeSubItem'>Instant Pot</li>
+								<li className='recipeSubItem'>No-Cook</li>
+								<li className='recipeSubItem'>Roasting</li>
+								<li className='recipeSubItem'>Slow Cooker</li>
+								<li className='recipeSubItem'>Stove Top</li>
 							</ul>
 						</li>
 						<li className='recipeMenuItem'>
 							Diet Type
-							<FontAwesomeIcon icon={faChevronRight} />
+							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
 							<ul id='recipeSubTypes'>
-								<Link to='/dairyFree'>
-									<li className='recipeSubItem'>Dairy-Free</li>
-								</Link>
-								{/* <li className='recipeSubItem'>Diabetic Friendly</li> */}
-								<Link to='/glutenFree'>
-									<li className='recipeSubItem'>Gluten-Free</li>
-								</Link>
-								{/* <li className='recipeSubItem'>Keto</li> */}
-								<Link to='/lowCarb'>
-									<li className='recipeSubItem'>Low-Carb</li>
-								</Link>
-								<Link to='/paleo'>
-									<li className='recipeSubItem'>Paleo</li>
-								</Link>
-								<Link to='/plantBased'>
-									<li className='recipeSubItem'>Plant-Based</li>
-								</Link>
-								<Link to='/vegetarian'>
-									<li className='recipeSubItem'>Vegetarian</li>
-								</Link>
+								<li className='recipeSubItem'>Dairy-Free</li>
+								<li className='recipeSubItem'>Diabetic Friendly</li>
+								<li className='recipeSubItem'>Gluten-Free</li>
+								<li className='recipeSubItem'>Keto</li>
+								<li className='recipeSubItem'>Low-Carb</li>
+								<li className='recipeSubItem'>Paleo</li>
+								<li className='recipeSubItem'>Plant-Based</li>
+								<li className='recipeSubItem'>Vegetarian</li>
 							</ul>
 						</li>
-						<Link to='/recipes'>
-							<li className='recipeMenuItem'>Recipe Index</li>
-						</Link>
-						{/* <li className='recipeMenuItem'>Recipe Videos</li> */}
+						<li className='recipeMenuItem'>Recipe Index</li>
+						<li className='recipeMenuItem'>Recipe Videos</li>
 					</ul>
 				</div>
 				<div id='meal-planning' className='navButton'>
@@ -493,18 +439,12 @@ const Navbar = () => {
 						<FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
 					</Link>
 					<ul id='recipeTypes' className='menuType'>
-						<Link to='mealPlanning'>
-							<li className='recipeMenuItem'>Meal Plans</li>
-						</Link>
-						<Link to='lowCarb'>
-							<li className='recipeMenuItem'>Low-Carb Menus</li>
-						</Link>
-						<Link to='/plantBased'>
-							<li className='recipeMenuItem'>Plant-Based Menus</li>
-						</Link>
-						{/* <li className='recipeMenuItem'>Weight Watchers Menus</li> */}
-						{/* <li className='recipeMenuItem'>Recipe Collections</li> */}
-						{/* <li className='recipeMenuItem'>Shopping Lists</li> */}
+						<li className='recipeMenuItem'>Meal Plans</li>
+						<li className='recipeMenuItem'>Low-Carb Menus</li>
+						<li className='recipeMenuItem'>Plant-Based Menus</li>
+						<li className='recipeMenuItem'>Weight Watchers Menus</li>
+						<li className='recipeMenuItem'>Recipe Collections</li>
+						<li className='recipeMenuItem'>Shopping Lists</li>
 					</ul>
 				</div>
 				<div id='weight-loss' className='navButton'>
@@ -517,12 +457,10 @@ const Navbar = () => {
 						<FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
 					</Link>
 					<ul id='weightLossRecipeTypes' className='menuType'>
-						{/* <li className='recipeMenuItem'>Cleanse & Detox</li> */}
-						{/* <li className='recipeMenuItem'>How to Lose Belly Fat</li> */}
-						<Link to='weightLoss'>
-							<li className='recipeMenuItem'>Weight Loss Foods</li>
-						</Link>
-						{/* <li className='recipeMenuItem'>Weight Loss Tips</li> */}
+						<li className='recipeMenuItem'>Cleanse & Detox</li>
+						<li className='recipeMenuItem'>How to Lose Belly Fat</li>
+						<li className='recipeMenuItem'>Weight Loss Foods</li>
+						<li className='recipeMenuItem'>Weight Loss Tips</li>
 					</ul>
 				</div>
 				<div id='fitness' className='navButton'>
@@ -535,55 +473,39 @@ const Navbar = () => {
 						<FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
 					</Link>
 					<ul id='recipeTypes' className='menuType'>
-						<Link to='abAndCore'>
-							<li className='recipeMenuItem'>Ab & Core</li>
-						</Link>
-						<Link to='/beginners'>
-							<li className='recipeMenuItem'>Beginners</li>
-						</Link>
-						{/* <li className='recipeMenuItem'>Challenges & Plans</li> */}
-						<Link to='/advanced'>
-							<li className='recipeMenuItem'>Advanced</li>
-						</Link>
-						{/* <li className='recipeMenuItem'>
+						<li className='recipeMenuItem'>Ab & Core</li>
+						<li className='recipeMenuItem'>Beginners</li>
+						<li className='recipeMenuItem'>Challenges & Plans</li>
+						<li className='recipeMenuItem'>Advanced</li>
+						<li className='recipeMenuItem'>
 							Fat Blasters
 							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
-							<ul id='skinnyRecipeSubTypes'>
+							<ul id='recipeSubTypes'>
 								<li className='recipeSubItem'>Cardio</li>
 								<li className='recipeSubItem'>H.I.T.T</li>
 								<li className='recipeSubItem'>Tabata</li>
 							</ul>
-						</li> */}
-						<Link to='/homeWorkouts'>
-							<li className='recipeMenuItem'>Home Workouts</li>
-						</Link>
-						<Link to='/lowerBody'>
-							<li className='recipeMenuItem'>
-								Lower Body
-								{/* <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
-							<ul id='skinnyRecipeSubTypes'>
+						</li>
+						<li className='recipeMenuItem'>Home Workouts</li>
+						<li className='recipeMenuItem'>
+							Lower Body
+							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
+							<ul id='recipeSubTypes'>
 								<li className='recipeSubItem'>Butt</li>
 								<li className='recipeSubItem'>Leg</li>
-							</ul> */}
-							</li>
-						</Link>
-						<Link to='/upperBody'>
-							<li className='recipeMenuItem'>
-								Upper Body
-								{/* <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
-							<ul id='skinnyRecipeSubTypes'>
+							</ul>
+						</li>
+						<li className='recipeMenuItem'>
+							Upper Body
+							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
+							<ul id='recipeSubTypes'>
 								<li className='recipeSubItem'>Arm</li>
 								<li className='recipeSubItem'>Back</li>
 								<li className='recipeSubItem'>Leg</li>
-							</ul> */}
-							</li>
-						</Link>
-						<Link to='/totalBody'>
-							<li className='recipeMenuItem'>Total Body</li>
-						</Link>
-						<Link to='/running'>
-							<li className='recipeMenuItem'>Running</li>
-						</Link>
+							</ul>
+						</li>
+						<li className='recipeMenuItem'>Total Body</li>
+						<li className='recipeMenuItem'>Running</li>
 					</ul>
 				</div>
 				<div id='self-care' className='navButton'>
@@ -595,13 +517,13 @@ const Navbar = () => {
 						Self Care&nbsp;
 						<FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
 					</Link>
-					{/* <ul id='recipeTypes' className='menuType'>
+					<ul id='recipeTypes' className='menuType'>
 						<li className='recipeSubItem'>Beauty</li>
 						<li className='recipeSubItem'>DIY</li>
 						<li className='recipeSubItem'>Fitness Tips</li>
 						<li className='recipeSubItem'>Healthy Eating</li>
 						<li className='recipeSubItem'>Yoga</li>
-					</ul> */}
+					</ul>
 				</div>
 				<div id='shop' className='navButton'>
 					<Link
@@ -629,12 +551,12 @@ const Navbar = () => {
 				</div>
 
 				{/* Mobile Nav Menu */}
-				{!mobileMenuActivated && (
+				{mobileMenuActivated == false && (
 					<div id='mobile-menu' onClick={handleMobileMenu}>
 						<FontAwesomeIcon icon={faBars} className='barsIcon' />
 					</div>
 				)}
-				{mobileMenuActivated && (
+				{mobileMenuActivated == true && (
 					<React.Fragment>
 						<div id='mobile-menu' onClick={handleMobileMenu}>
 							<FontAwesomeIcon icon={faTimes} className='closeIcon' />
@@ -695,58 +617,16 @@ const Navbar = () => {
 													</div>
 												</div>
 												<div className='tertiaryMobileMenu'>
-													<Link to='/appetizers'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Appetizers
-														</div>
-													</Link>
-													<Link to='/breakfast'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Breakfast
-														</div>
-													</Link>
-													<Link to='/lunch'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Lunch
-														</div>
-													</Link>
-													<Link to='/dinner'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Dinner
-														</div>
-													</Link>
-													<Link to='/dessert'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Dessert
-														</div>
-													</Link>
-													{/* <div className='tertiaryMobileItem'>Drinks</div> */}
-													<Link to='/sides'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Sides
-														</div>
-													</Link>
-													{/* <div className='tertiaryMobileItem'>Snacks</div> */}
-													{/* <div className='tertiaryMobileItem'>Dog Recipes</div> */}
-													{/* <div className='tertiaryMobileItem'>Holidays</div> */}
+													<div className='tertiaryMobileItem'>Appetizers</div>
+													<div className='tertiaryMobileItem'>Breakfast</div>
+													<div className='tertiaryMobileItem'>Lunch</div>
+													<div className='tertiaryMobileItem'>Dinner</div>
+													<div className='tertiaryMobileItem'>Dessert</div>
+													<div className='tertiaryMobileItem'>Drinks</div>
+													<div className='tertiaryMobileItem'>Sides</div>
+													<div className='tertiaryMobileItem'>Snacks</div>
+													<div className='tertiaryMobileItem'>Dog Recipes</div>
+													<div className='tertiaryMobileItem'>Holidays</div>
 												</div>
 											</div>
 										)}
@@ -777,85 +657,26 @@ const Navbar = () => {
 													</div>
 												</div>
 												<div className='tertiaryMobileMenu'>
-													{/* <div className='tertiaryMobileItem'>Baked Goods</div> */}
-													<Link to='/bowls'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Bowls
-														</div>
-													</Link>
-													<Link to='/burgers'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Burgers
-														</div>
-													</Link>
-													{/* <div className='tertiaryMobileItem'>Casseroles</div> */}
-													{/* <div className='tertiaryMobileItem'>Condiments</div> */}
-													{/* <div className='tertiaryMobileItem'>
+													<div className='tertiaryMobileItem'>Baked Goods</div>
+													<div className='tertiaryMobileItem'>Bowls</div>
+													<div className='tertiaryMobileItem'>Burgers</div>
+													<div className='tertiaryMobileItem'>Casseroles</div>
+													<div className='tertiaryMobileItem'>Condiments</div>
+													<div className='tertiaryMobileItem'>
 														Dressings & Vinaigrettes
-													</div> */}
-													{/* <div className='tertiaryMobileItem'>Ice Cream</div> */}
-													<Link to='/onePotOrSkillet'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															One-Pot & Skillet
-														</div>
-													</Link>
-													<Link to='/pastaDishes'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Pasta Dishes
-														</div>
-													</Link>
-													<Link to='/pizza'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Pizza
-														</div>
-													</Link>
-													<Link to='/salads'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Salads
-														</div>
-													</Link>
-													<Link to='/sandwiches'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Sandwiches
-														</div>
-													</Link>
-													<Link to='/soupStewChili'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Soup, Stew, & Chili
-														</div>
-													</Link>
-													<Link to='/tacosBurritos'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Tacos
-														</div>
-													</Link>
+													</div>
+													<div className='tertiaryMobileItem'>Ice Cream</div>
+													<div className='tertiaryMobileItem'>
+														One-Pot & Skillet
+													</div>
+													<div className='tertiaryMobileItem'>Pasta Dishes</div>
+													<div className='tertiaryMobileItem'>Pizza</div>
+													<div className='tertiaryMobileItem'>Salads</div>
+													<div className='tertiaryMobileItem'>Sandwiches</div>
+													<div className='tertiaryMobileItem'>
+														Soup, Stew, & Chili
+													</div>
+													<div className='tertiaryMobileItem'>Tacos</div>
 												</div>
 											</div>
 										)}
@@ -891,16 +712,9 @@ const Navbar = () => {
 														Barbeque & Grilling
 													</div>
 													<div className='tertiaryMobileItem'>Instant Pot</div>
-													<Link to='/noCook'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															No-Cook
-														</div>
-													</Link>
-													{/* <div className='tertiaryMobileItem'>Roasting</div> */}
-													{/* <div className='tertiaryMobileItem'>Slow Cooker</div> */}
+													<div className='tertiaryMobileItem'>No-Cook</div>
+													<div className='tertiaryMobileItem'>Roasting</div>
+													<div className='tertiaryMobileItem'>Slow Cooker</div>
 													<div className='tertiaryMobileItem'>Stove Top</div>
 												</div>
 											</div>
@@ -932,72 +746,26 @@ const Navbar = () => {
 													</div>
 												</div>
 												<div className='tertiaryMobileMenu'>
-													<Link to='/dairyFree'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Dairy-Free
-														</div>
-													</Link>
-													{/* <div className='tertiaryMobileItem'>
+													<div className='tertiaryMobileItem'>Dairy-Free</div>
+													<div className='tertiaryMobileItem'>
 														Diabetic-Friendly
-													</div> */}
-													<Link to='/glutenFree'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Gluten-Free
-														</div>
-													</Link>
-													{/* <div className='tertiaryMobileItem'>Keto</div> */}
-													<Link to='/lowCarb'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Low-Carb
-														</div>
-													</Link>
-													<Link to='/paleo'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Paleo
-														</div>
-													</Link>
-													<Link to='/plantBased'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Plant-Base
-														</div>
-													</Link>
-													<Link to='/vegetarian'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Vegetarian
-														</div>
-													</Link>
+													</div>
+													<div className='tertiaryMobileItem'>Gluten-Free</div>
+													<div className='tertiaryMobileItem'>Keto</div>
+													<div className='tertiaryMobileItem'>Low-Carb</div>
+													<div className='tertiaryMobileItem'>Paleo</div>
+													<div className='tertiaryMobileItem'>Plant-Base</div>
+													<div className='tertiaryMobileItem'>Vegetarian</div>
 												</div>
 											</div>
 										)}
-										<Link to='/recipes'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Recipe Index
-											</div>
-										</Link>
-										{/* <div className='secondaryMobileItem secondaryMobileTitle'>
+
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Recipe Index
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
 											Recipe Videos
-										</div> */}
+										</div>
 									</div>
 								</React.Fragment>
 							)}
@@ -1033,39 +801,24 @@ const Navbar = () => {
 										</div>
 									</li>
 									<div className='secondaryMobileMenu'>
-										<Link to='mealPlanning'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Meal Plans
-											</div>
-										</Link>
-										<Link to='lowCarb'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Low-Carb Menus
-											</div>
-										</Link>
-										<Link to='/plantBased'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Plant-Based Menus
-											</div>
-										</Link>
-										{/* <div className='secondaryMobileItem secondaryMobileTitle'>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Meal Plans
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Low-Carb Menus
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Plant-Based Menus
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
 											Weight Watchers Menus
-										</div> */}
-										{/* <div className='secondaryMobileItem secondaryMobileTitle'>
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
 											Recipe Collections
-										</div> */}
-										{/* <div className='secondaryMobileItem secondaryMobileTitle'>
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
 											Shopping Lists
-										</div> */}
+										</div>
 									</div>
 								</React.Fragment>
 							)}
@@ -1100,23 +853,18 @@ const Navbar = () => {
 										</div>
 									</li>
 									<div className='secondaryMobileMenu'>
-										{/* <div className='secondaryMobileItem secondaryMobileTitle'>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
 											Cleanse & Detox
-										</div> */}
-										{/* <div className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'>
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'>
 											How to Lose Belly Fat
-										</div> */}
-										<Link to='weightLoss'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Weight Loss Foods
-											</div>
-										</Link>
-										{/* <div className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'>
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'>
+											Weight Loss Foods
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'>
 											Weight Loss Tips
-										</div> */}
+										</div>
 									</div>
 								</React.Fragment>
 							)}
@@ -1151,34 +899,19 @@ const Navbar = () => {
 										</div>
 									</li>
 									<div className='secondaryMobileMenu'>
-										<Link to='abAndCore'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Ab & Core
-											</div>
-										</Link>
-										<Link to='beginners'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Beginners
-											</div>
-										</Link>
-										{/* <div className='secondaryMobileItem secondaryMobileTitle'>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Ab & Core
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Beginners
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
 											Challenges & Plans
-										</div> */}
-										<Link to='/advanced'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Advanced
-											</div>
-										</Link>
-										{/* {!tertiaryFatBlastersMenuActivated && (
+										</div>
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Advanced
+										</div>
+										{!tertiaryFatBlastersMenuActivated && (
 											<div className='secondaryMobileItem'>
 												<div className='secondaryMobileTitle'>Fat Blasters</div>
 												<div>
@@ -1189,8 +922,8 @@ const Navbar = () => {
 													/>
 												</div>
 											</div>
-										)} */}
-										{/* {tertiaryFatBlastersMenuActivated && (
+										)}
+										{tertiaryFatBlastersMenuActivated && (
 											<React.Fragment>
 												<div className='secondaryMobileItem'>
 													<div className='secondaryMobileTitle'>
@@ -1210,34 +943,12 @@ const Navbar = () => {
 													<div className='tertiaryMobileItem'>Tabata</div>
 												</div>
 											</React.Fragment>
-										)} */}
-										<Link to='/homeWorkouts'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Home Workouts
-											</div>
-										</Link>
-										<Link to='/lowerBody'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Lower Body
-											</div>
-										</Link>
-										<Link to='/upperBody'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Upper Body
-											</div>
-										</Link>
-
+										)}
+										<div className='secondaryMobileItem secondaryMobileTitle'>
+											Home Workouts
+										</div>
 										{/* Lower Body Menu Collapsed */}
-										{/* {!tertiaryLowerBodyMenuActivated && (
+										{!tertiaryLowerBodyMenuActivated && (
 											<div className='secondaryMobileItem'>
 												<div className='secondaryMobileTitle'>Lower Body</div>
 												<div>
@@ -1248,9 +959,9 @@ const Navbar = () => {
 													/>
 												</div>
 											</div>
-										)} */}
+										)}
 										{/* Lower Body Menu Expanded */}
-										{/* {tertiaryLowerBodyMenuActivated && (
+										{tertiaryLowerBodyMenuActivated && (
 											<React.Fragment>
 												<div className='secondaryMobileItem'>
 													<div className='secondaryMobileTitle'>Lower Body</div>
@@ -1267,10 +978,10 @@ const Navbar = () => {
 													<div className='tertiaryMobileItem'>Leg</div>
 												</div>
 											</React.Fragment>
-										)} */}
+										)}
 
 										{/* Upper Body Menu Collapsed */}
-										{/* {!tertiaryUpperBodyMenuActivated && (
+										{!tertiaryUpperBodyMenuActivated && (
 											<div className='secondaryMobileItem'>
 												<div className='secondaryMobileTitle'>Upper Body</div>
 												<div>
@@ -1281,9 +992,9 @@ const Navbar = () => {
 													/>
 												</div>
 											</div>
-										)} */}
+										)}
 										{/* Upper Body Menu Expanded */}
-										{/* {tertiaryUpperBodyMenuActivated && (
+										{tertiaryUpperBodyMenuActivated && (
 											<React.Fragment>
 												<div className='secondaryMobileItem'>
 													<div className='secondaryMobileTitle'>Upper Body</div>
@@ -1301,29 +1012,14 @@ const Navbar = () => {
 													<div className='tertiaryMobileItem'>Chest</div>
 												</div>
 											</React.Fragment>
-										)} */}
-										<Link to='/totalBody'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Total Body
-											</div>
-										</Link>
-										<Link to='/running'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Running
-											</div>
-										</Link>
+										)}
+										<div className='secondaryMobileItem'>Total Body</div>
+										<div className='secondaryMobileItem'>Running</div>
 									</div>
 								</React.Fragment>
 							)}
-
 							{/* Self Care Menu Not Expanded */}
-							{/* {!secondarySelfCareMenuActivated && (
+							{!secondarySelfCareMenuActivated && (
 								<li className='mobileNavButton'>
 									<Link to='/selfCare'>
 										<div onClick={closeMobileMenu}>Self Care</div>
@@ -1336,9 +1032,9 @@ const Navbar = () => {
 										/>
 									</div>
 								</li>
-							)} */}
+							)}
 							{/* Self Care Menu Expanded */}
-							{/* {secondarySelfCareMenuActivated && (
+							{secondarySelfCareMenuActivated && (
 								<React.Fragment>
 									<li className='mobileNavButton'>
 										<Link to='/selfCare'>
@@ -1370,17 +1066,7 @@ const Navbar = () => {
 										</div>
 									</div>
 								</React.Fragment>
-							)} */}
-
-							<Link to='/selfCare'>
-								<li
-									id='mobileShop'
-									className='mobileNavButton'
-									onClick={closeMobileMenu}
-								>
-									Self Care
-								</li>
-							</Link>
+							)}
 							<Link to='/shop'>
 								<li
 									id='mobileShop'

@@ -34,6 +34,9 @@
 .linkItem {
 	margin: 0px 20px;
 }
+a {
+	color: black;
+}
 .iconItem {
 	margin: 10px 20px;
 	font-size: 40px;

@@ -16,17 +16,6 @@ const Appetizers = () => {
 			<h1 id='compilationTitle'>Appetizers</h1>
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
-					<Link to='/healthyFrenchToast'>
-						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-french-toast-with-strawberries.jpg?quality=82&strip=1&resize=640%2C360'
-							section='Dinner'
-							title='Healthy French Toast With Strawberries'
-							description='When you want something a little sweet for supper, look no further than this French toast recipe.'
-							author='David Zinczenko and Matt Goulding'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
 					<Link to='/greekSalad'>
 						<SingleSquare
 							url='https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/08/Greek-Salad-450x450.jpg'

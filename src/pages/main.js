@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-	BrowserRouter as Router,
+	// BrowserRouter as Router,
 	Route,
 	// Redirect,
 	Switch,
-	Link,
+	// Link,
 } from 'react-router-dom';
 
 import Home from './home';
@@ -71,6 +71,24 @@ import Baking from './baking';
 import BbqGrilling from './bbqGrilling';
 import Instapot from './instapot';
 import StoveTop from './stoveTop';
+import Dessert from './dessert';
+import NoCook from './noCook';
+import DairyFree from './dairyFree';
+import GlutenFree from './glutenFree';
+import LowCarb from './lowCarb';
+import Paleo from './paleo';
+import PlantBased from './plantBased';
+import Vegetarian from './vegetarian';
+import AbAndCore from './abAndCore';
+import Beginners from './beginners';
+import Advanced from './advanced';
+import HomeWorkouts from './homeWorkouts';
+import LowerBody from './lowerBody';
+import UpperBody from './upperBody';
+import TotalBody from './totalBody';
+import Running from './running';
+import Shop from './shop';
+import Search from '../search';
 
 const Main = () => {
 	return (
@@ -156,6 +174,24 @@ const Main = () => {
 				<Route path='/bbqGrilling' component={BbqGrilling} />
 				<Route path='/instapot' component={Instapot} />
 				<Route path='/stoveTop' component={StoveTop} />
+				<Route path='/dessert' component={Dessert} />
+				<Route path='/noCook' component={NoCook} />
+				<Route path='/dairyFree' component={DairyFree} />
+				<Route path='/glutenFree' component={GlutenFree} />
+				<Route path='/lowCarb' component={LowCarb} />
+				<Route path='/paleo' component={Paleo} />
+				<Route path='/plantBased' component={PlantBased} />
+				<Route path='/vegetarian' component={Vegetarian} />
+				<Route path='/abAndCore' component={AbAndCore} />
+				<Route path='/beginners' component={Beginners} />
+				<Route path='/advanced' component={Advanced} />
+				<Route path='/homeWorkouts' component={HomeWorkouts} />
+				<Route path='/lowerBody' component={LowerBody} />
+				<Route path='/upperBody' component={UpperBody} />
+				<Route path='/totalBody' component={TotalBody} />
+				<Route path='/running' component={Running} />
+				<Route path='/shop' component={Shop} />
+				<Route path='/search' component={Search} />
 
 				<Route exact path='/' component={Home} />
 			</Switch>

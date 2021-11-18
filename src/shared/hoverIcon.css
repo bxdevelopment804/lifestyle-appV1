@@ -1,18 +1,3 @@
-#hoverIcon-photo {
-	/* position: absolute; */
-	/* width: calc(72vw / 4);
-	height: calc(72vw / 4); */
-	height: 250px;
-	width: 100%;
-	/* opacity: 100%; */
-	opacity: 75%;
-	background-color: #cccccc;
-}
-
-#hoverIcon-photo:hover {
-	opacity: 100%;
-}
-
 #hoverIcon-container {
 	/* display: inline-flex; */
 	display: flex;
@@ -21,6 +6,24 @@
 	/* width: calc(72vw / 4); */
 	width: 100%;
 	/* margin: auto; */
+}
+
+#hoverIcon-photo {
+	/* position: absolute; */
+	/* width: calc(72vw / 4);
+	height: calc(72vw / 4); */
+	/* Height 250px was original setting before tinkering - 11/13/21 */
+	height: 250px;
+	width: 100%;
+	/* opacity: 100%; */
+	opacity: 75%;
+	background-color: #cccccc;
+}
+
+#hoverIcon-photo:hover,
+#hoverIcon-title:hover,
+#hoverIcon-container:hover {
+	opacity: 100%;
 }
 
 #hoverIcon-title {

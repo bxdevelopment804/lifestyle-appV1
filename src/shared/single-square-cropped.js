@@ -4,7 +4,7 @@ import './single-square-cropped.css';
 
 const SingleSquareCropped = (props) => {
 	return (
-		<div id='single-square-container'>
+		<div id='single-square-cropped-container'>
 			<img id='single-square-photo-cropped' src={props.url} />
 			<div id='single-square-section'>{props.section}</div>
 			<div id='single-square-title'>{props.title}</div>

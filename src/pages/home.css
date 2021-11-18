@@ -10,6 +10,41 @@
 	/* border: solid green; */
 }
 
+/* .three-square-container-short {
+	text-decoration: none;
+} */
+/* 
+Link {
+	text-decoration: none !important;
+}
+
+Link:link {
+	text-decoration: none !important;
+} */
+
+/* -------------------------------------- */
+/* Removes underline from Link tags */
+a {
+	text-decoration: none;
+}
+/* -------------------------------------- */
+
+/* Link:link {
+	text-decoration: none;
+}
+
+Link:visited {
+}
+
+Link:focus {
+}
+
+Link:hover {
+}
+
+Link:active {
+} */
+
 #primary-image-container {
 	position: relative;
 	display: flex;

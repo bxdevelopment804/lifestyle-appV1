@@ -2,37 +2,27 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import SingleSquare from '../shared/single-square';
+import SingleSquareCropped from '../shared/single-square-cropped';
 
 import './generalCompilationFormatting.css';
 
-const Sides = () => {
+const Vegetarian = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
 	return (
 		<div>
-			<h1 id='compilationTitle'>Sides</h1>
+			<h1 id='compilationTitle'>Vegetarian</h1>
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
-					<Link to='/asianChickenMeatballs'>
+					<Link to='/texmexPitaPizza'>
 						<SingleSquare
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
-							section='Lunch'
-							title='Asian Chicken Meatballs'
-							description='Get your tastebuds ready for some bold flavors we bring for a twist on a classic dish.'
-							author='David Zinczenko and Matt Goulding'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/chickenZoodleSoup'>
-						<SingleSquare
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
-							section='Dinner'
-							title='Instant Pot Chicken Zoodle Soup'
-							description='Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.'
-							author='Posie Brien'
+							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							section='Plant-Based Recipes'
+							title='Tex-Mex Pita Pizzas'
+							description='These will satisfy your taste buds and satiate your tum.'
+							author='Darshana Thacker'
 						/>
 					</Link>
 				</div>
@@ -70,6 +60,28 @@ const Sides = () => {
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
+					<Link to='/penneTomatoMushroom'>
+						<SingleSquare
+							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							section='Plant-Based Recipes'
+							title='Penne With Tomato-Mushroom Sauce'
+							description='Put an authentic Italian pasta dish on your dinner table in just 20 minutes.'
+							author='Del Sroufe'
+						/>
+					</Link>
+				</div>
+				<div className='compilationContainerItem'>
+					<Link to='/burritosRiceBeans'>
+						<SingleSquare
+							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							section='Plant-Based Recipes'
+							title='Burritos With Spanish Rice And Black Beans'
+							description='Quick and easy, vegan bean and rice burritos are a perfect vegetarian dinner idea.'
+							author='Susan Voisin'
+						/>
+					</Link>
+				</div>
+				<div className='compilationContainerItem'>
 					<Link to='/zucchiniNoodleCaprese'>
 						<SingleSquare
 							url='https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2014/10/zucchini-noodle-caprese-6-300x300.jpg'
@@ -92,28 +104,6 @@ const Sides = () => {
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
-					<Link to='/salmonAvocadoSalad'>
-						<SingleSquare
-							url='https://downshiftology.com/wp-content/uploads/2020/07/Salmon-Avocado-Salad-6-300x300.jpg'
-							section='Weight Loss Recipes'
-							title='Salmon Avocado Salad'
-							description='This salmon avocado salad is a healthy salad recipe that is big on nutrients and flavor.'
-							author='Lisa Bryan'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/tacoSalad'>
-						<SingleSquare
-							url='https://downshiftology.com/wp-content/uploads/2020/06/Taco-Salad-6-300x300.jpg'
-							section='Weight Loss Recipes'
-							title='Taco Salad'
-							description='Loaded with crisp vegetables, seasoned ground beef, and taco classics such as homemade salsa, cilantro and avocado.'
-							author='Lisa Bryan'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
 					<Link to='/cucumberRadishSalad'>
 						<SingleSquare
 							url='https://downshiftology.com/wp-content/uploads/2021/07/Cucumber-Radish-Salad-main-1-300x300.jpg'
@@ -124,19 +114,8 @@ const Sides = () => {
 						/>
 					</Link>
 				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/southwestChickenSalad'>
-						<SingleSquare
-							url='https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Southwest-Chicken-Salad-6-450x450.jpg'
-							section='Weight Loss Recipes'
-							title='Southwest Chicken Salad'
-							description='Simple to make, filled with bold flavors, and hearty enough to fill you up.'
-							author='Lisa Bryan'
-						/>
-					</Link>
-				</div>
 			</div>
 		</div>
 	);
 };
-export default Sides;
+export default Vegetarian;

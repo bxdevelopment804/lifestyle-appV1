@@ -1,6 +1,7 @@
 #three-square-short-container {
 	/* display: flex; */
 	position: relative;
+	display: inline-block;
 	/* height: 400px; */
 	/* height: 43vh; */
 	max-height: 530px;
@@ -25,13 +26,22 @@
 	font-size: xx-large;
 	font-weight: 700;
 	font-family: 'Times New Roman', Times, serif;
+	color: black;
+}
+
+#three-square-short-description,
+#three-square-short-author {
+	color: grey;
 }
 
 #three-square-short-section,
 #three-square-short-title,
-#three-square-short-description,
+#three-square-short-description {
+	margin-top: 5px;
+}
+
 #three-square-short-author {
-	margin-top: 20px;
+	margin-top: 15px;
 }
 
 #three-square-short-photo {

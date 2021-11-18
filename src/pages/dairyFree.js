@@ -6,14 +6,14 @@ import SingleSquareCropped from '../shared/single-square-cropped';
 
 import './generalCompilationFormatting.css';
 
-const Dinner = () => {
+const DairyFree = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
 	return (
 		<div>
-			<h1 id='compilationTitle'>Dinner</h1>
+			<h1 id='compilationTitle'>Dairy Free</h1>
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/greenTeaNoodles'>
@@ -28,7 +28,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
-						<SingleSquareCropped
+						<SingleSquare
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
@@ -45,28 +45,6 @@ const Dinner = () => {
 							title='Instant Pot Chicken Zoodle Soup'
 							description='Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.'
 							author='Posie Brien'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/italianTunaMelt'>
-						<SingleSquare
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-italian-tuna-melt.jpg?quality=82&strip=1&resize=970%2C546'
-							section='Lunch'
-							title='Italian Tuna Melt'
-							description='A new and improved version of the classic sandwich that is ready to eat in minutes.'
-							author='David Zinczenko and Matt Goulding'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/chickenSaladSandwich'>
-						<SingleSquare
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360'
-							section='Lunch'
-							title='Chicken Salad Sandwich with Curry and Raisins'
-							description='Who said a chicken salad needs to be drowning in mayo to be tasty?'
-							author='David Zinczenko and Matt Goulding'
 						/>
 					</Link>
 				</div>
@@ -93,13 +71,35 @@ const Dinner = () => {
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
-					<Link to='/penneTomatoMushroom'>
+					<Link to='/wildRiceSoup'>
 						<SingleSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
 							section='Plant-Based Recipes'
-							title='Penne With Tomato-Mushroom Sauce'
-							description='Put an authentic Italian pasta dish on your dinner table in just 20 minutes.'
-							author='Del Sroufe'
+							title='Creamy Wild Rice Soup'
+							description='	It’s like a chicken noodle soup but better.'
+							author='Carla Christian'
+						/>
+					</Link>
+				</div>
+				<div className='compilationContainerItem'>
+					<Link to='/veganBakedPotato'>
+						<SingleSquare
+							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							section='Plant-Based Recipes'
+							title='"Nacho" Vegan Baked Potato'
+							description='This recipe makes a great go-to meal when things are busy.'
+							author='Andrea Duclos'
+						/>
+					</Link>
+				</div>
+				<div className='compilationContainerItem'>
+					<Link to='/veganMacaroniCheese'>
+						<SingleSquare
+							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							section='Plant-Based Recipes'
+							title='Stove-Top Vegan Macaroni and Cheese'
+							description='This classic vegan mac and cheese is ultra cheesy, saucy and creamy.'
+							author='Molly Patrick'
 						/>
 					</Link>
 				</div>
@@ -116,7 +116,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/honeyDijonChicken'>
-						<SingleSquareCropped
+						<SingleSquare
 							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Sheet-Pan-Honey-Mustard-Chicken-3-400x500-circle.jpg'
 							section='Meal Planning'
 							title='Honey Dijon Chicken'
@@ -126,24 +126,13 @@ const Dinner = () => {
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
-					<Link to='/beefStirFry'>
+					<Link to='/masonJarNoodles'>
 						<SingleSquare
-							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+							url='https://thegirlonbloor.com/wp-content/uploads/2016/01/Mason-Jar-Instant-Noodle-Soups-500x500.jpg'
 							section='Meal Planning'
-							title='Beef Stir Fry'
-							description='This is the EASIEST Beef Stir Fry recipe, with a 2-ingredient stir fry sauce.'
+							title='Mason Jar Instant Noodles'
+							description='These are the perfect on-the-go work lunch and packed full of raw veggies, quick-cook vermicelli noodles & shredded chicken!'
 							author='Taylor Stinson'
-						/>
-					</Link>
-				</div>
-				<div className='compilationContainerItem'>
-					<Link to='/zucchiniNoodleCaprese'>
-						<SingleSquare
-							url='https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2014/10/zucchini-noodle-caprese-6-300x300.jpg'
-							section='Weight Loss Recipes'
-							title='Zucchini Noodle Caprese'
-							description='This zucchini noodle caprese is a delicious, healthy salad made from zucchini noodles and a few simple, fresh ingredients.'
-							author='Lisa Bryan'
 						/>
 					</Link>
 				</div>
@@ -170,6 +159,17 @@ const Dinner = () => {
 					</Link>
 				</div>
 				<div className='compilationContainerItem'>
+					<Link to='/cucumberRadishSalad'>
+						<SingleSquare
+							url='https://downshiftology.com/wp-content/uploads/2021/07/Cucumber-Radish-Salad-main-1-300x300.jpg'
+							section='Weight Loss Recipes'
+							title='Cucumber Radish Salad'
+							description='Loaded with cool cucumbers, crisp radishes, fresh dill, and a simple olive oil lemon dressing for a fresh, tangy touch.'
+							author='Lisa Bryan'
+						/>
+					</Link>
+				</div>
+				<div className='compilationContainerItem'>
 					<Link to='/southwestChickenSalad'>
 						<SingleSquare
 							url='https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Southwest-Chicken-Salad-6-450x450.jpg'
@@ -184,4 +184,4 @@ const Dinner = () => {
 		</div>
 	);
 };
-export default Dinner;
+export default DairyFree;

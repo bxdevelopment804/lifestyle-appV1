@@ -34,8 +34,14 @@
 	top: -15px;
 	margin-top: 10px;
 }
+
 #single-square-photo {
 	width: 100%;
+}
+
+#single-square-description,
+#single-square-author {
+	color: grey;
 }
 
 @media (max-width: 750px) {

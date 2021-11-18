@@ -36,6 +36,7 @@
 	font-size: xx-large;
 	font-weight: 700;
 	font-family: 'Times New Roman', Times, serif;
+	color: black;
 }
 
 #primary-square-title,
@@ -44,6 +45,10 @@
 	position: relative;
 	top: -15px;
 	margin-top: 10px;
+}
+#primary-square-description,
+#primary-square-author {
+	color: grey;
 }
 
 /* #primary-square-photo {

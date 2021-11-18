@@ -29,6 +29,7 @@
 	font-size: medium;
 	font-weight: 700;
 	font-family: 'Times New Roman', Times, serif;
+	color: black;
 }
 
 #six-square-section,
@@ -36,6 +37,11 @@
 #six-square-description,
 #six-square-author {
 	margin-top: 2px;
+}
+
+#six-square-description,
+#six-square-author {
+	color: grey;
 }
 
 /* #six-square-photo { */

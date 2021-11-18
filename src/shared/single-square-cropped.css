@@ -1,4 +1,4 @@
-#single-square-container {
+#single-square-cropped-container {
 	/* display: flex; */
 	position: relative;
 	/* height: 400px; */
@@ -49,6 +49,11 @@
 	/* top: 50%; */
 	left: -25%;
 	/* transform: translate(-50%, -50%); */
+}
+
+#single-square-description,
+#single-square-author {
+	color: grey;
 }
 
 @media (max-width: 750px) {

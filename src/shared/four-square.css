@@ -29,6 +29,7 @@
 	font-size: medium;
 	font-weight: 700;
 	font-family: 'Times New Roman', Times, serif;
+	color: black;
 }
 
 #four-square-section,
@@ -36,6 +37,7 @@
 #four-square-description,
 #four-square-author {
 	margin-top: 2px;
+	/* text-decoration: none; */
 }
 
 #four-square-photo {
@@ -44,6 +46,17 @@
 	/* width: 15vw;
 	max-width: 340px; */
 }
+
+#four-square-description,
+#four-square-author {
+	color: grey;
+}
+
+/* #six-square-description,
+#six-square-author {
+	color: grey;
+	text-decoration: none;
+} */
 
 /* Tablets - LIGHT BLUE*/
 @media (max-width: 768px) and (min-width: 481px) {
