@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import SingleSquare from '../shared/single-square';
+import SingleSquareCropped from '../shared/single-square-cropped';
 
 import './generalCompilationFormatting.css';
 
@@ -16,7 +17,7 @@ const PastaDishes = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
@@ -27,7 +28,7 @@ const PastaDishes = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
@@ -38,7 +39,7 @@ const PastaDishes = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/penneTomatoMushroom'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'

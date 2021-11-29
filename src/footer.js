@@ -49,8 +49,9 @@ const Footer = (props) => {
 				</Link>
 			</div>
 			<div id='copyright' className='footerItem'>
-				"Copyright" © 2021HealthyLifestyle &nbsp; All Rights Reserved &nbsp;
-				Privacy Policy &nbsp; Terms &nbsp; Disclaimer &nbsp; Sitemap
+				"Copyright" © 2021HealthyLifestyle &nbsp; All Rights Reserved
+				{/* &nbsp;
+				Privacy Policy &nbsp; Terms &nbsp; Disclaimer &nbsp; Sitemap */}
 			</div>
 			<div id='iconsWithLogIn' className='footerItem'>
 				<a href='https://www.facebook.com/'>
@@ -68,7 +69,7 @@ const Footer = (props) => {
 				<a href='https://www.youtube.com/'>
 					<FontAwesomeIcon icon={faYoutube} className='iconItem' />
 				</a>
-				<FontAwesomeIcon icon={faRss} className='iconItem' />
+				{/* <FontAwesomeIcon icon={faRss} className='iconItem' /> */}
 			</div>
 			<div id='signatureBlock' className='footerItem'>
 				Replicated by <strong>BX Development</strong>

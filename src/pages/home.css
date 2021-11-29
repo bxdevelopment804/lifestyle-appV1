@@ -53,7 +53,9 @@ Link:active {
 	/* THE BELOW LINE WAS KEY TO GETTING THIS CONTAINER TO SIZE WITH THE IMAGE!! */
 	height: calc(0.475 * 100vw);
 	margin: auto;
-	margin-bottom: 5%;
+	/* margin-bottom: 5%; */
+	margin-bottom: 50px;
+	/* border: solid blue 1px; */
 
 	/* min-width: var(--main-min-width); */
 	/* padding-top: 56.25%; *Aspect ratio didn't function as described.* */
@@ -203,39 +205,39 @@ Link:active {
 	opacity: 100%;
 }
 
-#four-box-one {
+/* #four-box-one {
 	background-image: url(https://img.buzzfeed.com/buzzfeed-static/static/2021-02/25/20/asset/8a98f7f0d02c/sub-buzz-6394-1614285314-17.jpg?output-format=auto&output-quality=auto);
 	background-size: cover;
-	background-position: center center;
-	/* align-items: center; */
-}
+	background-position: center center; */
+/* align-items: center; */
+/* } */
 
-#four-box-one-label {
+/* #four-box-one-label {
 	position: absolute;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.3);
 	text-align: center;
 	font-family: 'Times New Roman', Times, serif;
 	left: 0.4%;
-}
+} */
 
-#four-box-two {
+/* #four-box-two {
 	background-image: url(https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/air-fryer-shrimp-boil-for-two-recipe.jpg);
 	background-size: cover;
 	background-position: center center;
-}
+} */
 
-#four-box-three {
+/* #four-box-three {
 	background-image: url(https://img.delicious.com.au/Q8jQkgVW/del/2016/05/butternut-spaghetti-with-prosciutto-and-brown-butter-30846-2.jpg);
 	background-size: cover;
 	background-position: center center;
-}
+} */
 
-#four-box-four {
+/* #four-box-four {
 	background-image: url(https://images.themodernproper.com/billowy-turkey/production/posts/2019/Lentil-Soup-with-Quinoa-and-Mushrooms-10_191012_000659.jpg?w=1200&auto=compress%2Cformat&fit=crop&fp-x=0.5&fp-y=0.5&dm=1610375259&s=e9ccb039a532d89ed4ff052f96ae3dcc);
 	background-size: cover;
 	background-position: center center;
-}
+} */
 
 .subtitle {
 	position: relative;
@@ -246,7 +248,6 @@ Link:active {
 	font-family: 'Times New Roman', Times, serif;
 	margin-top: 50px;
 	/* border: solid red; */
-
 	/* left: 28vw; */
 	/*	text-align: left;
 	width: calc(100vw -28vw - 28vw); */
@@ -370,9 +371,9 @@ Link:active {
 /* margin: auto; */
 /* } */
 
-.spacer {
-	/* border: solid green; */
-}
+/* .spacer { */
+/* border: solid green; */
+/* } */
 
 #signup-bar2 {
 	display: flex;
@@ -387,7 +388,6 @@ Link:active {
 	width: 100%;
 	margin-top: 35px;
 	font-family: 'Times New Roman', Times, serif;
-
 	/* padding-top: 12vh; */
 	/* padding: auto; */
 }

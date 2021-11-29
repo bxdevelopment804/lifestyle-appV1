@@ -6,14 +6,18 @@
 	/* width: calc(72vw / 4); */
 	width: 100%;
 	/* margin: auto; */
+	align-items: center;
+	height: 250px;
+	overflow: hidden;
 }
 
 #hoverIcon-photo {
-	/* position: absolute; */
+	display: flex;
+	position: relative;
 	/* width: calc(72vw / 4);
 	height: calc(72vw / 4); */
+	/* height: 250px; */
 	/* Height 250px was original setting before tinkering - 11/13/21 */
-	height: 250px;
 	width: 100%;
 	/* opacity: 100%; */
 	opacity: 75%;

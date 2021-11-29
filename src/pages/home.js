@@ -265,30 +265,41 @@ const Home = () => {
 				</div>
 
 				<div id='four-box-grid-container'>
-					<div id='four-box-grid-item1' className='four-box-grid-item'>
-						<HoverIcon
-							url='https://img.buzzfeed.com/buzzfeed-static/static/2021-02/25/20/asset/8a98f7f0d02c/sub-buzz-6394-1614285314-17.jpg?output-format=auto&output-quality=auto'
-							title='5-Ingredient'
-						/>
-					</div>
-					<div id='four-box-grid-item2' className='four-box-grid-item'>
-						<HoverIcon
-							url='https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/air-fryer-shrimp-boil-for-two-recipe.jpg'
-							title='Air Fryer'
-						/>
-					</div>
-					<div id='four-box-grid-item3' className='four-box-grid-item'>
-						<HoverIcon
-							url='https://img.delicious.com.au/Q8jQkgVW/del/2016/05/butternut-spaghetti-with-prosciutto-and-brown-butter-30846-2.jpg'
-							title='Keto'
-						/>
-					</div>
-					<div id='four-box-grid-item4' className='four-box-grid-item'>
-						<HoverIcon
-							url='https://images.themodernproper.com/billowy-turkey/production/posts/2019/Lentil-Soup-with-Quinoa-and-Mushrooms-10_191012_000659.jpg?w=1200&auto=compress%2Cformat&fit=crop&fp-x=0.5&fp-y=0.5&dm=1610375259&s=e9ccb039a532d89ed4ff052f96ae3dcc'
-							title='Vegetarian'
-						/>
-					</div>
+					<Link to='/plantBased'>
+						<div id='four-box-grid-item1' className='four-box-grid-item'>
+							<HoverIcon
+								// url='https://images.unsplash.com/photo-1571809839227-b2ac3d261257?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDI1fHxtZWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60'
+								url='https://image.freepik.com/free-photo/keto-salad-with-superfood-healthy-lifestyle_53876-101571.jpg'
+								title='Plant-Based'
+							/>
+						</div>
+					</Link>
+					<Link to='/mealPlanning'>
+						<div id='four-box-grid-item2' className='four-box-grid-item'>
+							<HoverIcon
+								url='https://images.unsplash.com/photo-1594849425906-205ebbc48c55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
+								title='Meal-Planning'
+							/>
+						</div>
+					</Link>
+					<Link to='/sandwiches'>
+						<div id='four-box-grid-item3' className='four-box-grid-item'>
+							<HoverIcon
+								// url='https://images.unsplash.com/photo-1571809864118-d0a73b090d6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjQ3fHxtZWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60'
+								url='https://image.freepik.com/free-photo/high-angle-delicious-sandwich-plate_23-2148633465.jpg'
+								title='Sandwiches'
+							/>
+						</div>
+					</Link>
+					<Link to='/pastaDishes'>
+						<div id='four-box-grid-item4' className='four-box-grid-item'>
+							<HoverIcon
+								// url='https://images.unsplash.com/photo-1568625365131-079e026a927d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
+								url='https://image.freepik.com/free-photo/close-up-pasta-with-sauce-parmesan-mushrooms-lettuce-dark-wooden-table_176474-2451.jpg'
+								title='Pasta Dishes'
+							/>
+						</div>
+					</Link>
 				</div>
 				<hr />
 				<p className='subtitle'>The Latest</p>

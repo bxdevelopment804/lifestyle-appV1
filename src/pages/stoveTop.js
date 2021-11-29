@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import SingleSquare from '../shared/single-square';
+import SingleSquareCropped from '../shared/single-square-cropped';
 
 import './generalCompilationFormatting.css';
 
@@ -16,7 +17,7 @@ const StoveTop = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/healthyFrenchToast'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-french-toast-with-strawberries.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Dinner'
 							title='Healthy French Toast With Strawberries'
@@ -27,7 +28,7 @@ const StoveTop = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/italianTunaMelt'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-italian-tuna-melt.jpg?quality=82&strip=1&resize=970%2C546'
 							section='Lunch'
 							title='Italian Tuna Melt'
@@ -38,7 +39,7 @@ const StoveTop = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/healthyUltimateBurger'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
 							section='Dinner'
 							title='The Healthy Ultimate Burger'
@@ -49,7 +50,7 @@ const StoveTop = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
@@ -60,7 +61,7 @@ const StoveTop = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
@@ -71,7 +72,7 @@ const StoveTop = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/penneTomatoMushroom'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'
@@ -82,7 +83,7 @@ const StoveTop = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/burritosRiceBeans'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import SingleSquare from '../shared/single-square';
+import SingleSquareCropped from '../shared/single-square-cropped';
 
 import './generalCompilationFormatting.css';
 
@@ -16,7 +17,7 @@ const BbqGrilling = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
@@ -27,7 +28,7 @@ const BbqGrilling = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/healthyUltimateBurger'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
 							section='Dinner'
 							title='The Healthy Ultimate Burger'

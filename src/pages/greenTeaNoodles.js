@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 import SingleSquare from '../shared/single-square';
 import FiveStarRating from '../shared/fiveStarRating';
@@ -20,16 +21,90 @@ const GreenTeaNoodles = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const [gradeIndex, setGradeIndex] = useState(-1);
-	const [numOfRatings, setNumOfRatings] = useState(5);
-	const [totalOfRatings, setTotalOfRatings] = useState(18);
-	const averageRating = totalOfRatings / numOfRatings;
-
-	const changeGradeIndex = (index) => {
-		setGradeIndex(index);
+	const printRecipe = () => {
+		window.print();
+		// var printWindow = window.open('');
+		// printWindow.document.write(
+		//   document.getElementById('printSection').innerHTML
+		// );
+		// printWindow.stop();
+		// printWindow.print();
+		// printWindow.close();
 	};
 
-	const updateAverageRating = () => {};
+	const [gradeIndex, setGradeIndex] = useState(-1);
+	const [currentRating, setCurrentRating] = useState(0);
+	const [numOfRatings, setNumOfRatings] = useState(5);
+	const [totalOfRatings, setTotalOfRatings] = useState(18);
+	const [averageRating, setAverageRating] = useState(
+		totalOfRatings / numOfRatings
+	);
+
+	const [previouslyRated, setPreviouslyRated] = useState(false);
+	const [ratingCountLimit, setRatingCountLimit] = useState(false);
+
+	const changeGradeIndex = (index) => {
+		if (!previouslyRated) {
+			setGradeIndex(index);
+			setCurrentRating(Number(index) + 1);
+			setTotalOfRatings(totalOfRatings + (Number(index) + 1));
+			setAverageRating(
+				((totalOfRatings + (Number(index) + 1)) / numOfRatings).toFixed(2)
+			);
+			setPreviouslyRated(true);
+			alert('Thanks for voting!');
+		}
+	};
+
+	const updateRatingCount = () => {
+		if (!ratingCountLimit) {
+			setNumOfRatings(numOfRatings + 1);
+			setRatingCountLimit(true);
+		}
+	};
+
+	const [recipeComment, setRecipeComment] = useState('');
+	const [reviewerName, setReviewerName] = useState('');
+	const [reviewerEmail, setReviewerEmail] = useState('');
+	const [commentModalIsOpen, setCommentModalIsOpen] = useState(false);
+
+	const updateComment = (event) => {
+		setRecipeComment(event.target.value);
+	};
+	const updateReviewerName = (event) => {
+		setReviewerName(event.target.value);
+	};
+	const updateReviewerEmail = (event) => {
+		setReviewerEmail(event.target.value);
+	};
+
+	function openCommentModal() {
+		if (recipeComment != '' && reviewerName != '' && reviewerEmail != '') {
+			setCommentModalIsOpen(true);
+		} else {
+			alert('Please complete all three fields.');
+		}
+	}
+
+	function closeCommentModal() {
+		setCommentModalIsOpen(false);
+		setRecipeComment('');
+		setReviewerName('');
+		setReviewerEmail('');
+	}
+
+	const customStyles = {
+		content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+		},
+	};
+
+	Modal.setAppElement('#root');
 
 	return (
 		<div id='pageContainer'>
@@ -40,11 +115,14 @@ const GreenTeaNoodles = () => {
 					gradeIndex={gradeIndex}
 					changeGradeIndex={changeGradeIndex}
 					numOfRatings={numOfRatings}
-					setNumOfRatings={setNumOfRatings}
+					// setNumOfRatings={setNumOfRatings}
 					totalOfRatings={totalOfRatings}
-					setTotalOfRatings={setTotalOfRatings}
-					updateAverageRating={updateAverageRating}
+					// setTotalOfRatings={setTotalOfRatings}
+					updateRatingCount={updateRatingCount}
 					averageRating={averageRating}
+					// setAverageRating={setAverageRating}
+					currentRating={currentRating}
+					// setCurrentRating={setCurrentRating}
 				/>
 			</div>
 			<div id='authorBlock'>
@@ -125,11 +203,10 @@ const GreenTeaNoodles = () => {
 						gradeIndex={gradeIndex}
 						changeGradeIndex={changeGradeIndex}
 						numOfRatings={numOfRatings}
-						setNumOfRatings={setNumOfRatings}
 						totalOfRatings={totalOfRatings}
-						setTotalOfRatings={setTotalOfRatings}
-						updateAverageRating={updateAverageRating}
+						updateRatingCount={updateRatingCount}
 						averageRating={averageRating}
+						currentRating={currentRating}
 					/>
 				</div>
 				<div id='headerContainer'>
@@ -139,22 +216,27 @@ const GreenTeaNoodles = () => {
 					<div id='block2' class='imageContainerWithButtons'>
 						<img
 							className='headerItem'
-							src='https://www.nospoonnecessary.com/wp-content/uploads/2018/10/Green-Tea-Poached-Salmon-Soba-Noodles-84-1-1024x1536.jpg'
+							src='https://imgr.search.brave.com/3nYpSHAMejANUk23odtup3gamIKRUjZbSg3BEqJSOUw/fit/768/512/ce/1/aHR0cHM6Ly93d3cu/bm9zcG9vbm5lY2Vz/c2FyeS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTgvMTAv/R3JlZW4tVGVhLVBv/YWNoZWQtU2FsbW9u/LVNvYmEtTm9vZGxl/cy0xMjAuanBn'
 							width='100%'
 						/>
-						<div id='reviewRecipe'>
-							<strong id='reviewRecipeText'>Review Recipe</strong>
-						</div>
-						<div id='pinRecipe'>
-							<strong>Pin Recipe</strong>
-						</div>
-						<div id='printRecipe'>
-							{' '}
+						<a href='#leaveReply'>
+							<div id='reviewRecipe'>
+								<strong id='reviewRecipeText'>Review Recipe</strong>
+							</div>
+						</a>
+						<a href='https://www.pinterest.com/'>
+							<div id='pinRecipe'>
+								<strong>Pin Recipe</strong>
+							</div>
+						</a>
+						<div id='printRecipe' onClick={printRecipe}>
 							<FontAwesomeIcon icon={faPrint} className='printIcon' />
 							&nbsp;&nbsp;
 							<strong>Print Recipe</strong>
 						</div>
 					</div>
+					{/* Added div below */}
+					{/* <div id='printSection'> */}
 					<div id='block3' className='headerItem'>
 						Flavorful, yet healthy and light, these Green Tea Noodles with
 						Sticky Sweet Chili Salmon are easy to make and perfect for busy
@@ -301,6 +383,9 @@ const GreenTeaNoodles = () => {
 							<div className='nutritionItem'>SmartPoints (FreeStyle): 11</div>
 						</div>
 					</div>
+					{/* Added div below */}
+					{/* </div> */}
+
 					<div id='block23' className='instructionItem'>
 						<strong>Keywords</strong>&nbsp; Dinner, Asian, Seafood
 					</div>
@@ -484,29 +569,62 @@ const GreenTeaNoodles = () => {
 								gradeIndex={gradeIndex}
 								changeGradeIndex={changeGradeIndex}
 								numOfRatings={numOfRatings}
-								setNumOfRatings={setNumOfRatings}
 								totalOfRatings={totalOfRatings}
-								setTotalOfRatings={setTotalOfRatings}
-								updateAverageRating={updateAverageRating}
+								updateRatingCount={updateRatingCount}
 								averageRating={averageRating}
+								currentRating={currentRating}
 							/>
 						</div>
 					</div>
 					<div id='commentText' className='replyItem'>
 						Comment*
-						<div id='commentBox' className='replyItem'></div>
+						<textarea
+							name='enteredComment'
+							id='commentBox'
+							value={recipeComment}
+							onChange={updateComment}
+						></textarea>
 					</div>
 					<div id='nameText' className='replyItem'>
 						Name*
-						<div id='nameField' className='replyItem'></div>
+						<div className='replyItem'>
+							<input
+								id='nameField'
+								type='text'
+								value={reviewerName}
+								onChange={updateReviewerName}
+							></input>
+						</div>
 					</div>
 					<div id='emailText' className='replyItem'>
 						Email*
-						<div id='emailField' className='replyItem'></div>
+						<div className='replyItem'>
+							<input
+								id='emailField'
+								type='text'
+								value={reviewerEmail}
+								onChange={updateReviewerEmail}
+							></input>
+						</div>
 					</div>
-					<div id='postButton' className='replyItem'>
+					<div id='postButton' className='replyItem' onClick={openCommentModal}>
 						Post Comment
 					</div>
+					<Modal
+						id='commentModal'
+						isOpen={commentModalIsOpen}
+						onRequestClose={closeCommentModal}
+						style={customStyles}
+						contentLabel='commentModal'
+					>
+						<h2>The following comment has been recorded!</h2>
+						<div> Comment: {recipeComment}</div>
+						<div> Name: {reviewerName}</div>
+						<div> Email: {reviewerEmail}</div>
+						<button className='buttonItem' onClick={closeCommentModal}>
+							Close
+						</button>
+					</Modal>
 				</div>
 			</div>
 		</div>

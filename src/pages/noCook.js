@@ -17,7 +17,7 @@ const NoCook = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/chickenSaladSandwich'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Lunch'
 							title='Chicken Salad Sandwich with Curry and Raisins'

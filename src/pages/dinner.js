@@ -15,9 +15,9 @@ const Dinner = () => {
 		<div>
 			<h1 id='compilationTitle'>Dinner</h1>
 			<div id='compilationContainer'>
-				<div className='compilationContainerItem'>
+				{/* <div className='compilationContainerItem'>
 					<Link to='/greenTeaNoodles'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://img.delicious.com.au/EEJ2ozkv/del/2020/10/green-tea-noodles-with-sticky-sweet-chilli-salmon-140868-2.jpg'
 							section='Dinner'
 							title='Green Tea Noodles with Sticky Sweet Chili Salmon'
@@ -25,7 +25,7 @@ const Dinner = () => {
 							author='Phoebe Wood'
 						/>
 					</Link>
-				</div>
+				</div> */}
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
 						<SingleSquareCropped
@@ -39,7 +39,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
@@ -50,7 +50,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/italianTunaMelt'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-italian-tuna-melt.jpg?quality=82&strip=1&resize=970%2C546'
 							section='Lunch'
 							title='Italian Tuna Melt'
@@ -61,7 +61,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/chickenSaladSandwich'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Lunch'
 							title='Chicken Salad Sandwich with Curry and Raisins'
@@ -72,7 +72,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/healthyUltimateBurger'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
 							section='Dinner'
 							title='The Healthy Ultimate Burger'
@@ -83,7 +83,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
@@ -94,7 +94,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/penneTomatoMushroom'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'
@@ -105,7 +105,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/burritosRiceBeans'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'
@@ -116,7 +116,7 @@ const Dinner = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/honeyDijonChicken'>
-						<SingleSquareCropped
+						<SingleSquare
 							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Sheet-Pan-Honey-Mustard-Chicken-3-400x500-circle.jpg'
 							section='Meal Planning'
 							title='Honey Dijon Chicken'

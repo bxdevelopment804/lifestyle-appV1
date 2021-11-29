@@ -1,0 +1,33 @@
+#searchBox {
+	border: solid grey;
+	height: 200px;
+	width: 300px;
+	margin: auto;
+	overflow: scroll;
+	border-radius: 3px;
+	background-color: rgb(0, 0, 0, 0.05);
+}
+
+#inputField {
+	margin: 10px auto;
+}
+
+/* .searchLinks {
+  margin-bottom: 15px;
+} */
+
+/* p {
+  margin: 10px 0px;
+} */
+
+#searchBox::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* #searchLinks {
+  border: solid blue;
+} */

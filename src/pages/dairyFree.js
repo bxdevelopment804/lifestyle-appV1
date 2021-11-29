@@ -15,7 +15,7 @@ const DairyFree = () => {
 		<div>
 			<h1 id='compilationTitle'>Dairy Free</h1>
 			<div id='compilationContainer'>
-				<div className='compilationContainerItem'>
+				{/* <div className='compilationContainerItem'>
 					<Link to='/greenTeaNoodles'>
 						<SingleSquare
 							url='https://img.delicious.com.au/EEJ2ozkv/del/2020/10/green-tea-noodles-with-sticky-sweet-chilli-salmon-140868-2.jpg'
@@ -25,10 +25,10 @@ const DairyFree = () => {
 							author='Phoebe Wood'
 						/>
 					</Link>
-				</div>
+				</div> */}
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
@@ -39,7 +39,7 @@ const DairyFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
@@ -50,7 +50,7 @@ const DairyFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/healthyUltimateBurger'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
 							section='Dinner'
 							title='The Healthy Ultimate Burger'
@@ -61,7 +61,7 @@ const DairyFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
@@ -72,7 +72,7 @@ const DairyFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
@@ -83,7 +83,7 @@ const DairyFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
@@ -94,7 +94,7 @@ const DairyFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
@@ -105,7 +105,7 @@ const DairyFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/burritosRiceBeans'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'

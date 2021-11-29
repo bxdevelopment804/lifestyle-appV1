@@ -53,6 +53,8 @@ const OnePotOrSkillet = () => {
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
+							description='This classic vegan mac and cheese is ultra cheesy, saucy and creamy.'
+							author='Molly Patrick'
 						/>
 					</Link>
 				</div>

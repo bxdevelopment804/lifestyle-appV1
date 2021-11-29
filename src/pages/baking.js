@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import SingleSquare from '../shared/single-square';
+import SingleSquareCropped from '../shared/single-square-cropped';
 
 import './generalCompilationFormatting.css';
 
@@ -16,7 +17,7 @@ const Baking = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
@@ -27,7 +28,7 @@ const Baking = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'

@@ -17,7 +17,7 @@ const GlutenFree = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
@@ -28,7 +28,7 @@ const GlutenFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
@@ -39,7 +39,7 @@ const GlutenFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
@@ -50,7 +50,7 @@ const GlutenFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
@@ -61,7 +61,7 @@ const GlutenFree = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'

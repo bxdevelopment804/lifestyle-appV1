@@ -17,7 +17,7 @@ const PlantBased = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
@@ -28,7 +28,7 @@ const PlantBased = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
@@ -39,7 +39,7 @@ const PlantBased = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
@@ -50,7 +50,7 @@ const PlantBased = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
@@ -61,7 +61,7 @@ const PlantBased = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/penneTomatoMushroom'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'
@@ -72,7 +72,7 @@ const PlantBased = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/burritosRiceBeans'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'

@@ -57,3 +57,9 @@ a {
 		margin: 5px auto;
 	}
 }
+
+@media print {
+	#footerContainer {
+		display: none !important;
+	}
+}

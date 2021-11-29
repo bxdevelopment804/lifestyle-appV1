@@ -54,15 +54,12 @@
 /* #star1:hover ~ .ratingIcon {
 	color: black;
 }
-
 #star2:hover ~ .ratingIcon {
 	color: black;
 }
-
 #star3:hover ~ .ratingIcon {
 	color: black;
 }
-
 #star4:hover ~ .ratingIcon {
 	color: black;
 } */
@@ -75,11 +72,9 @@
 	color: red;
 	opacity: 100%;
 }
-
 .newTestStars:hover {
 	cursor: crosshair;
 }
-
 .newTestStars:hover ~ .newTestStars {
 	opacity: 25%;
 } */
@@ -267,7 +262,7 @@
 /* Red placeholder for five star rating */
 #rating2 {
 	display: flex;
-	position: relative;
+	position: absolute;
 	background-color: red;
 	color: aliceblue;
 	/* border: solid green; */
@@ -277,7 +272,7 @@
 	/* width: 770px; */
 	width: 67vw;
 	max-width: 770px;
-	margin: 10px auto 20px;
+	/* margin: 10px auto 20px; */
 	/* margin: auto; */
 }
 
@@ -335,9 +330,9 @@
 	margin: 20px auto;
 }
 
-/* .instructionItem {
-	border: solid blue;
-} */
+.instructionItem {
+	/* border: solid blue; */
+}
 
 .ingredient {
 	font-size: larger;
@@ -378,8 +373,7 @@
 }
 .instruction {
 	margin-bottom: 10px;
-	/* text-indent: 10px; */
-	padding-left: 5px;
+	text-indent: 10px;
 }
 
 /* Nutrition information */
@@ -452,6 +446,7 @@
 	grid-column-end: 3;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 10px;
 }
 .socialMediaButtons {
 	display: flex;
@@ -593,27 +588,20 @@
 	font-weight: 700;
 	display: flex;
 	flex-direction: column;
-	/* text-align: left; */
-	/* background-color: red; */
+	text-align: left;
 }
 #commentBox {
-	display: block;
 	grid-column-start: 1;
 	grid-column-end: -1;
 	grid-row-start: 7;
 	grid-row-end: 9;
 	min-height: 150px;
-	/* height: auto; */
 	border: solid black 1px;
 	border-radius: 3px;
-	/* background-color: lightblue; */
-	padding: 10px;
-	box-sizing: border-box;
-	/* flex-wrap: wrap; */
-	/* word-wrap: break-word; */
-	resize: none;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: x-large;
+	/* 11/19/20 - Below three lines not working. */
+	/* text-align: top; */
+	/* word-wrap: normal;
+  overflow: scroll; */
 }
 #nameText,
 #emailText {
@@ -628,11 +616,6 @@
 	border-radius: 3px;
 	min-height: 50px;
 	width: 100%;
-	/* background-color: lightcoral; */
-	padding: 10px;
-	box-sizing: border-box;
-	/* resize: none; */
-	font-size: x-large;
 }
 #postButton {
 	display: block;
@@ -648,25 +631,13 @@
 	font-weight: 700;
 	grid-column-start: 1;
 	grid-column-end: -1;
-	cursor: pointer;
-}
-
-#postButton:hover,
-#reviewRecipe:hover,
-#pinRecipe:hover {
-	background-color: rgb(201, 0, 0);
-}
-
-#printRecipe:hover {
-	background-color: lightgray;
-	cursor: pointer;
 }
 
 .replyItem {
 	/* border: solid orange; */
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
 	#pageContainer {
 		/* background-color: pink; */
 	}
@@ -759,243 +730,18 @@
 	}
 }
 
-/* Mobile - GREEN */
-@media (max-width: 480px) {
-	#pageContainer {
-		/* display: flex; */
-		/* flex-direction: column; */
-		width: 92vw;
-		/* max-width: 1200px; */
-		margin: auto;
-		/* border: solid blue; */
-	}
-
-	#sectionTitle {
-		margin: 8px 0px 8px;
-	}
-
-	#rating {
-		margin: 15px 0px 15px;
-	}
-
-	#recipeButton {
-		display: block;
-		/* position: relative;
-		width: 100vw; */
-	}
-
-	#authorBlock {
-		/* border: solid royalblue 1px; */
-		width: 92vw;
-	}
-
-	#description,
-	.foodDescription {
-		width: 92vw;
-		margin: 5px auto;
-	}
-
-	#image1,
-	#image2,
-	#image3 {
-		margin: 10px auto;
-	}
-
-	#videoHeader,
-	#recipeSection {
-		width: 92vw;
-	}
-
-	/*----------------------------
-	NEED TO SET BOTTOM RECIPE ITEMS/SECTIONS TO 92VW - 10/27/21 */
-	/*----------------------------*/
-
-	#rating2 {
-		display: flex;
-		position: relative;
-		background-color: red;
-		color: aliceblue;
-		/* border: solid green; */
-		height: 40px;
-		align-items: center;
-		justify-content: center;
-		/* text-indent: 2vw; */
-		/* width: 770px; */
-		width: 92vw;
-		max-width: 770px;
-		margin: 10px auto 20px;
-		/* margin: auto; */
-	}
-
-	#headerContainer {
-		display: grid;
-		grid-template-columns: 1.5fr 1fr;
-		grid-auto-rows: minmax(30px, auto);
-		justify-content: center;
-		margin: 20px 0;
-		gap: 15px;
-		row-gap: 5px;
-		/* width: 770px; */
-		width: 87vw;
-		max-width: 770px;
-		margin: auto;
-		/* border: solid green 1px; */
-	}
-
-	#instructionContainer {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: minmax(30px, auto);
-		justify-content: center;
-		margin: 20px 0;
-		gap: 15px;
-		row-gap: 5px;
-		/* width: 770px; */
-		width: 87vw;
-		max-width: 770px;
-		margin: 20px auto;
-		/* border: solid green 1px; */
-	}
-
-	#block1 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 1;
-		grid-row-end: 2;
-	}
-
-	#block2 {
-		grid-column-start: 2;
-		grid-column-end: 3;
-		grid-row-start: 1;
-		grid-row-end: 2;
-	}
-
-	#block17 {
-		/* border: solid blue 1px; */
-		width: 100%;
-		/* display: flex; */
-		/* position: relative; */
-		/* justify-content: left; */
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-
-	#block18 {
-		padding: 10px 0px 25px;
-	}
-
-	/* #sectionTitle {
-		margin: 12px 0px;
-		border: solid blue;
-	} */
-
-	.ingredient {
-		font-size: medium;
-		/* line-height: 1px; */
-		/* border: solid red; */
-		margin: 0px;
-	}
-
-	#media {
-		margin: 8px 0px;
-	}
-
-	.socialMediaButtons {
-		display: flex;
-		height: 44px;
-		/* width: 100%; */
-		width: 87vw;
-		/* border: solid blue; */
-		border-radius: 10px;
-		color: aliceblue;
-		align-items: center;
-		justify-content: center;
-		font-size: larger;
-		font-weight: 700;
-	}
-
-	#block29 {
-		grid-column-start: 1;
-		grid-column-end: -1;
-		/* grid-row-start: 1;
-		grid-row-end: 4; */
-		display: flex;
-		object-fit: cover;
-		/* border: solid green; */
-		/* width: calc(770px / 5); */
-		/* width: calc(67vw / 5); */
-		/* max-width: 770px; */
-		/* border-radius: 100%; */
-		display: flex;
-		/* flex-direction: column; */
-		flex-direction: row;
-		/* justify-self: center; */
-		margin: auto;
-		/* align-items: center; */
-	}
-
-	#footerAuthContainer {
-		width: 87vw;
-	}
-
-	#block30,
-	#block31,
-	#block32 {
-		grid-column-start: 1;
-		grid-column-end: -1;
-	}
-
-	#block29 {
-		display: flex;
-		justify-content: center;
-		margin: auto;
-		border: solid blue 1px;
-	}
-
-	#postButton {
-		display: flex;
-		/* position: relative; */
-		/* width: 100%; */
-		/* width: 277px; */
-		justify-content: stretch;
-		align-items: center;
-		height: 50px;
-		/* margin: auto; */
-		background-color: red;
-		color: aliceblue;
-		font-size: xx-large;
-		font-weight: 700;
-		grid-column-start: 1;
-		grid-column-end: -1;
-	}
-
-	/* .star {
-		height: 5px;
-		border: solid blue 1px;
-	} */
-	/* Ingredient List */
-	/* #block17 { */
-	/* font-size: smaller; */
-	/* border: solid blue; */
-	/* } */
-	/* Ad Space */
-	/* #block18 {
-		display: none;
-		border: solid red;
-		grid-column: -1 -1;
-	} */
-}
-
 @media print {
+	/* * {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+  } */
+
 	#sectionTitle,
 	#title,
 	#rating,
+	#rating2,
 	#authorBlock,
-	#authorInfo,
-	#authorPhoto,
-	#authorName,
-	#recipeButton,
 	#media,
 	#date,
 	#description,
@@ -1003,50 +749,128 @@
 	#videoHeader,
 	#video1,
 	#title2,
-	#image2,
-	.foodDescription,
 	#title3,
+	.foodDescription,
+	#image2,
 	#image3,
-	#rating2,
 	#block23,
 	#block24,
 	#block25,
 	#block26,
 	#block27,
-	#block28,
-	#block29,
-	#block30,
-	#block31,
-	#block32,
-	#block33,
+	.socialMediaButtons,
+	#footerAuthContainer,
 	#block34,
-	#block35,
-	#block36,
-	#block37,
-	#block38,
-	#block39,
-	#block40,
-	#leaveReply,
-	#emailMessage,
-	#commentText,
-	#nameText,
-	#emailText,
-	#postButton,
+	#footerLinkContainer,
 	#block18 {
 		display: none !important;
-		/* visibility: hidden; */
+		/* visibility: hidden !important; */
 	}
 
-	#block19 {
-		break-before: always !important;
-		-webkit-break-before: always !important;
-	}
-
-	#instructionContainer {
+	/* ----------------- */
+	#block17,
+	#ingredientList,
+	#headerContainer {
 		display: block;
+		width: 100vw !important;
+		border: solid purple;
 	}
-	/* #printSection { */
-	/* display: contents; */
-	/* visibility: visible; */
-	/* } */
+	#block18 {
+		width: 0px !important;
+		/* display: none !important; */
+		visibility: none !important;
+		/* font-size: 0px !important; */
+	}
+	.ingredient,
+	#block16,
+	#block4,
+	#block3,
+	#block2,
+	#block1,
+	#block5,
+	#block6,
+	#block7,
+	#block8,
+	#block9,
+	#block19,
+	#block20 {
+		margin: 0px 0px !important;
+		line-height: 1.2em !important;
+	}
+	/* .subBlock-1 {
+    text-align: left !important;
+  } */
+	#block19 {
+		break-before: auto !important;
+		break-after: avoid !important;
+	}
+	#block20 {
+		break-before: avoid !important;
+	}
+	#printSection {
+		/* padding: 0in 0.125in !important; */
+		position: absolute !important;
+		display: block;
+		border: solid red;
+		margin-left: 0in !important;
+		/* width: 95vw !important; */
+		width: 8.5in !important;
+		left: 0in !important;
+		margin-left: 0% !important;
+		padding: 0% !important;
+	}
+	#headerContainer {
+		position: relative !important;
+		/* display: flex !important; */
+		border: solid blue;
+		/* width: 95vw !important; */
+		/* width: 8.5in !important; */
+		width: 100% !important;
+		left: 0in !important;
+		/* margin-left: 0% !important; */
+		margin: auto !important;
+	}
+
+	/* ----------------- */
+
+	/* #instructionContainer {
+    break-inside: always !important;
+  }
+  #ingredientList {
+    break-inside: always !important;
+  }
+  .ingredient {
+    break-before: auto !important;
+    break-inside: auto !important;
+    break-after: auto !important;
+  }
+  #block16 {
+    break-before: always !important;
+    break-after: avoid-page !important;
+  }
+  #block17 {
+    break-before: avoid-page !important;
+    break-inside: always !important;
+  }
+  #block18 {
+    break-before: avoid-page !important;
+    break-inside: always !important;
+    grid-column-start: 1 !important;
+    grid-column-end: -1 !important;
+    display: block;
+  }
+  #block19 {
+  }
+  #block20 {
+    break-before: avoid !important;
+    break-inside: always !important;
+  }
+  #block21 {
+    page-break-before: always !important;
+  }
+  #block22,
+  #block17,
+  #block18 {
+    page-break-before: avoid !important;
+  } */
 }

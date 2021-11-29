@@ -17,7 +17,7 @@ const Paleo = () => {
 			<div id='compilationContainer'>
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
@@ -28,7 +28,7 @@ const Paleo = () => {
 				</div>
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
-						<SingleSquare
+						<SingleSquareCropped
 							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'

@@ -4,30 +4,19 @@ import './ratingStar.css';
 import './fiveStarRating.css';
 
 const FiveStarRating = (props) => {
-	// const [gradeIndex, setGradeIndex] = useState(-1);
 	const GRADES = ['Poor', 'Fair', 'Good', 'Very good', 'Excellent'];
 	const activeStar = {
 		fill: 'black',
 	};
-	// const changeGradeIndex = (index) => {
-	// 	setGradeIndex(index);
-	// };
-
-	const currentRating = Number(props.gradeIndex) + 1;
 
 	return (
-		<div className='starContainer'>
-			{/* <h1 className='result'>
-				{GRADES[gradeIndex] ? GRADES[gradeIndex] : "You didn't rate yet"}
-			</h1> */}
+		<div className='starContainer' onClick={props.updateRatingCount}>
 			<div className='stars'>
 				{GRADES.map((grade, index) => (
 					<RatingStar
 						index={index}
 						key={grade}
-						// changeGradeIndex={changeGradeIndex}
 						changeGradeIndex={props.changeGradeIndex}
-						// style={gradeIndex >= index ? activeStar : {}}
 						style={props.gradeIndex >= index ? activeStar : {}}
 					/>
 				))}
@@ -38,6 +27,12 @@ const FiveStarRating = (props) => {
 					&nbsp; {props.averageRating} stars with {props.numOfRatings} votes
 				</div>
 			)}
+			{/* Below section left in just for troubleshooting. */}
+			{/* <div>&nbsp;Grade Index: {props.gradeIndex}&nbsp;</div>
+			<div>Current Rating: {props.currentRating}&nbsp;</div>
+			<div>Num of Ratings: {props.numOfRatings}&nbsp;</div>
+			<div>Total of Ratings: {props.totalOfRatings}&nbsp;</div>
+			<div>Average Rating: {props.averageRating}&nbsp;</div> */}
 		</div>
 	);
 };
