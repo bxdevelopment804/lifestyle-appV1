@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 import SingleSquare from '../shared/single-square';
 import FiveStarRating from '../shared/fiveStarRating';
@@ -20,11 +21,106 @@ const CucumberRadishSalad = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
+	const printRecipe = () => {
+		window.print();
+	};
+
+	// Five star rating state and associated functions
 	const [gradeIndex, setGradeIndex] = useState(-1);
+	const [currentRating, setCurrentRating] = useState(0);
+	const [numOfRatings, setNumOfRatings] = useState(5);
+	const [totalOfRatings, setTotalOfRatings] = useState(18);
+	const [averageRating, setAverageRating] = useState(
+		totalOfRatings / numOfRatings
+	);
+
+	const [previouslyRated, setPreviouslyRated] = useState(false);
+	const [ratingCountLimit, setRatingCountLimit] = useState(false);
 
 	const changeGradeIndex = (index) => {
-		setGradeIndex(index);
+		if (!previouslyRated) {
+			setGradeIndex(index);
+			setCurrentRating(Number(index) + 1);
+			setTotalOfRatings(totalOfRatings + (Number(index) + 1));
+			setAverageRating(
+				((totalOfRatings + (Number(index) + 1)) / numOfRatings).toFixed(2)
+			);
+			setPreviouslyRated(true);
+			alert('Thanks for voting!');
+		}
 	};
+
+	const updateRatingCount = () => {
+		if (!ratingCountLimit) {
+			setNumOfRatings(numOfRatings + 1);
+			setRatingCountLimit(true);
+		}
+	};
+
+	// Review recipe state and associated functions
+	const [recipeComment, setRecipeComment] = useState('');
+	const [reviewerName, setReviewerName] = useState('');
+	const [reviewerEmail, setReviewerEmail] = useState('');
+	const [commentModalIsOpen, setCommentModalIsOpen] = useState(false);
+
+	const updateComment = (event) => {
+		setRecipeComment(event.target.value);
+	};
+	const updateReviewerName = (event) => {
+		setReviewerName(event.target.value);
+	};
+	const updateReviewerEmail = (event) => {
+		setReviewerEmail(event.target.value);
+	};
+
+	function openCommentModal() {
+		if (recipeComment != '' && reviewerName != '' && reviewerEmail != '') {
+			setCommentModalIsOpen(true);
+		} else {
+			alert('Please complete all three fields.');
+		}
+	}
+
+	function closeCommentModal() {
+		setCommentModalIsOpen(false);
+		setRecipeComment('');
+		setReviewerName('');
+		setReviewerEmail('');
+	}
+
+	// Mailing list sign up state and associated functions
+	const [signUpEmail, setSignUpEmail] = useState('');
+	const [signUpModalIsOpen, setSignUpModalIsOpen] = useState(false);
+
+	const updateSignUpEmail = (event) => {
+		setSignUpEmail(event.target.value);
+	};
+
+	function openSignUpModal() {
+		if (signUpEmail != '') {
+			setSignUpModalIsOpen(true);
+		} else {
+			alert('Please enter a complete email to sign up for our mailing list.');
+		}
+	}
+
+	function closeSignUpModal() {
+		setSignUpModalIsOpen(false);
+		setSignUpEmail('');
+	}
+
+	const customStyles = {
+		content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+		},
+	};
+
+	Modal.setAppElement('#root');
 
 	const mealType = 'Salad';
 	const cuisineType = 'American';
@@ -79,6 +175,11 @@ const CucumberRadishSalad = () => {
 				<FiveStarRating
 					gradeIndex={gradeIndex}
 					changeGradeIndex={changeGradeIndex}
+					numOfRatings={numOfRatings}
+					totalOfRatings={totalOfRatings}
+					updateRatingCount={updateRatingCount}
+					averageRating={averageRating}
+					currentRating={currentRating}
 				/>
 			</div>
 			<div id='authorBlock'>
@@ -100,9 +201,15 @@ const CucumberRadishSalad = () => {
 				</a>
 			</div>
 			<div id='media'>
-				<FontAwesomeIcon icon={faPinterest} className='titleIcon' />
-				<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
-				<FontAwesomeIcon icon={faEnvelope} className='titleIcon' />
+				<a href='https://www.pinterest.com/'>
+					<FontAwesomeIcon icon={faPinterest} className='titleIcon' />
+				</a>
+				<a href='https://www.facebook.com/'>
+					<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
+				</a>
+				<a href='https://www.instagram.com/'>
+					<FontAwesomeIcon icon={faInstagram} className='titleIcon' />
+				</a>
 			</div>
 			<div id='date'>Published: {recipeDate}</div>
 			<p id='description'>{recipeDescription}</p>
@@ -133,6 +240,11 @@ const CucumberRadishSalad = () => {
 					<FiveStarRating
 						gradeIndex={gradeIndex}
 						changeGradeIndex={changeGradeIndex}
+						numOfRatings={numOfRatings}
+						totalOfRatings={totalOfRatings}
+						updateRatingCount={updateRatingCount}
+						averageRating={averageRating}
+						currentRating={currentRating}
 					/>
 				</div>
 				<div id='headerContainer'>
@@ -141,13 +253,17 @@ const CucumberRadishSalad = () => {
 					</div>
 					<div id='block2' class='imageContainerWithButtons'>
 						<img className='headerItem' src={smallRecipePhoto} width='100%' />
-						<div id='reviewRecipe'>
-							<strong id='reviewRecipeText'>Review Recipe</strong>
-						</div>
-						<div id='pinRecipe'>
-							<strong>Pin Recipe</strong>
-						</div>
-						<div id='printRecipe'>
+						<a href='#leaveReply'>
+							<div id='reviewRecipe'>
+								<strong id='reviewRecipeText'>Review Recipe</strong>
+							</div>
+						</a>
+						<a href='https://www.pinterest.com/'>
+							<div id='pinRecipe'>
+								<strong>Pin Recipe</strong>
+							</div>
+						</a>
+						<div id='printRecipe' onClick={printRecipe}>
 							<FontAwesomeIcon icon={faPrint} className='printIcon' />
 							&nbsp;&nbsp;
 							<strong>Print Recipe</strong>
@@ -285,7 +401,9 @@ const CucumberRadishSalad = () => {
 					</div>
 					<div id='block24' className='instructionItem'>
 						<div id='instagramPlaceholder'>
-							<FontAwesomeIcon icon={faInstagram} className='instagramIcon' />
+							<a href='https://www.instagram.com/'>
+								<FontAwesomeIcon icon={faInstagram} className='instagramIcon' />
+							</a>
 						</div>
 						<div id='instagramText'>
 							<div>
@@ -309,27 +427,64 @@ const CucumberRadishSalad = () => {
 								Create a FREE account for quick & easy access
 							</h3>
 							<div id='signup-bar-inputs'>
-								<input type='text' />
-								<button>START SAVING</button>
+								<input
+									id='signUpEmailField'
+									type='text'
+									placeholder='Email address...'
+									value={signUpEmail}
+									onChange={updateSignUpEmail}
+								/>
+								<button onClick={openSignUpModal}>START SAVING</button>
 							</div>
+							<Modal
+								id='signUpModal'
+								isOpen={signUpModalIsOpen}
+								onRequestClose={closeSignUpModal}
+								style={customStyles}
+								contentLabel='signUpModal'
+							>
+								<h2>The following email has been added to our mailing list!</h2>
+								<div id='signUpModalEmail'> Email: {signUpEmail}</div>
+								<button className='buttonItem' onClick={closeSignUpModal}>
+									Close
+								</button>
+							</Modal>
 						</div>
 					</div>
 					<div id='block27' className='instructionItem'>
 						Share this recipe
 					</div>
 					<div id='block28' className='instructionItem'>
-						<div id='facebookButton' className='socialMediaButtons'>
-							<FontAwesomeIcon icon={faFacebookSquare} className='icon' />
-							&nbsp;&nbsp;Facebook
-						</div>
-						<div id='pintrestButton' className='socialMediaButtons'>
-							<FontAwesomeIcon icon={faPinterestSquare} className='icon' />
-							&nbsp;&nbsp;Pin
-						</div>
-						<div id='emailButton' className='socialMediaButtons'>
-							<FontAwesomeIcon icon={faEnvelope} className='icon' />
-							&nbsp;&nbsp;Email
-						</div>
+						<a
+							href='https://www.facebook.com/'
+							id='facebookAnchor'
+							className='socialMediaAnchors'
+						>
+							<div id='facebookButton' className='socialMediaButtons'>
+								<FontAwesomeIcon icon={faFacebookSquare} className='icon' />
+								&nbsp;&nbsp;Facebook
+							</div>
+						</a>
+						<a
+							href='https://www.pinterest.com/'
+							id='pinterestAnchor'
+							className='socialMediaAnchors'
+						>
+							<div id='pintrestButton' className='socialMediaButtons'>
+								<FontAwesomeIcon icon={faPinterestSquare} className='icon' />
+								&nbsp;&nbsp;Pin
+							</div>
+						</a>
+						<a
+							href='https://www.instagram.com/'
+							id='instagramAnchor'
+							className='socialMediaAnchors'
+						>
+							<div id='instagramButton' className='socialMediaButtons'>
+								<FontAwesomeIcon icon={faInstagram} className='icon' />
+								&nbsp;&nbsp;Instagram
+							</div>
+						</a>
 					</div>
 				</div>
 				<div id='footerAuthContainer'>
@@ -442,24 +597,63 @@ const CucumberRadishSalad = () => {
 							<FiveStarRating
 								gradeIndex={gradeIndex}
 								changeGradeIndex={changeGradeIndex}
+								numOfRatings={numOfRatings}
+								totalOfRatings={totalOfRatings}
+								updateRatingCount={updateRatingCount}
+								averageRating={averageRating}
+								currentRating={currentRating}
 							/>
 						</div>
 					</div>
 					<div id='commentText' className='replyItem'>
 						Comment*
-						<div id='commentBox' className='replyItem'></div>
+						<textarea
+							name='enteredComment'
+							id='commentBox'
+							value={recipeComment}
+							onChange={updateComment}
+						></textarea>
 					</div>
 					<div id='nameText' className='replyItem'>
 						Name*
-						<div id='nameField' className='replyItem'></div>
+						<div className='replyItem'>
+							<input
+								id='nameField'
+								type='text'
+								value={reviewerName}
+								onChange={updateReviewerName}
+							></input>
+						</div>
 					</div>
 					<div id='emailText' className='replyItem'>
 						Email*
-						<div id='emailField' className='replyItem'></div>
+						<div className='replyItem'>
+							<input
+								id='emailField'
+								type='text'
+								value={reviewerEmail}
+								onChange={updateReviewerEmail}
+							></input>
+						</div>
 					</div>
-					<div id='postButton' className='replyItem'>
+					<div id='postButton' className='replyItem' onClick={openCommentModal}>
 						Post Comment
 					</div>
+					<Modal
+						id='commentModal'
+						isOpen={commentModalIsOpen}
+						onRequestClose={closeCommentModal}
+						style={customStyles}
+						contentLabel='commentModal'
+					>
+						<h2>The following comment has been recorded!</h2>
+						<div> Comment: {recipeComment}</div>
+						<div> Name: {reviewerName}</div>
+						<div> Email: {reviewerEmail}</div>
+						<button className='buttonItem' onClick={closeCommentModal}>
+							Close
+						</button>
+					</Modal>
 				</div>
 			</div>
 		</div>
