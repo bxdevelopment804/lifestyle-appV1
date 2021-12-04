@@ -23,15 +23,9 @@ const GreenTeaNoodles = () => {
 
 	const printRecipe = () => {
 		window.print();
-		// var printWindow = window.open('');
-		// printWindow.document.write(
-		//   document.getElementById('printSection').innerHTML
-		// );
-		// printWindow.stop();
-		// printWindow.print();
-		// printWindow.close();
 	};
 
+	// Five star rating state and associated functions
 	const [gradeIndex, setGradeIndex] = useState(-1);
 	const [currentRating, setCurrentRating] = useState(0);
 	const [numOfRatings, setNumOfRatings] = useState(5);
@@ -63,6 +57,7 @@ const GreenTeaNoodles = () => {
 		}
 	};
 
+	// Review recipe state and associated functions
 	const [recipeComment, setRecipeComment] = useState('');
 	const [reviewerName, setReviewerName] = useState('');
 	const [reviewerEmail, setReviewerEmail] = useState('');
@@ -91,6 +86,27 @@ const GreenTeaNoodles = () => {
 		setRecipeComment('');
 		setReviewerName('');
 		setReviewerEmail('');
+	}
+
+	// Mailing list sign up state and associated functions
+	const [signUpEmail, setSignUpEmail] = useState('');
+	const [signUpModalIsOpen, setSignUpModalIsOpen] = useState(false);
+
+	const updateSignUpEmail = (event) => {
+		setSignUpEmail(event.target.value);
+	};
+
+	function openSignUpModal() {
+		if (signUpEmail != '') {
+			setSignUpModalIsOpen(true);
+		} else {
+			alert('Please enter a complete email to sign up for our mailing list.');
+		}
+	}
+
+	function closeSignUpModal() {
+		setSignUpModalIsOpen(false);
+		setSignUpEmail('');
 	}
 
 	const customStyles = {
@@ -142,9 +158,16 @@ const GreenTeaNoodles = () => {
 				</a>
 			</div>
 			<div id='media'>
-				<FontAwesomeIcon icon={faPinterest} className='titleIcon' />
-				<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
-				<FontAwesomeIcon icon={faEnvelope} className='titleIcon' />
+				<a href='https://www.pinterest.com/'>
+					<FontAwesomeIcon icon={faPinterest} className='titleIcon' />
+				</a>
+				<a href='https://www.facebook.com/'>
+					<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
+				</a>
+				{/* <FontAwesomeIcon icon={faEnvelope} className='titleIcon' /> */}
+				<a href='https://www.instagram.com/'>
+					<FontAwesomeIcon icon={faInstagram} className='titleIcon' />
+				</a>
 			</div>
 			<div id='date'>Published: October 01, 2020</div>
 			<p id='description'>
@@ -391,7 +414,10 @@ const GreenTeaNoodles = () => {
 					</div>
 					<div id='block24' className='instructionItem'>
 						<div id='instagramPlaceholder'>
-							<FontAwesomeIcon icon={faInstagram} className='instagramIcon' />
+							{/* <FontAwesomeIcon icon={faInstagram} className='instagramIcon' /> */}
+							<a href='https://www.instagram.com/'>
+								<FontAwesomeIcon icon={faInstagram} className='instagramIcon' />
+							</a>
 						</div>
 						<div id='instagramText'>
 							<div>
@@ -415,27 +441,64 @@ const GreenTeaNoodles = () => {
 								Create a FREE account for quick & easy access
 							</h3>
 							<div id='signup-bar-inputs'>
-								<input type='text' />
-								<button>START SAVING</button>
+								<input
+									id='signUpEmailField'
+									type='text'
+									placeholder='Email address...'
+									value={signUpEmail}
+									onChange={updateSignUpEmail}
+								/>
+								<button onClick={openSignUpModal}>START SAVING</button>
 							</div>
+							<Modal
+								id='signUpModal'
+								isOpen={signUpModalIsOpen}
+								onRequestClose={closeSignUpModal}
+								style={customStyles}
+								contentLabel='signUpModal'
+							>
+								<h2>The following email has been added to our mailing list!</h2>
+								<div id='signUpModalEmail'> Email: {signUpEmail}</div>
+								<button className='buttonItem' onClick={closeSignUpModal}>
+									Close
+								</button>
+							</Modal>
 						</div>
 					</div>
 					<div id='block27' className='instructionItem'>
 						Share this recipe
 					</div>
 					<div id='block28' className='instructionItem'>
-						<div id='facebookButton' className='socialMediaButtons'>
-							<FontAwesomeIcon icon={faFacebookSquare} className='icon' />
-							&nbsp;&nbsp;Facebook
-						</div>
-						<div id='pintrestButton' className='socialMediaButtons'>
-							<FontAwesomeIcon icon={faPinterestSquare} className='icon' />
-							&nbsp;&nbsp;Pin
-						</div>
-						<div id='emailButton' className='socialMediaButtons'>
-							<FontAwesomeIcon icon={faEnvelope} className='icon' />
-							&nbsp;&nbsp;Email
-						</div>
+						<a
+							href='https://www.facebook.com/'
+							id='facebookAnchor'
+							className='socialMediaAnchors'
+						>
+							<div id='facebookButton' className='socialMediaButtons'>
+								<FontAwesomeIcon icon={faFacebookSquare} className='icon' />
+								&nbsp;&nbsp;Facebook
+							</div>
+						</a>
+						<a
+							href='https://www.pinterest.com/'
+							id='pinterestAnchor'
+							className='socialMediaAnchors'
+						>
+							<div id='pintrestButton' className='socialMediaButtons'>
+								<FontAwesomeIcon icon={faPinterestSquare} className='icon' />
+								&nbsp;&nbsp;Pin
+							</div>
+						</a>
+						<a
+							href='https://www.instagram.com/'
+							id='instagramAnchor'
+							className='socialMediaAnchors'
+						>
+							<div id='instagramButton' className='socialMediaButtons'>
+								<FontAwesomeIcon icon={faInstagram} className='icon' />
+								&nbsp;&nbsp;Instagram
+							</div>
+						</a>
 					</div>
 				</div>
 				<div id='footerAuthContainer'>

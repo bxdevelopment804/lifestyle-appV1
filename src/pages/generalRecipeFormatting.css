@@ -445,6 +445,9 @@
 	grid-column-start: 1;
 	grid-column-end: 3;
 }
+#signUpModalEmail {
+	margin: 20px 0px;
+}
 
 /* Social media buttons  */
 #block28 {
@@ -452,12 +455,16 @@
 	grid-column-end: 3;
 	display: flex;
 	justify-content: space-between;
+	/* border: solid pink; */
 }
 .socialMediaButtons {
 	display: flex;
+	/* display: inline-flex; */
+	/* position: absolute; */
 	height: 44px;
-	width: 31%;
-	/* border: solid blue; */
+	/* width: 31%; */
+	/* width: 100%; */
+	/* border: solid green; */
 	border-radius: 10px;
 	color: aliceblue;
 	align-items: center;
@@ -465,15 +472,43 @@
 	font-size: larger;
 	font-weight: 700;
 }
-#facebookButton {
+.socialMediaAnchors {
+	display: flex;
+	position: relative;
+	height: 44px;
+	width: 31%;
+	/* border: solid green; */
+	border-radius: 10px;
+	color: aliceblue;
+	align-items: center;
+	justify-content: center;
+	font-size: larger;
+	font-weight: 700;
+}
+#facebookAnchor {
 	background-color: blue;
+	color: aliceblue;
 }
-#pintrestButton {
+/* #facebookButton {
+	background-color: blue;
+	color: aliceblue;
+} */
+#pinterestAnchor {
 	background-color: red;
+	color: aliceblue;
 }
-#emailButton {
+/* #pintrestButton {
+	background-color: red;
+	color: aliceblue;
+} */
+#instagramAnchor {
 	background-color: grey;
+	color: aliceblue;
 }
+/* #instagramButton {
+	background-color: grey;
+	color: aliceblue;
+} */
 .icon {
 	font-size: xx-large;
 }

@@ -17,7 +17,8 @@
 	font-size: large;
 	background-color: rgba(128, 128, 128, 0.315);
 	height: 30px;
-	align-items: center;
+	/* align-items: center; */
+	align-content: center;
 	justify-content: center;
 	/* grid-column-start: 1;
 	grid-column-end: 6; */
