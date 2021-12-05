@@ -775,12 +775,43 @@
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		grid-template-columns: 1, -1;
+		/* grid-template-columns: 1, -1; */
+		/* grid-column-start: 1;
+		grid-column-end: 3; */
+		/* border: solid purple; */
+		width: 100%;
+		justify-items: center;
+		align-items: center;
 	}
 	.socialMediaButtons {
-		width: 200px;
-		margin-bottom: 10px;
+		/* width: 200px;
+		margin-bottom: 10px; */
+		/* border: solid blue; */
+		align-items: center;
+		justify-content: center;
 	}
+	.socialMediaAnchors {
+		display: flex;
+		position: relative;
+		height: 44px;
+		/* width: 31%; */
+		width: 200px;
+		/* border: solid green; */
+		border-radius: 10px;
+		color: aliceblue;
+		align-items: center;
+		justify-content: center;
+		font-size: larger;
+		font-weight: 700;
+		margin: 5px 0px;
+		padding: 0px 10px;
+	}
+	/* 
+	#block29 {
+		border: blue solid;
+		width: 100px;
+	} */
+
 	#signup-header-h3 {
 		margin-top: 0px 0px;
 	}
