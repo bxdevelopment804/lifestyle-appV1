@@ -502,12 +502,14 @@ const GreenTeaNoodles = () => {
 					</div>
 				</div>
 				<div id='footerAuthContainer'>
-					<img
-						id='block29'
-						className='authorPhoto'
-						src='https://img.delicious.com.au/Sh0eXQqs/w506-h506-cfill/del/2015/11/phoebe-wood-138289-1.jpg'
-						alt='author'
-					/>
+					<div id='block29'>
+						<img
+							// id='authorPhoto2'
+							className='authorPhoto'
+							src='https://img.delicious.com.au/Sh0eXQqs/w506-h506-cfill/del/2015/11/phoebe-wood-138289-1.jpg'
+							alt='author'
+						/>
+					</div>
 					<div id='block30' className='footerAuthInfo'>
 						Phoebe Wood
 					</div>

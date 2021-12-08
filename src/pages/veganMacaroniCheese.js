@@ -483,8 +483,8 @@ const VeganMacaroniCheese = () => {
 							className='authorPhoto'
 							src='https://www.forksoverknives.com/wp-content/uploads/fly-images/28240/W999Ja6E-494x341-c.jpg'
 							alt='author'
-							width='150px'
-							height='100px'
+							// width='150px'
+							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>

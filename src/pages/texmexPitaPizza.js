@@ -489,8 +489,8 @@ const TexmexPitaPizza = () => {
 							className='authorPhoto'
 							src='https://www.forksoverknives.com/wp-content/uploads/fly-images/28913/Darshana-Thacker-732x506-1-494x341-c.jpg'
 							alt='author'
-							width='130px'
-							height='100px'
+							// width='130px'
+							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>

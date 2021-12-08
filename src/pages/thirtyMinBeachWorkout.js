@@ -313,8 +313,8 @@ const ThirtyMinBeachWorkout = () => {
 							className='authorPhoto'
 							src={authorPhoto}
 							alt='author'
-							width='100px'
-							height='100px'
+							// width='100px'
+							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>

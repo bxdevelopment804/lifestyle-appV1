@@ -142,7 +142,8 @@ const AsianChickenMeatballs = () => {
 					<img
 						id='authorPhoto'
 						className='authorPhoto'
-						src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNiB7xhtV400YhyOPtn5mrCawZZpCjAbrbWOtFWwfDXLxqvtpBtyJzWyZlPRWbHLBujqU&usqp=CAU'
+						// src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNiB7xhtV400YhyOPtn5mrCawZZpCjAbrbWOtFWwfDXLxqvtpBtyJzWyZlPRWbHLBujqU&usqp=CAU'
+						src='https://pbs.twimg.com/profile_images/378800000276556305/416287d3cae05392f05d2dc305b94914_400x400.jpeg'
 						alt='author'
 						width='75px'
 						height='50px'
@@ -150,7 +151,8 @@ const AsianChickenMeatballs = () => {
 					<img
 						id='authorPhoto2'
 						className='authorPhoto'
-						src='https://static.appliancesconnection.com/www/871x1350/site-info/images/blog/matt-goulding.jpg'
+						// src='https://static.appliancesconnection.com/www/871x1350/site-info/images/blog/matt-goulding.jpg'
+						src='https://images.ctfassets.net/o6q5esfvflvg/ua-687219270355465615/da71caed34b1867559b91ed7a6d57077/mattgoulding001.jpg'
 						alt='author'
 						width='75px'
 						height='50px'
@@ -492,17 +494,19 @@ const AsianChickenMeatballs = () => {
 					<div id='block29'>
 						<img
 							className='authorPhoto'
-							src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNiB7xhtV400YhyOPtn5mrCawZZpCjAbrbWOtFWwfDXLxqvtpBtyJzWyZlPRWbHLBujqU&usqp=CAU'
+							// src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNiB7xhtV400YhyOPtn5mrCawZZpCjAbrbWOtFWwfDXLxqvtpBtyJzWyZlPRWbHLBujqU&usqp=CAU'
+							src='https://pbs.twimg.com/profile_images/378800000276556305/416287d3cae05392f05d2dc305b94914_400x400.jpeg'
 							alt='author'
-							width='125px'
-							height='100px'
+							// width='150px'
+							// height='125px'
 						/>
 						<img
 							className='authorPhoto'
-							src='https://static.appliancesconnection.com/www/871x1350/site-info/images/blog/matt-goulding.jpg'
+							// src='https://static.appliancesconnection.com/www/871x1350/site-info/images/blog/matt-goulding.jpg'
+							src='https://images.ctfassets.net/o6q5esfvflvg/ua-687219270355465615/da71caed34b1867559b91ed7a6d57077/mattgoulding001.jpg'
 							alt='author'
-							width='125px'
-							height='100px'
+							// width='150px'
+							// height='125px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>

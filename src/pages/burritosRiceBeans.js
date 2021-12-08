@@ -518,8 +518,8 @@ const BurritosRiceBeans = () => {
 							className='authorPhoto'
 							src={authorPhoto}
 							alt='author'
-							width='150px'
-							height='100px'
+							// width='150px'
+							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>

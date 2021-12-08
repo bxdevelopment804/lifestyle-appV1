@@ -480,8 +480,8 @@ const PenneTomatoMushroom = () => {
 							className='authorPhoto'
 							src='https://www.forksoverknives.com/wp-content/uploads/fly-images/25234/del-494x341-c.jpg'
 							alt='author'
-							width='150px'
-							height='100px'
+							// width='150px'
+							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>

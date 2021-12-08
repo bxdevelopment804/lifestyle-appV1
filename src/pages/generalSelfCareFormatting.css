@@ -409,19 +409,20 @@
 	border: solid purple;
 } */
 #block29 {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
+	/* grid-column-start: 1;
+	grid-column-end: 2; */
+	/* 12-7-21 - Fixing recipe page, may throw off this page. */
+	/* grid-row-start: 1;
 	grid-row-end: 4;
 	display: flex;
-	object-fit: cover;
+	object-fit: cover; */
 	/* border: solid green; */
 	/* width: calc(770px / 5); */
-	width: calc(67vw / 5);
+	/* width: calc(67vw / 5);
 	max-width: 770px;
 	border-radius: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; */
 }
 #block30 {
 	display: flex;
@@ -694,7 +695,7 @@
 		display: flex;
 		justify-content: center;
 		margin: auto;
-		border: solid blue 1px;
+		/* border: solid blue 1px; */
 	}
 
 	#footerAuthContainer {

@@ -484,20 +484,20 @@ const WildRiceSoup = () => {
 							className='authorPhoto'
 							src='https://www.forksoverknives.com/wp-content/uploads/fly-images/68654/CarlaChristian_photo-494x341-c.jpg'
 							alt='author'
-							width='150px'
-							height='100px'
+							// width='150px'
+							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>
 						Carla Christian
 					</div>
 					<div id='block31' className='footerAuthInfo'>
-						CARLA CHRISTIAN Carla Christian, RD, LD, received her associate’s
-						degree in culinary arts from The Culinary Institute of America in
-						2006 and her bachelor’s degree in dietetics from Michigan State
-						University in 2009. She finished her dietetic internship from The
-						University of Nebraska Medical Center in 2010 and is a former chef
-						in the Better Homes and Gardens® Test Kitchen.
+						Carla Christian, RD, LD, received her associate’s degree in culinary
+						arts from The Culinary Institute of America in 2006 and her
+						bachelor’s degree in dietetics from Michigan State University in
+						2009. She finished her dietetic internship from The University of
+						Nebraska Medical Center in 2010 and is a former chef in the Better
+						Homes and Gardens® Test Kitchen.
 					</div>
 					<div id='block32' className='footerAuthInfo'>
 						More by Carla

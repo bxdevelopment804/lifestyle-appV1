@@ -468,11 +468,12 @@ const ChickenZoodleSoup = () => {
 				<div id='footerAuthContainer'>
 					<div id='block29'>
 						<img
+							id='authorPhoto2'
 							className='authorPhoto'
 							src='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/posie-brien-eat-this-not-that-writer.jpg?quality=82&strip=all&w=96'
 							alt='author'
-							width='100px'
-							height='100px'
+							// max-width='100px'
+							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>
