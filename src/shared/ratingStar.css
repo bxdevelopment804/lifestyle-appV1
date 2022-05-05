@@ -6,15 +6,12 @@
 
 .stars {
 	display: flex;
-	/* justify-content: center; */
 	justify-content: left;
-	/* gap: 8px; */
 }
 
 .star {
 	position: relative;
 	cursor: pointer;
-	/* border: solid blue; */
 }
 
 .starsRadioInput {
@@ -29,11 +26,3 @@
 .star:hover {
 	color: red;
 }
-
-/* .starContainer {
-	border: solid blue;
-} */
-
-/* .starsRadioInput ~ svg {
-	fill: yellow;
-} */

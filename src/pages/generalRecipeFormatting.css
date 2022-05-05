@@ -4,7 +4,6 @@
 	width: 72vw;
 	max-width: 1200px;
 	margin: auto;
-	/* border: solid red; */
 }
 
 #sectionTitle {
@@ -12,99 +11,50 @@
 	position: relative;
 	font-size: large;
 	font-variant-caps: all-petite-caps;
-	color: red;
+	color: blue;
 	font-weight: 600;
-	/* text-indent: 2vw; */
 	margin: 35px 0px 18px;
 }
 
 #title {
 	display: flex;
-	/* text-indent: 1vw; */
 	font-size: 50px;
 	font-weight: 700;
 	font-family: 'Times New Roman', Times, serif;
 	padding: 0px 0px;
-	/* border: solid red; */
 	text-align: left;
 	justify-content: left;
-	/* left: 0px; */
 }
 
 #rating {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	/* flex-direction: row; */
-	/* text-indent: 2vw; */
 	margin-bottom: 10px;
-	/* border: solid red; */
 	justify-content: left;
 	text-align: left;
 }
 .ratingIcon {
 	display: inline-flex;
-	/* border: solid blue; */
-	color: red;
+	color: blue;
 }
-/* .ratingIcon:hover {
-	color: black;
-} */
-
-/* #star1:hover ~ .ratingIcon {
-	color: black;
-}
-
-#star2:hover ~ .ratingIcon {
-	color: black;
-}
-
-#star3:hover ~ .ratingIcon {
-	color: black;
-}
-
-#star4:hover ~ .ratingIcon {
-	color: black;
-} */
-
-/* .testStar {
-	font-family: FontAwesome;
-} */
-
-/* .newTestStars {
-	color: red;
-	opacity: 100%;
-}
-
-.newTestStars:hover {
-	cursor: crosshair;
-}
-
-.newTestStars:hover ~ .newTestStars {
-	opacity: 25%;
-} */
-
-/* #star2:hover ~ #star1 {
-	color: black;
-} */
-
-/* **Use this site as a guide for getting the five star rating working. - https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child and also https://codepen.io/melnik909/pen/OvaxVY?editors=1100** */
-
-/* #star2:hover,
-#star {
-	color: black;
-} */
 
 #authorBlock {
 	display: flex;
 	position: relative;
 	justify-content: space-between;
 	align-items: center;
-	/* width: 96vw; */
 	width: 72vw;
 	max-width: 1200px;
 	margin: auto;
-	/* border: solid blue; */
+}
+
+.authorPhoto {
+	margin: 0px 5px 0px 0px;
+}
+
+#authorName {
+	margin: 0px 5px;
 }
 
 #recipeButton {
@@ -114,6 +64,10 @@
 	width: 150px;
 	align-items: center;
 	justify-content: center;
+}
+
+#media {
+	margin: 10px auto;
 }
 
 #authorInfo {
@@ -130,7 +84,6 @@
 #date {
 	display: flex;
 	position: relative;
-	/* width: 96vw; */
 	width: 72vw;
 	max-width: 1200px;
 	margin: auto;
@@ -139,7 +92,6 @@
 #description {
 	display: flex;
 	position: relative;
-	/* width: 96vw; */
 	width: 72vw;
 	max-width: 1200px;
 	margin: 15px auto;
@@ -149,7 +101,6 @@
 #image1,
 #image2,
 #image3 {
-	/* width: 96vw; */
 	width: 72vw;
 	max-width: 1200px;
 	margin: auto;
@@ -171,7 +122,6 @@
 	margin: auto;
 	width: 67vw;
 	max-width: 770px;
-	/* height: max-content; */
 }
 
 #title2,
@@ -184,14 +134,12 @@
 	padding: 0px 1vw;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	/* text-align: left; */
 }
 
 .foodDescription {
 	display: flex;
 	position: relative;
 	margin: auto;
-	/* width: 96vw; */
 	width: 72vw;
 	max-width: 1200px;
 	font-size: x-large;
@@ -207,16 +155,10 @@
 	margin: 20px 0;
 	gap: 30px;
 	row-gap: 5px;
-	/* width: 770px; */
 	width: 67vw;
 	max-width: 770px;
 	margin: auto;
 }
-
-/* Didn't work */
-/* #recipeSection {
-	width: 67vw;
-} */
 
 /* Formatting for half width bold headers */
 #block1,
@@ -270,15 +212,11 @@
 	position: relative;
 	background-color: red;
 	color: aliceblue;
-	/* border: solid green; */
 	height: 40px;
 	align-items: center;
-	/* text-indent: 2vw; */
-	/* width: 770px; */
 	width: 67vw;
 	max-width: 770px;
 	margin: 10px auto 20px;
-	/* margin: auto; */
 }
 
 #block4 {
@@ -303,12 +241,11 @@
 .subBlock-1,
 .subBlock-2 {
 	display: inline-flex;
-	/* border: solid blue; */
 	align-items: center;
 }
 
 #redAuthor {
-	color: red;
+	color: blue;
 }
 
 #block15 {
@@ -329,15 +266,10 @@
 	margin: 20px 0;
 	gap: 30px;
 	row-gap: 5px;
-	/* width: 770px; */
 	width: 67vw;
 	max-width: 770px;
 	margin: 20px auto;
 }
-
-/* .instructionItem {
-	border: solid blue;
-} */
 
 .ingredient {
 	font-size: larger;
@@ -378,7 +310,6 @@
 }
 .instruction {
 	margin-bottom: 10px;
-	/* text-indent: 10px; */
 	padding-left: 5px;
 }
 
@@ -416,7 +347,6 @@
 	justify-content: center;
 }
 #instagramPlaceholder {
-	/* border: solid green; */
 	display: flex;
 	height: 100px;
 	width: 100px;
@@ -445,6 +375,22 @@
 	grid-column-start: 1;
 	grid-column-end: 3;
 }
+#signup-bar-inputs {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+#signUpEmailField,
+#signUpButton {
+	display: flex;
+	margin: 5px 5px;
+}
+
+#signUpEmailField {
+	width: 50vw;
+	max-width: 500px;
+}
+
 #signUpModalEmail {
 	margin: 20px 0px;
 }
@@ -455,16 +401,10 @@
 	grid-column-end: 3;
 	display: flex;
 	justify-content: space-between;
-	/* border: solid pink; */
 }
 .socialMediaButtons {
 	display: flex;
-	/* display: inline-flex; */
-	/* position: absolute; */
 	height: 44px;
-	/* width: 31%; */
-	/* width: 100%; */
-	/* border: solid green; */
 	border-radius: 10px;
 	color: aliceblue;
 	align-items: center;
@@ -477,7 +417,6 @@
 	position: relative;
 	height: 44px;
 	width: 31%;
-	/* border: solid green; */
 	border-radius: 10px;
 	color: aliceblue;
 	align-items: center;
@@ -489,26 +428,14 @@
 	background-color: blue;
 	color: aliceblue;
 }
-/* #facebookButton {
-	background-color: blue;
-	color: aliceblue;
-} */
 #pinterestAnchor {
 	background-color: red;
 	color: aliceblue;
 }
-/* #pintrestButton {
-	background-color: red;
-	color: aliceblue;
-} */
 #instagramAnchor {
 	background-color: grey;
 	color: aliceblue;
 }
-/* #instagramButton {
-	background-color: grey;
-	color: aliceblue;
-} */
 .icon {
 	font-size: xx-large;
 }
@@ -517,14 +444,10 @@
 #footerAuthContainer {
 	display: grid;
 	grid-template-columns: 1fr 4fr;
-	/* width: 770px; */
 	width: 67vw;
 	max-width: 770px;
 	margin: auto;
 	gap: 20px;
-}
-.footerAuthInfo {
-	/* border: solid purple; */
 }
 #block29 {
 	grid-column-start: 1;
@@ -533,8 +456,6 @@
 	grid-row-end: 4;
 	display: flex;
 	object-fit: cover;
-	/* border: solid green; */
-	/* width: calc(770px / 5); */
 	width: calc(67vw / 5);
 	max-width: 770px;
 	border-radius: 100%;
@@ -570,7 +491,6 @@
 	display: flex;
 	font-size: larger;
 	background-color: lightgoldenrodyellow;
-	/* border: solid green; */
 	margin: 5px 10px;
 	padding: 10px;
 	border-left: solid rgb(197, 194, 0);
@@ -579,9 +499,6 @@
 /* Footer Links */
 #footerLinkContainer {
 	display: grid;
-	/* width: 72vw; */
-	/* max-width: 1200px; */
-	/* border: solid blue; */
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	width: 100%;
 	margin: 20px 0px;
@@ -592,7 +509,6 @@
 #block26,
 #block27 {
 	margin-bottom: 20px;
-	/* border: solid pink; */
 }
 
 /* Related recipes */
@@ -628,34 +544,29 @@
 	font-weight: 700;
 	display: flex;
 	flex-direction: column;
-	/* text-align: left; */
-	/* background-color: red; */
 }
 #commentBox {
 	display: block;
 	grid-column-start: 1;
 	grid-column-end: -1;
-	grid-row-start: 7;
-	grid-row-end: 9;
+	grid-row-start: 8;
+	grid-row-end: 10;
 	min-height: 150px;
-	/* height: auto; */
 	border: solid black 1px;
 	border-radius: 3px;
-	/* background-color: lightblue; */
 	padding: 10px;
 	box-sizing: border-box;
-	/* flex-wrap: wrap; */
-	/* word-wrap: break-word; */
 	resize: none;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: x-large;
 }
-#nameText,
+#nameText {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
 #emailText {
-	grid-template-columns: repeat (2 1fr);
-	text-align: left;
-	font-weight: 700;
-	font-size: larger;
+	grid-column-start: 2;
+	grid-column-end: 3;
 }
 #nameField,
 #emailField {
@@ -663,27 +574,41 @@
 	border-radius: 3px;
 	min-height: 50px;
 	width: 100%;
-	/* background-color: lightcoral; */
 	padding: 10px;
 	box-sizing: border-box;
-	/* resize: none; */
 	font-size: x-large;
 }
+
+/* ----------------------------- */
+/* Adjustments to comment area after adding email functionality */
+#commentForm {
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: -1;
+	margin-top: 0px;
+}
+#nameAndEmailContainer {
+	display: grid;
+	gap: 8px;
+	margin: 10px 0px;
+}
+
+/* ----------------------------- */
 #postButton {
 	display: block;
-	/* width: 50%; */
 	width: 277px;
 	justify-content: center;
 	align-items: center;
 	height: 50px;
-	/* margin: auto; */
-	background-color: red;
+	background-color: blue;
 	color: aliceblue;
 	font-size: xx-large;
 	font-weight: 700;
 	grid-column-start: 1;
 	grid-column-end: -1;
 	cursor: pointer;
+	border: none;
+	margin-top: 10px;
 }
 
 #postButton:hover,
@@ -697,14 +622,7 @@
 	cursor: pointer;
 }
 
-.replyItem {
-	/* border: solid orange; */
-}
-
 @media (max-width: 750px) {
-	#pageContainer {
-		/* background-color: pink; */
-	}
 	#title,
 	#title2,
 	#title3 {
@@ -745,9 +663,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	/* #reviewRecipe {
-		max-height: 50px;
-	} */
+
 	#reviewRecipe,
 	#printRecipe {
 		display: flex;
@@ -768,25 +684,19 @@
 		margin-left: 10px;
 		text-align: left;
 	}
-	/* .instruction {
-		font-size: medium;
-	} */
+
+	#signup-bar {
+		padding: 5px;
+	}
 	#block28 {
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		/* grid-template-columns: 1, -1; */
-		/* grid-column-start: 1;
-		grid-column-end: 3; */
-		/* border: solid purple; */
 		width: 100%;
 		justify-items: center;
 		align-items: center;
 	}
 	.socialMediaButtons {
-		/* width: 200px;
-		margin-bottom: 10px; */
-		/* border: solid blue; */
 		align-items: center;
 		justify-content: center;
 	}
@@ -794,9 +704,7 @@
 		display: flex;
 		position: relative;
 		height: 44px;
-		/* width: 31%; */
 		width: 200px;
-		/* border: solid green; */
 		border-radius: 10px;
 		color: aliceblue;
 		align-items: center;
@@ -811,26 +719,19 @@
 		grid-column-start: 1;
 		grid-column-end: -1;
 		display: flex;
-		/* object-fit: cover; */
 		flex-direction: row;
 		margin: auto;
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		padding-top: 40px;
-		/* width: 200px; */
+		padding-top: 20px;
 	}
-
-	/* #authorPhoto2 {
+	.daveAndMattPhoto {
 		display: flex;
 		position: relative;
-		width: 400px;
-		margin: auto; */
-	/* position: absolute; */
-	/* min-width: 200px; */
-	/* max-width: 200px; */
-	/* flex-shrink: unset; */
-	/* } */
+		width: 31vw;
+		margin: 0px 10px;
+	}
 
 	#block30,
 	#block31,
@@ -846,21 +747,21 @@
 	#postButton {
 		font-size: x-large;
 	}
+	#nameAndEmailContainer {
+		display: flex;
+		flex-direction: column;
+	}
 	#postButton {
 		display: flex;
 		align-items: center;
 	}
 }
 
-/* Mobile - GREEN */
+/*Mobile*/
 @media (max-width: 480px) {
 	#pageContainer {
-		/* display: flex; */
-		/* flex-direction: column; */
 		width: 92vw;
-		/* max-width: 1200px; */
 		margin: auto;
-		/* border: solid blue; */
 	}
 
 	#sectionTitle {
@@ -873,12 +774,9 @@
 
 	#recipeButton {
 		display: block;
-		/* position: relative;
-		width: 100vw; */
 	}
 
 	#authorBlock {
-		/* border: solid royalblue 1px; */
 		width: 92vw;
 	}
 
@@ -899,25 +797,17 @@
 		width: 92vw;
 	}
 
-	/*----------------------------
-	NEED TO SET BOTTOM RECIPE ITEMS/SECTIONS TO 92VW - 10/27/21 */
-	/*----------------------------*/
-
 	#rating2 {
 		display: flex;
 		position: relative;
 		background-color: red;
 		color: aliceblue;
-		/* border: solid green; */
 		height: 40px;
 		align-items: center;
 		justify-content: center;
-		/* text-indent: 2vw; */
-		/* width: 770px; */
 		width: 92vw;
 		max-width: 770px;
 		margin: 10px auto 20px;
-		/* margin: auto; */
 	}
 
 	#headerContainer {
@@ -928,11 +818,9 @@
 		margin: 20px 0;
 		gap: 15px;
 		row-gap: 5px;
-		/* width: 770px; */
 		width: 87vw;
 		max-width: 770px;
 		margin: auto;
-		/* border: solid green 1px; */
 	}
 
 	#instructionContainer {
@@ -943,11 +831,9 @@
 		margin: 20px 0;
 		gap: 15px;
 		row-gap: 5px;
-		/* width: 770px; */
 		width: 87vw;
 		max-width: 770px;
 		margin: 20px auto;
-		/* border: solid green 1px; */
 	}
 
 	#block1 {
@@ -965,11 +851,7 @@
 	}
 
 	#block17 {
-		/* border: solid blue 1px; */
 		width: 100%;
-		/* display: flex; */
-		/* position: relative; */
-		/* justify-content: left; */
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
@@ -978,15 +860,8 @@
 		padding: 10px 0px 25px;
 	}
 
-	/* #sectionTitle {
-		margin: 12px 0px;
-		border: solid blue;
-	} */
-
 	.ingredient {
 		font-size: medium;
-		/* line-height: 1px; */
-		/* border: solid red; */
 		margin: 0px;
 	}
 
@@ -997,9 +872,7 @@
 	.socialMediaButtons {
 		display: flex;
 		height: 44px;
-		/* width: 100%; */
 		width: 87vw;
-		/* border: solid blue; */
 		border-radius: 10px;
 		color: aliceblue;
 		align-items: center;
@@ -1014,43 +887,17 @@
 		grid-column-start: 1;
 		grid-column-end: -1;
 		object-fit: cover;
-		/* display: flex; */
-		/* flex-direction: row; */
 		flex-direction: column;
 		margin: auto;
 		justify-items: center;
 		align-items: center;
-		/* height: 300px; */
-		/* border: solid blue; */
-		/* ------- */
-		/* width: 87vw; */
 		width: 100%;
-		/* padding: 5px; */
 	}
 
-	/* #authorPhoto2 {
-		display: flex;
-		position: relative;
-		margin: auto;
-		justify-self: center;
-		max-width: 200px;
-	} */
-
-	/* #block29 { */
-	/* display: flex; */
-	/* margin: auto; */
-	/* grid-row-start: 1;
-		grid-row-end: 4; */
-	/* border: solid blue 1px; */
-	/* border: solid green; */
-	/* width: calc(770px / 5); */
-	/* width: calc(67vw / 5); */
-	/* max-width: 770px; */
-	/* border-radius: 100%; */
-	/* flex-direction: column; */
-	/* justify-self: center; */
-	/* align-items: center; */
-	/* } */
+	.daveAndMattPhoto {
+		width: 50vw;
+		margin: 10px auto;
+	}
 
 	#footerAuthContainer {
 		width: 87vw;
@@ -1072,29 +919,13 @@
 		align-items: center;
 		height: 50px;
 		/* margin: auto; */
-		background-color: red;
+		background-color: blue;
 		color: aliceblue;
 		font-size: xx-large;
 		font-weight: 700;
 		grid-column-start: 1;
 		grid-column-end: -1;
 	}
-
-	/* .star {
-		height: 5px;
-		border: solid blue 1px;
-	} */
-	/* Ingredient List */
-	/* #block17 { */
-	/* font-size: smaller; */
-	/* border: solid blue; */
-	/* } */
-	/* Ad Space */
-	/* #block18 {
-		display: none;
-		border: solid red;
-		grid-column: -1 -1;
-	} */
 }
 
 @media print {
@@ -1144,7 +975,6 @@
 	#postButton,
 	#block18 {
 		display: none !important;
-		/* visibility: hidden; */
 	}
 
 	#block19 {
@@ -1155,8 +985,4 @@
 	#instructionContainer {
 		display: block;
 	}
-	/* #printSection { */
-	/* display: contents; */
-	/* visibility: visible; */
-	/* } */
 }

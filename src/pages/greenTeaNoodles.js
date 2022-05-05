@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
+import emailjs from 'emailjs-com';
 
 import SingleSquare from '../shared/single-square';
 import FiveStarRating from '../shared/fiveStarRating';
 import './generalRecipeFormatting.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPrint } from '@fortawesome/free-solid-svg-icons';
+import { faPrint } from '@fortawesome/free-solid-svg-icons';
 import {
 	faFacebook,
 	faFacebookSquare,
@@ -74,7 +75,7 @@ const GreenTeaNoodles = () => {
 	};
 
 	function openCommentModal() {
-		if (recipeComment != '' && reviewerName != '' && reviewerEmail != '') {
+		if (recipeComment !== '' && reviewerName !== '' && reviewerEmail !== '') {
 			setCommentModalIsOpen(true);
 		} else {
 			alert('Please complete all three fields.');
@@ -97,7 +98,7 @@ const GreenTeaNoodles = () => {
 	};
 
 	function openSignUpModal() {
-		if (signUpEmail != '') {
+		if (signUpEmail !== '') {
 			setSignUpModalIsOpen(true);
 		} else {
 			alert('Please enter a complete email to sign up for our mailing list.');
@@ -122,6 +123,28 @@ const GreenTeaNoodles = () => {
 
 	Modal.setAppElement('#root');
 
+	//Code for sending emails from comment section.
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_zz1nmdq',
+				'template_blotnk6',
+				form.current,
+				'K0MS8uX0Eal8GsLQ1'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	};
+
 	return (
 		<div id='pageContainer'>
 			<div id='sectionTitle'>DINNER</div>
@@ -131,14 +154,10 @@ const GreenTeaNoodles = () => {
 					gradeIndex={gradeIndex}
 					changeGradeIndex={changeGradeIndex}
 					numOfRatings={numOfRatings}
-					// setNumOfRatings={setNumOfRatings}
 					totalOfRatings={totalOfRatings}
-					// setTotalOfRatings={setTotalOfRatings}
 					updateRatingCount={updateRatingCount}
 					averageRating={averageRating}
-					// setAverageRating={setAverageRating}
 					currentRating={currentRating}
-					// setCurrentRating={setCurrentRating}
 				/>
 			</div>
 			<div id='authorBlock'>
@@ -164,7 +183,6 @@ const GreenTeaNoodles = () => {
 				<a href='https://www.facebook.com/'>
 					<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
 				</a>
-				{/* <FontAwesomeIcon icon={faEnvelope} className='titleIcon' /> */}
 				<a href='https://www.instagram.com/'>
 					<FontAwesomeIcon icon={faInstagram} className='titleIcon' />
 				</a>
@@ -186,9 +204,9 @@ const GreenTeaNoodles = () => {
 				height='418'
 				src='https://www.youtube.com/embed/Idp67QSxXhc'
 				title='YouTube video player'
-				frameborder='0'
+				frameBorder='0'
 				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-				allowfullscreen
+				allowFullScreen
 			></iframe>
 			<div id='title2'>A Traditional Classic</div>
 			<img
@@ -236,11 +254,12 @@ const GreenTeaNoodles = () => {
 					<div id='block1' className='headerItem'>
 						Green Tea Noodles with Sticky Sweet Chili Salmon
 					</div>
-					<div id='block2' class='imageContainerWithButtons'>
+					<div id='block2' className='imageContainerWithButtons'>
 						<img
 							className='headerItem'
-							src='https://imgr.search.brave.com/3nYpSHAMejANUk23odtup3gamIKRUjZbSg3BEqJSOUw/fit/768/512/ce/1/aHR0cHM6Ly93d3cu/bm9zcG9vbm5lY2Vz/c2FyeS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTgvMTAv/R3JlZW4tVGVhLVBv/YWNoZWQtU2FsbW9u/LVNvYmEtTm9vZGxl/cy0xMjAuanBn'
+							src='https://img.delicious.com.au/EEJ2ozkv/del/2020/10/green-tea-noodles-with-sticky-sweet-chilli-salmon-140868-2.jpg'
 							width='100%'
+							alt='Green Tea Noodles'
 						/>
 						<a href='#leaveReply'>
 							<div id='reviewRecipe'>
@@ -258,8 +277,6 @@ const GreenTeaNoodles = () => {
 							<strong>Print Recipe</strong>
 						</div>
 					</div>
-					{/* Added div below */}
-					{/* <div id='printSection'> */}
 					<div id='block3' className='headerItem'>
 						Flavorful, yet healthy and light, these Green Tea Noodles with
 						Sticky Sweet Chili Salmon are easy to make and perfect for busy
@@ -641,40 +658,60 @@ const GreenTeaNoodles = () => {
 							/>
 						</div>
 					</div>
-					<div id='commentText' className='replyItem'>
-						Comment*
-						<textarea
-							name='enteredComment'
-							id='commentBox'
-							value={recipeComment}
-							onChange={updateComment}
-						></textarea>
-					</div>
-					<div id='nameText' className='replyItem'>
-						Name*
-						<div className='replyItem'>
-							<input
-								id='nameField'
-								type='text'
-								value={reviewerName}
-								onChange={updateReviewerName}
-							></input>
+					<form id='commentForm' ref={form} onSubmit={sendEmail}>
+						<div id='commentText' className='replyItem'>
+							Comment*
+							<textarea
+								name='enteredComment'
+								id='commentBox'
+								value={recipeComment}
+								onChange={updateComment}
+							></textarea>
 						</div>
-					</div>
-					<div id='emailText' className='replyItem'>
-						Email*
-						<div className='replyItem'>
-							<input
-								id='emailField'
-								type='text'
-								value={reviewerEmail}
-								onChange={updateReviewerEmail}
-							></input>
+						<div id='nameAndEmailContainer'>
+							<div id='nameText' className='replyItem'>
+								Name*
+								<div className='replyItem'>
+									<input
+										id='nameField'
+										name='name'
+										type='text'
+										value={reviewerName}
+										onChange={updateReviewerName}
+									></input>
+								</div>
+							</div>
+							<div id='emailText' className='replyItem'>
+								Email*
+								<div className='replyItem'>
+									<input
+										id='emailField'
+										name='email'
+										type='text'
+										value={reviewerEmail}
+										onChange={updateReviewerEmail}
+									></input>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div id='postButton' className='replyItem' onClick={openCommentModal}>
-						Post Comment
-					</div>
+						<div style={{ display: 'none' }}>
+							<input
+								type='text'
+								name='relevantPage'
+								id='relevantPage'
+								value='Green Tea Noodles with Sticky Sweet Chili Salmon'
+								readOnly={true}
+							/>
+						</div>
+						<button
+							type='submit'
+							id='postButton'
+							className='replyItem'
+							onClick={openCommentModal}
+						>
+							Post Comment
+						</button>
+					</form>
 					<Modal
 						id='commentModal'
 						isOpen={commentModalIsOpen}

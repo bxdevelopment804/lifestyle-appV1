@@ -1,17 +1,88 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+import emailjs from 'emailjs-com';
 
 import SingleSquare from '../shared/single-square';
 import './generalWorkoutFormatting.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faPinterest } from '@fortawesome/free-brands-svg-icons';
+import {
+	faFacebook,
+	faPinterest,
+	faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 const TurkishGetUp = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+	const customStyles = {
+		content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+		},
+	};
+
+	Modal.setAppElement('#root');
+
+	//Code for sending emails from comment section.
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_zz1nmdq',
+				'template_blotnk6',
+				form.current,
+				'K0MS8uX0Eal8GsLQ1'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	};
+
+	// Review recipe state and associated functions
+	const [recipeComment, setRecipeComment] = useState('');
+	const [reviewerName, setReviewerName] = useState('');
+	const [reviewerEmail, setReviewerEmail] = useState('');
+	const [commentModalIsOpen, setCommentModalIsOpen] = useState(false);
+
+	const updateComment = (event) => {
+		setRecipeComment(event.target.value);
+	};
+	const updateReviewerName = (event) => {
+		setReviewerName(event.target.value);
+	};
+	const updateReviewerEmail = (event) => {
+		setReviewerEmail(event.target.value);
+	};
+
+	function openCommentModal() {
+		if (recipeComment !== '' && reviewerName !== '' && reviewerEmail !== '') {
+			setCommentModalIsOpen(true);
+		} else {
+			alert('Please complete all three fields.');
+		}
+	}
+
+	function closeCommentModal() {
+		setCommentModalIsOpen(false);
+		setRecipeComment('');
+		setReviewerName('');
+		setReviewerEmail('');
+	}
 
 	const sectionType = 'advanced';
 	const workoutTitle =
@@ -64,9 +135,15 @@ const TurkishGetUp = () => {
 				</div>
 			</div>
 			<div id='media'>
-				<FontAwesomeIcon icon={faPinterest} className='titleIcon' />
-				<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
-				<FontAwesomeIcon icon={faEnvelope} className='titleIcon' />
+				<a href='https://www.pinterest.com/'>
+					<FontAwesomeIcon icon={faPinterest} className='titleIcon' />
+				</a>
+				<a href='https://www.facebook.com/'>
+					<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
+				</a>
+				<a href='https://www.instagram.com/'>
+					<FontAwesomeIcon icon={faInstagram} className='titleIcon' />
+				</a>
 			</div>
 			<div id='date'>Published: {workoutDate}</div>
 			<p id='description1' className='workoutDescription'>
@@ -89,9 +166,9 @@ const TurkishGetUp = () => {
 				height='560'
 				src={videoSource}
 				title='YouTube video player'
-				frameborder='0'
+				frameBorder='0'
 				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-				allowfullscreen
+				allowFullScreen
 			></iframe>
 
 			<div id='title1' className='workoutTitle'>
@@ -272,8 +349,8 @@ const TurkishGetUp = () => {
 							Create a FREE account for quick & easy access
 						</h3>
 						<div id='signup-bar-inputs'>
-							<input type='text' />
-							<button>START SAVING</button>
+							<input id='signUpEmailField' type='text' />
+							<button id='signUpButton'>START SAVING</button>
 						</div>
 					</div>
 				</div>
@@ -351,21 +428,75 @@ const TurkishGetUp = () => {
 						Your email address will not be published. Required fields are marked
 						*
 					</div>
-					<div id='commentText' className='replyItem'>
-						Comment*
-						<div id='commentBox' className='replyItem'></div>
-					</div>
-					<div id='nameText' className='replyItem'>
-						Name*
-						<div id='nameField' className='replyItem'></div>
-					</div>
-					<div id='emailText' className='replyItem'>
-						Email*
-						<div id='emailField' className='replyItem'></div>
-					</div>
-					<div id='postButton' className='replyItem'>
-						Post Comment
-					</div>
+					<form id='commentForm' ref={form} onSubmit={sendEmail}>
+						<div id='commentText' className='replyItem'>
+							Comment*
+							<textarea
+								name='enteredComment'
+								id='commentBox'
+								value={recipeComment}
+								onChange={updateComment}
+							></textarea>
+						</div>
+						<div id='nameAndEmailContainer'>
+							<div id='nameText' className='replyItem'>
+								Name*
+								<div className='replyItem'>
+									<input
+										id='nameField'
+										name='name'
+										type='text'
+										value={reviewerName}
+										onChange={updateReviewerName}
+									></input>
+								</div>
+							</div>
+							<div id='emailText' className='replyItem'>
+								Email*
+								<div className='replyItem'>
+									<input
+										id='emailField'
+										name='email'
+										type='text'
+										value={reviewerEmail}
+										onChange={updateReviewerEmail}
+									></input>
+								</div>
+							</div>
+						</div>
+						<div style={{ display: 'none' }}>
+							<input
+								type='text'
+								name='relevantPage'
+								id='relevantPage'
+								value={workoutTitle}
+								readOnly={true}
+							/>
+						</div>
+						<button
+							type='submit'
+							id='postButton'
+							className='replyItem'
+							onClick={openCommentModal}
+						>
+							Post Comment
+						</button>
+					</form>
+					<Modal
+						id='commentModal'
+						isOpen={commentModalIsOpen}
+						onRequestClose={closeCommentModal}
+						style={customStyles}
+						contentLabel='commentModal'
+					>
+						<h2>The following comment has been recorded!</h2>
+						<div> Comment: {recipeComment}</div>
+						<div> Name: {reviewerName}</div>
+						<div> Email: {reviewerEmail}</div>
+						<button className='buttonItem' onClick={closeCommentModal}>
+							Close
+						</button>
+					</Modal>
 				</div>
 			</div>
 		</div>

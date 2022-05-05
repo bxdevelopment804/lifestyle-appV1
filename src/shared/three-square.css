@@ -1,15 +1,9 @@
 #three-square-container {
-	/* display: flex; */
 	display: inline-block;
 	position: relative;
-	/* height: 400px; */
-	/* height: 43vh; */
 	max-height: 625px;
-	/* height: 60vh; */
-	/* width: 300px; */
 	max-width: 390px;
 	width: 23vw;
-	/* border: solid green; */
 	justify-content: left;
 	text-align: left;
 	margin-bottom: 2vh;
@@ -44,7 +38,6 @@
 #three-square-photo {
 	width: 23vw;
 	max-width: 390px;
-	/* height: 23vw; */
 }
 
 #three-square-description,
@@ -52,7 +45,7 @@
 	color: grey;
 }
 
-/* Laptops and Larger - GREY */
+/*Laptops and Larger*/
 @media (max-width: 1024px) {
 	#three-square-title {
 		font-size: x-large;
@@ -68,54 +61,37 @@
 	}
 }
 
-/* Tablets - LIGHT BLUE */
+/*Tablets*/
 @media (max-width: 768px) and (min-width: 481px) {
 	#three-square-container {
-		/* display: flex; */
 		position: relative;
-		/* max-height: 500px; */
 		width: 72vw;
 		max-width: 555px;
-		/* border: solid green; */
 		margin-bottom: 40px;
-		/* min-height: 400px; */
-		/* height: 175vw; */
-		/* margin: auto; */
 	}
 
 	#three-square-photo {
-		/* position: absolute; */
 		width: 100%;
 		max-width: 555px;
-		/* border: solid orange; */
 	}
 	#three-square-title {
 		font-size: large;
 	}
 }
 
-/* Mobile - GREEN */
+/*Mobile*/
 @media (max-width: 480px) {
 	#three-square-container {
 		position: relative;
 		width: 72vw;
 		max-width: 555px;
-		/* border: solid green; */
 		min-width: 230px;
 		margin-bottom: 10px;
-		/* display: flex; */
-		/* max-height: 500px; */
-		/* min-height: 400px; */
-		/* height: 175vw; */
-		/* margin: auto; */
 	}
 
 	#three-square-photo {
 		width: 100%;
 		min-width: 230px;
-		/* max-width: 555px; */
-		/* position: absolute; */
-		/* border: solid orange; */
 	}
 
 	#three-square-title {

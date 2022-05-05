@@ -5,7 +5,7 @@ import './single-square.css';
 const SingleSquare = (props) => {
 	return (
 		<div id='single-square-container'>
-			<img id='single-square-photo' src={props.url} />
+			<img id='single-square-photo' src={props.url} alt='food snapshot' />
 			<div id='single-square-section'>{props.section}</div>
 			<div id='single-square-title'>{props.title}</div>
 			<div id='single-square-description'>{props.description}</div>

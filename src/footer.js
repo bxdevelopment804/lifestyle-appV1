@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './footer.css';
-import {
-	faArrowUp,
-	faChevronUp,
-	faRss,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import {
 	faFacebook,
 	faInstagram,
@@ -19,10 +15,9 @@ import {
 
 const Footer = (props) => {
 	return (
-		// <React.Fragment>
 		<div id='footerContainer'>
 			<div id='topButton' className='footerItem'>
-				<a href='#logo'>
+				<a id='backToTopContainer' href='#logo'>
 					<button>
 						<FontAwesomeIcon icon={faChevronUp} /> &nbsp; Back to Top
 					</button>
@@ -49,9 +44,7 @@ const Footer = (props) => {
 				</Link>
 			</div>
 			<div id='copyright' className='footerItem'>
-				"Copyright" © 2021HealthyLifestyle &nbsp; All Rights Reserved
-				{/* &nbsp;
-				Privacy Policy &nbsp; Terms &nbsp; Disclaimer &nbsp; Sitemap */}
+				"Copyright" © 2021 HealthyLifestyle &nbsp; All Rights Reserved
 			</div>
 			<div id='iconsWithLogIn' className='footerItem'>
 				<a href='https://www.facebook.com/'>
@@ -69,7 +62,6 @@ const Footer = (props) => {
 				<a href='https://www.youtube.com/'>
 					<FontAwesomeIcon icon={faYoutube} className='iconItem' />
 				</a>
-				{/* <FontAwesomeIcon icon={faRss} className='iconItem' /> */}
 			</div>
 			<div id='signatureBlock' className='footerItem'>
 				Replicated by <strong>BX Development</strong>
@@ -81,7 +73,6 @@ const Footer = (props) => {
 				</a>
 			</div>
 		</div>
-		// </React.Fragment>
 	);
 };
 

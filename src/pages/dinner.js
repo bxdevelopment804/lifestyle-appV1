@@ -15,17 +15,6 @@ const Dinner = () => {
 		<div>
 			<h1 id='compilationTitle'>Dinner</h1>
 			<div id='compilationContainer'>
-				{/* <div className='compilationContainerItem'>
-					<Link to='/greenTeaNoodles'>
-						<SingleSquareCropped
-							url='https://img.delicious.com.au/EEJ2ozkv/del/2020/10/green-tea-noodles-with-sticky-sweet-chilli-salmon-140868-2.jpg'
-							section='Dinner'
-							title='Green Tea Noodles with Sticky Sweet Chili Salmon'
-							description='Green tea noodles bring a pop of colour to this easy midweek dinner.'
-							author='Phoebe Wood'
-						/>
-					</Link>
-				</div> */}
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
 						<SingleSquareCropped

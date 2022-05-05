@@ -32,7 +32,6 @@ const Home = () => {
 						/>
 						<PrimarySquare
 							id='primary-image-description'
-							// url=''
 							section='Dinner'
 							title='Green Tea Noodles with Sticky Sweet Chili Salmon'
 							description='Green tea noodles bring a pop of colour to this easy midweek dinner.'
@@ -423,8 +422,8 @@ const Home = () => {
 						Create a FREE account for quick & easy access
 					</h3>
 					<div id='signup2-bar-inputs'>
-						<input type='text' />
-						<button>START SAVING</button>
+						<input id='signUpEmailField' type='text' />
+						<button id='signUpButton'>START SAVING</button>
 					</div>
 				</div>
 				<h2>Featured On</h2>

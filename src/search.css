@@ -12,14 +12,6 @@
 	margin: 10px auto;
 }
 
-/* .searchLinks {
-  margin-bottom: 15px;
-} */
-
-/* p {
-  margin: 10px 0px;
-} */
-
 #searchBox::-webkit-scrollbar {
 	display: none;
 }
@@ -27,7 +19,3 @@
 a {
 	text-decoration: none;
 }
-
-/* #searchLinks {
-  border: solid blue;
-} */

@@ -1,15 +1,4 @@
 #footerContainer {
-	/* margin: 5px 0px; */
-	/* display: grid; */
-	/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-	/* width: 96vw; */
-	/* margin: auto; */
-	/* gap: 10px; */
-	/* justify-self: center; */
-	/* position: relative; */
-	/* max-width: 1200px; */
-	/* border: solid blue; */
-	/* width: 100%; */
 	background-color: rgb(221, 221, 221);
 }
 #topButton {
@@ -17,11 +6,8 @@
 	font-size: large;
 	background-color: rgba(128, 128, 128, 0.315);
 	height: 30px;
-	/* align-items: center; */
-	align-content: center;
+	align-items: center;
 	justify-content: center;
-	/* grid-column-start: 1;
-	grid-column-end: 6; */
 }
 #linkList {
 	display: flex;
@@ -29,8 +15,6 @@
 	width: 72vw;
 	margin: auto;
 	font-weight: 700;
-	/* flex-wrap: wrap; */
-	/* border: solid burlywood; */
 }
 .linkItem {
 	margin: 0px 20px;
@@ -38,18 +22,20 @@
 a {
 	color: black;
 }
+
+#backToTopContainer {
+	display: flex;
+}
 .iconItem {
 	margin: 10px 20px;
 	font-size: 40px;
 }
 
 .footerItem {
-	/* display: flex; */
-	/* border: solid green; */
 	margin: 20px 0px;
 }
 
-/* Tablets - LIGHT BLUE*/
+/*Tablets*/
 @media (max-width: 768px) {
 	#linkList {
 		flex-direction: column;

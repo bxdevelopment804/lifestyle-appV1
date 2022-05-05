@@ -34,7 +34,7 @@ const Home = () => {
 	};
 
 	function openSignUpModal() {
-		if (signUpEmail != '') {
+		if (signUpEmail !== '') {
 			setSignUpModalIsOpen(true);
 		} else {
 			alert('Please enter a complete email to sign up for our mailing list.');
@@ -67,10 +67,10 @@ const Home = () => {
 						<img
 							id='primary-image'
 							src='https://img.delicious.com.au/EEJ2ozkv/del/2020/10/green-tea-noodles-with-sticky-sweet-chilli-salmon-140868-2.jpg'
+							alt='Green Tea Noodles with Sticky Sweet Chili Salmon'
 						/>
 						<PrimarySquare
 							id='primary-image-description'
-							// url=''
 							section='Dinner'
 							title='Green Tea Noodles with Sticky Sweet Chili Salmon'
 							description='Green tea noodles bring a pop of colour to this easy midweek dinner.'
@@ -83,7 +83,6 @@ const Home = () => {
 					<Link to='/plantBased'>
 						<div id='four-box-grid-item1' className='four-box-grid-item'>
 							<HoverIcon
-								// url='https://images.unsplash.com/photo-1571809839227-b2ac3d261257?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDI1fHxtZWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60'
 								url='https://image.freepik.com/free-photo/keto-salad-with-superfood-healthy-lifestyle_53876-101571.jpg'
 								title='Plant-Based'
 							/>
@@ -100,7 +99,6 @@ const Home = () => {
 					<Link to='/sandwiches'>
 						<div id='four-box-grid-item3' className='four-box-grid-item'>
 							<HoverIcon
-								// url='https://images.unsplash.com/photo-1571809864118-d0a73b090d6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjQ3fHxtZWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60'
 								url='https://image.freepik.com/free-photo/high-angle-delicious-sandwich-plate_23-2148633465.jpg'
 								title='Sandwiches'
 							/>

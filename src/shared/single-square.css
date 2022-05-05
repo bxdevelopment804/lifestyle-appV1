@@ -1,14 +1,5 @@
 #single-square-container {
-	/* display: flex; */
 	position: relative;
-	/* height: 400px; */
-	/* height: 43vh; */
-	/* max-height: 530px; */
-	/* height: 60vh; */
-	/* width: 300px; */
-	/* max-width: 390px; */
-	/* width: 23vw; */
-	/* border: solid green; */
 	justify-content: left;
 	text-align: left;
 	margin-bottom: 2vh;
@@ -30,7 +21,6 @@
 #single-square-title,
 #single-square-description,
 #single-square-author {
-	/* position: relative; */
 	top: -15px;
 	margin-top: 10px;
 }

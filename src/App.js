@@ -1,4 +1,4 @@
-//Styled after SkinnyMS.com
+//Entire Site Styled After SkinnyMS.com
 import React from 'react';
 
 import Navbar from './navbar';

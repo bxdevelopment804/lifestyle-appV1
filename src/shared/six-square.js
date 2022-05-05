@@ -5,7 +5,7 @@ import './six-square.css';
 const SixSquare = (props) => {
 	return (
 		<div id='six-square-container'>
-			<img id='six-square-photo' src={props.url} />
+			<img id='six-square-photo' src={props.url} alt='food snapshot' />
 			<div id='six-square-section' style={{ textDecoration: 'none' }}>
 				{props.section}
 			</div>

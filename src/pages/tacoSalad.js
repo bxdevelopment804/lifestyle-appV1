@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
+import emailjs from 'emailjs-com';
 
 import SingleSquare from '../shared/single-square';
 import FiveStarRating from '../shared/fiveStarRating';
 import './generalRecipeFormatting.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPrint, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faPrint } from '@fortawesome/free-solid-svg-icons';
 import {
 	faFacebook,
 	faFacebookSquare,
@@ -74,7 +75,7 @@ const TacoSalad = () => {
 	};
 
 	function openCommentModal() {
-		if (recipeComment != '' && reviewerName != '' && reviewerEmail != '') {
+		if (recipeComment !== '' && reviewerName !== '' && reviewerEmail !== '') {
 			setCommentModalIsOpen(true);
 		} else {
 			alert('Please complete all three fields.');
@@ -97,7 +98,7 @@ const TacoSalad = () => {
 	};
 
 	function openSignUpModal() {
-		if (signUpEmail != '') {
+		if (signUpEmail !== '') {
 			setSignUpModalIsOpen(true);
 		} else {
 			alert('Please enter a complete email to sign up for our mailing list.');
@@ -121,6 +122,28 @@ const TacoSalad = () => {
 	};
 
 	Modal.setAppElement('#root');
+
+	//Code for sending emails from comment section.
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_zz1nmdq',
+				'template_blotnk6',
+				form.current,
+				'K0MS8uX0Eal8GsLQ1'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	};
 
 	const mealType = 'Salad';
 	const cuisineType = 'Mexican';
@@ -224,9 +247,9 @@ const TacoSalad = () => {
 				height='560'
 				src={videoSource}
 				title='YouTube video player'
-				frameborder='0'
+				frameBorder='0'
 				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-				allowfullscreen
+				allowFullScreen
 			></iframe>
 			<div id='title2'>{title2}</div>
 			<img id='image2' src={recipePhoto2} alt={altText} />
@@ -252,7 +275,12 @@ const TacoSalad = () => {
 						{mealTitle}
 					</div>
 					<div id='block2' class='imageContainerWithButtons'>
-						<img className='headerItem' src={smallRecipePhoto} width='100%' />
+						<img
+							className='headerItem'
+							src={smallRecipePhoto}
+							width='100%'
+							alt={altText}
+						/>
 						<a href='#leaveReply'>
 							<div id='reviewRecipe'>
 								<strong id='reviewRecipeText'>Review Recipe</strong>
@@ -601,40 +629,60 @@ const TacoSalad = () => {
 							/>
 						</div>
 					</div>
-					<div id='commentText' className='replyItem'>
-						Comment*
-						<textarea
-							name='enteredComment'
-							id='commentBox'
-							value={recipeComment}
-							onChange={updateComment}
-						></textarea>
-					</div>
-					<div id='nameText' className='replyItem'>
-						Name*
-						<div className='replyItem'>
-							<input
-								id='nameField'
-								type='text'
-								value={reviewerName}
-								onChange={updateReviewerName}
-							></input>
+					<form id='commentForm' ref={form} onSubmit={sendEmail}>
+						<div id='commentText' className='replyItem'>
+							Comment*
+							<textarea
+								name='enteredComment'
+								id='commentBox'
+								value={recipeComment}
+								onChange={updateComment}
+							></textarea>
 						</div>
-					</div>
-					<div id='emailText' className='replyItem'>
-						Email*
-						<div className='replyItem'>
-							<input
-								id='emailField'
-								type='text'
-								value={reviewerEmail}
-								onChange={updateReviewerEmail}
-							></input>
+						<div id='nameAndEmailContainer'>
+							<div id='nameText' className='replyItem'>
+								Name*
+								<div className='replyItem'>
+									<input
+										id='nameField'
+										name='name'
+										type='text'
+										value={reviewerName}
+										onChange={updateReviewerName}
+									></input>
+								</div>
+							</div>
+							<div id='emailText' className='replyItem'>
+								Email*
+								<div className='replyItem'>
+									<input
+										id='emailField'
+										name='email'
+										type='text'
+										value={reviewerEmail}
+										onChange={updateReviewerEmail}
+									></input>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div id='postButton' className='replyItem' onClick={openCommentModal}>
-						Post Comment
-					</div>
+						<div style={{ display: 'none' }}>
+							<input
+								type='text'
+								name='relevantPage'
+								id='relevantPage'
+								value={mealTitle}
+								readOnly={true}
+							/>
+						</div>
+						<button
+							type='submit'
+							id='postButton'
+							className='replyItem'
+							onClick={openCommentModal}
+						>
+							Post Comment
+						</button>
+					</form>
 					<Modal
 						id='commentModal'
 						isOpen={commentModalIsOpen}

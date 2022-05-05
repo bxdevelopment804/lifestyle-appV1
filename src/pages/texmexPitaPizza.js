@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
+import emailjs from 'emailjs-com';
 
 import SingleSquare from '../shared/single-square';
 import FiveStarRating from '../shared/fiveStarRating';
 import './generalRecipeFormatting.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPrint, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faPrint } from '@fortawesome/free-solid-svg-icons';
 import {
 	faFacebook,
 	faFacebookSquare,
@@ -74,7 +75,7 @@ const TexmexPitaPizza = () => {
 	};
 
 	function openCommentModal() {
-		if (recipeComment != '' && reviewerName != '' && reviewerEmail != '') {
+		if (recipeComment !== '' && reviewerName !== '' && reviewerEmail !== '') {
 			setCommentModalIsOpen(true);
 		} else {
 			alert('Please complete all three fields.');
@@ -97,7 +98,7 @@ const TexmexPitaPizza = () => {
 	};
 
 	function openSignUpModal() {
-		if (signUpEmail != '') {
+		if (signUpEmail !== '') {
 			setSignUpModalIsOpen(true);
 		} else {
 			alert('Please enter a complete email to sign up for our mailing list.');
@@ -121,6 +122,28 @@ const TexmexPitaPizza = () => {
 	};
 
 	Modal.setAppElement('#root');
+
+	//Code for sending emails from comment section.
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_zz1nmdq',
+				'template_blotnk6',
+				form.current,
+				'K0MS8uX0Eal8GsLQ1'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	};
 
 	return (
 		<div id='pageContainer'>
@@ -184,9 +207,9 @@ const TexmexPitaPizza = () => {
 				height='315'
 				src='https://www.youtube.com/embed/0Pbb7NHtVog'
 				title='YouTube video player'
-				frameborder='0'
+				frameBorder='0'
 				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-				allowfullscreen
+				allowFullScreen
 			></iframe>
 			<div id='title2'>
 				These will satisfy your taste buds and satiate your tum.
@@ -239,11 +262,12 @@ const TexmexPitaPizza = () => {
 					<div id='block1' className='headerItem'>
 						Tex-Mex Pita Pizzas
 					</div>
-					<div id='block2' class='imageContainerWithButtons'>
+					<div id='block2' className='imageContainerWithButtons'>
 						<img
 							className='headerItem'
 							src='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
 							width='100%'
+							alt='Tex Mex Pita Pizza'
 						/>
 						<a href='#leaveReply'>
 							<div id='reviewRecipe'>
@@ -489,8 +513,6 @@ const TexmexPitaPizza = () => {
 							className='authorPhoto'
 							src='https://www.forksoverknives.com/wp-content/uploads/fly-images/28913/Darshana-Thacker-732x506-1-494x341-c.jpg'
 							alt='author'
-							// width='130px'
-							// height='100px'
 						/>
 					</div>
 					<div id='block30' className='footerAuthInfo'>
@@ -609,40 +631,60 @@ const TexmexPitaPizza = () => {
 							/>
 						</div>
 					</div>
-					<div id='commentText' className='replyItem'>
-						Comment*
-						<textarea
-							name='enteredComment'
-							id='commentBox'
-							value={recipeComment}
-							onChange={updateComment}
-						></textarea>
-					</div>
-					<div id='nameText' className='replyItem'>
-						Name*
-						<div className='replyItem'>
-							<input
-								id='nameField'
-								type='text'
-								value={reviewerName}
-								onChange={updateReviewerName}
-							></input>
+					<form id='commentForm' ref={form} onSubmit={sendEmail}>
+						<div id='commentText' className='replyItem'>
+							Comment*
+							<textarea
+								name='enteredComment'
+								id='commentBox'
+								value={recipeComment}
+								onChange={updateComment}
+							></textarea>
 						</div>
-					</div>
-					<div id='emailText' className='replyItem'>
-						Email*
-						<div className='replyItem'>
-							<input
-								id='emailField'
-								type='text'
-								value={reviewerEmail}
-								onChange={updateReviewerEmail}
-							></input>
+						<div id='nameAndEmailContainer'>
+							<div id='nameText' className='replyItem'>
+								Name*
+								<div className='replyItem'>
+									<input
+										id='nameField'
+										name='name'
+										type='text'
+										value={reviewerName}
+										onChange={updateReviewerName}
+									></input>
+								</div>
+							</div>
+							<div id='emailText' className='replyItem'>
+								Email*
+								<div className='replyItem'>
+									<input
+										id='emailField'
+										name='email'
+										type='text'
+										value={reviewerEmail}
+										onChange={updateReviewerEmail}
+									></input>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div id='postButton' className='replyItem' onClick={openCommentModal}>
-						Post Comment
-					</div>
+						<div style={{ display: 'none' }}>
+							<input
+								type='text'
+								name='relevantPage'
+								id='relevantPage'
+								value='Tex-Mex Pita Pizzas'
+								readOnly={true}
+							/>
+						</div>
+						<button
+							type='submit'
+							id='postButton'
+							className='replyItem'
+							onClick={openCommentModal}
+						>
+							Post Comment
+						</button>
+					</form>
 					<Modal
 						id='commentModal'
 						isOpen={commentModalIsOpen}

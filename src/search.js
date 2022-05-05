@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import SingleSquare from './shared/single-square';
 
 import './search.css';
 
@@ -345,8 +344,6 @@ const Search = () => {
 		},
 	];
 
-	// const [searchPhrase, setSearchPhrase] = useState();
-
 	const [filteredArray, setFilteredArray] = useState([]);
 
 	const handleSearch = (event) => {
@@ -357,43 +354,26 @@ const Search = () => {
 		setFilteredArray(newFilter);
 	};
 
-	// function searchFunction(page) {
-	//   return page.contains(searchPhrase);
-	// }
-
-	// const handleSubmit = (event) => {
-	//   event.preventDefault();
-	//   alert(`Submitting Name ${searchPhrase}`);
-	// };
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
+		document.getElementById('inputField').focus();
 	}, []);
 
 	return (
 		<div>
-			{/* <div>SEARCH PAGE</div> */}
-			{/* <form onSubmit={handleSubmit}> */}
-			<form id='inputField'>
+			<h2>Search for Recipes and Articles Below:</h2>
+			<form id='inputFieldForm'>
 				<label>
-					{/* Name: */}
 					<input
 						id='inputField'
 						type='text'
 						placeholder='Enter Search Term'
-						// value={searchPhrase}
-						// onSubmit={(event) => {
-						//   setSearchPhrase(event.target.value);
-						// }}
-						// onChange={(event) => setSearchPhrase(event.target.value)}
 						onChange={handleSearch}
 					/>
 				</label>
-				{/* <input type='submit' value='Submit' /> */}
 			</form>
-			{/* <div>Search Phrase: {searchPhrase}</div> */}
-			{/* <div>Filtered Pages: {filteredPages}</div> */}
-			{filteredArray.length != 0 && (
+
+			{filteredArray.length !== 0 && (
 				<div id='searchBox'>
 					{filteredArray.slice(0, 20).map((page) => {
 						return (
@@ -402,7 +382,6 @@ const Search = () => {
 									<div className='searchLinks'>{page.title}</div>
 								</a>
 								<br />
-								{/* <n /> */}
 							</React.Fragment>
 						);
 					})}

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	// BrowserRouter as Router,
-	Route,
-	// Redirect,
-	Switch,
-	// Link,
-} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Home from './home';
 import Recipes from './recipes';
@@ -16,7 +10,6 @@ import SelfCare from './selfCare';
 import GreenTeaNoodles from './greenTeaNoodles';
 import HealthyFrenchToast from './healthyFrenchToast';
 import AsianChickenMeatballs from './asianChickenMeatballs';
-import './main.css';
 import ChickenZoodleSoup from './chickenZoodleSoup';
 import ItalianTunaMelt from './italianTunaMelt';
 import ChickenSaladSandwich from './chickenSaladSandwich';
