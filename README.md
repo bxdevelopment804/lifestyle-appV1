@@ -4,7 +4,7 @@
 
 1.  **What Does Lifestyle App Do?**
 
-    Provides the daily high, low, and current temperatures, current conditions, humidity, precipitation, wind speed, and local time for a user defined list of cities.
+    Provides a collection of healthy recipes, workouts, and wellness articles for people looking to live a bit healthier. Watch related videos, or search for something different.
 
 2.  **Design Intent**
 
@@ -14,6 +14,8 @@
 
     - Create React App
     - CSS
+    - EmailJS
+    - FontAwesome
 
 4.  **Link**
 
