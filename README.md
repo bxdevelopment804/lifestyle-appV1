@@ -2,7 +2,7 @@
   Lifestyle App
 </h1>
 
-1.  **What Does Lifestyle App Do?**
+1.  **What Does This Lifestyle App Do?**
 
     Provides a collection of healthy recipes, workouts, and wellness articles for people looking to live a bit healthier. Watch related videos, or search for something different.
 
