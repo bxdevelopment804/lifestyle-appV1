@@ -19,4 +19,4 @@
 
 4.  **Link**
 
-    - [Lifestyle App](http://lifestyle-app.vercel.app/)
+    - [Lifestyle App](https://bxd-lifestyle.vercel.app/)
