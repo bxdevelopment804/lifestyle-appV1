@@ -44,7 +44,7 @@ const Footer = (props) => {
 				</Link>
 			</div>
 			<div id='copyright' className='footerItem'>
-				"Copyright" © 2021 HealthyLifestyle &nbsp; All Rights Reserved
+				2022 HealthyLifestyle &nbsp; All Rights Reserved
 			</div>
 			<div id='iconsWithLogIn' className='footerItem'>
 				<a href='https://www.facebook.com/'>
