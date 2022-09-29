@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -12,7 +12,32 @@ import {
 import './navbar.css';
 
 const Navbar = () => {
-	//State for hiding and showing the mobile dropdown menu
+	//Mobile menu clickaway handler
+	function useMobileMenuVisible(initialIsVisible) {
+		const [isMobileMenuVisible, setIsMobileMenuVisible] =
+			useState(initialIsVisible);
+		const ref = useRef(null);
+
+		const handleClickOutside = (event) => {
+			if (ref.current && !ref.current.contains(event.target)) {
+				closeMobileMenu();
+			}
+		};
+
+		useEffect(() => {
+			document.addEventListener('click', handleClickOutside, true);
+			return () => {
+				document.removeEventListener('click', handleClickOutside, true);
+			};
+		}, []);
+
+		return { ref, isMobileMenuVisible, setIsMobileMenuVisible };
+	}
+
+	//State needed purely for the above clickaway hook to function.
+	const { ref, isMobileMenuVisible } = useMobileMenuVisible(true);
+
+	//State for hiding and showing the entire mobile dropdown menu
 	const [mobileMenuActivated, setMobileMenuActivated] = useState(false);
 	const handleMobileMenu = () => {
 		setMobileMenuActivated(!mobileMenuActivated);
@@ -324,583 +349,607 @@ const Navbar = () => {
 					</div>
 				)}
 				{mobileMenuActivated && (
-					<React.Fragment>
+					<div>
 						<div id='mobile-menu' onClick={handleMobileMenu}>
 							<FontAwesomeIcon icon={faTimes} className='closeIcon' />
 						</div>
-						<ul id='mobileNavButtonList'>
-							{!secondaryRecipeMenuActivated && (
-								<li className='mobileNavButton'>
-									<Link to='/recipes'>
-										<div onClick={closeMobileMenu}>Recipes</div>
-									</Link>
-									<div>
-										<FontAwesomeIcon
-											icon={faChevronDown}
-											onClick={handleSecondaryRecipeMenu}
-											className='chevron'
-										/>
-									</div>
-								</li>
-							)}
-							{secondaryRecipeMenuActivated && (
-								<React.Fragment>
-									<li className='mobileNavButton'>
-										<Link to='/recipes'>
-											<div onClick={closeMobileMenu}>Recipes</div>
-										</Link>
-										<div>
-											<FontAwesomeIcon
-												icon={faChevronUp}
-												onClick={handleSecondaryRecipeMenu}
-												className='chevron'
-											/>
-										</div>
-									</li>
-									<div className='secondaryMobileMenu'>
-										{/* Meal Type Tertiary Menus */}
-										{!tertiaryMealTypeMenuActivated && (
-											<div className='secondaryMobileItem'>
-												<div className='secondaryMobileTitle'>Meal Type</div>
+						<div ref={ref}>
+							{isMobileMenuVisible && (
+								<div>
+									<ul id='mobileNavButtonList'>
+										{!secondaryRecipeMenuActivated && (
+											<li className='mobileNavButton'>
+												<Link to='/recipes'>
+													<div onClick={closeMobileMenu}>Recipes</div>
+												</Link>
 												<div>
 													<FontAwesomeIcon
 														icon={faChevronDown}
-														onClick={handleTertiaryMealTypeMenu}
+														onClick={handleSecondaryRecipeMenu}
 														className='chevron'
 													/>
 												</div>
-											</div>
+											</li>
 										)}
-										{tertiaryMealTypeMenuActivated && (
-											<div>
-												<div className='secondaryMobileItem'>
-													<div className='secondaryMobileTitle'>Meal Type</div>
+										{secondaryRecipeMenuActivated && (
+											<React.Fragment>
+												<li className='mobileNavButton'>
+													<Link to='/recipes'>
+														<div onClick={closeMobileMenu}>Recipes</div>
+													</Link>
 													<div>
 														<FontAwesomeIcon
 															icon={faChevronUp}
-															onClick={handleTertiaryMealTypeMenu}
+															onClick={handleSecondaryRecipeMenu}
 															className='chevron'
 														/>
 													</div>
+												</li>
+												<div className='secondaryMobileMenu'>
+													{/* Meal Type Tertiary Menus */}
+													{!tertiaryMealTypeMenuActivated && (
+														<div className='secondaryMobileItem'>
+															<div className='secondaryMobileTitle'>
+																Meal Type
+															</div>
+															<div>
+																<FontAwesomeIcon
+																	icon={faChevronDown}
+																	onClick={handleTertiaryMealTypeMenu}
+																	className='chevron'
+																/>
+															</div>
+														</div>
+													)}
+													{tertiaryMealTypeMenuActivated && (
+														<div>
+															<div className='secondaryMobileItem'>
+																<div className='secondaryMobileTitle'>
+																	Meal Type
+																</div>
+																<div>
+																	<FontAwesomeIcon
+																		icon={faChevronUp}
+																		onClick={handleTertiaryMealTypeMenu}
+																		className='chevron'
+																	/>
+																</div>
+															</div>
+															<div className='tertiaryMobileMenu'>
+																<Link to='/appetizers'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Appetizers
+																	</div>
+																</Link>
+																<Link to='/breakfast'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Breakfast
+																	</div>
+																</Link>
+																<Link to='/lunch'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Lunch
+																	</div>
+																</Link>
+																<Link to='/dinner'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Dinner
+																	</div>
+																</Link>
+																<Link to='/dessert'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Dessert
+																	</div>
+																</Link>
+																<Link to='/sides'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Sides
+																	</div>
+																</Link>
+															</div>
+														</div>
+													)}
+
+													{/* Dish Type Tertiary Menus */}
+													{!tertiaryDishTypeMenuActivated && (
+														<div className='secondaryMobileItem'>
+															<div className='secondaryMobileTitle'>
+																Dish Type
+															</div>
+															<div>
+																<FontAwesomeIcon
+																	icon={faChevronDown}
+																	onClick={handleTertiaryDishTypeMenu}
+																	className='chevron'
+																/>
+															</div>
+														</div>
+													)}
+													{tertiaryDishTypeMenuActivated && (
+														<div>
+															<div className='secondaryMobileItem'>
+																<div className='secondaryMobileTitle'>
+																	Dish Type
+																</div>
+																<div>
+																	<FontAwesomeIcon
+																		icon={faChevronUp}
+																		onClick={handleTertiaryDishTypeMenu}
+																		className='chevron'
+																	/>
+																</div>
+															</div>
+															<div className='tertiaryMobileMenu'>
+																<Link to='/bowls'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Bowls
+																	</div>
+																</Link>
+																<Link to='/burgers'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Burgers
+																	</div>
+																</Link>
+																<Link to='/onePotOrSkillet'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		One-Pot & Skillet
+																	</div>
+																</Link>
+																<Link to='/pastaDishes'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Pasta Dishes
+																	</div>
+																</Link>
+																<Link to='/pizza'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Pizza
+																	</div>
+																</Link>
+																<Link to='/salads'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Salads
+																	</div>
+																</Link>
+																<Link to='/sandwiches'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Sandwiches
+																	</div>
+																</Link>
+																<Link to='/soupStewChili'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Soup, Stew, & Chili
+																	</div>
+																</Link>
+																<Link to='/tacosBurritos'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Tacos
+																	</div>
+																</Link>
+															</div>
+														</div>
+													)}
+
+													{/* Method Tertiary Menus */}
+													{!tertiaryMethodMenuActivated && (
+														<div className='secondaryMobileItem'>
+															<div className='secondaryMobileTitle'>Method</div>
+															<div>
+																<FontAwesomeIcon
+																	icon={faChevronDown}
+																	onClick={handleTertiaryMethodMenu}
+																	className='chevron'
+																/>
+															</div>
+														</div>
+													)}
+													{tertiaryMethodMenuActivated && (
+														<div>
+															<div className='secondaryMobileItem'>
+																<div className='secondaryMobileTitle'>
+																	Method
+																</div>
+																<div>
+																	<FontAwesomeIcon
+																		icon={faChevronUp}
+																		onClick={handleTertiaryMethodMenu}
+																		className='chevron'
+																	/>
+																</div>
+															</div>
+															<div className='tertiaryMobileMenu'>
+																<div className='tertiaryMobileItem'>Baking</div>
+																<div className='tertiaryMobileItem'>
+																	Barbeque & Grilling
+																</div>
+																<div className='tertiaryMobileItem'>
+																	Instant Pot
+																</div>
+																<Link to='/noCook'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		No-Cook
+																	</div>
+																</Link>
+																<div className='tertiaryMobileItem'>
+																	Stove Top
+																</div>
+															</div>
+														</div>
+													)}
+
+													{/* Diet Type Tertiary Menus */}
+													{!tertiaryDietTypeMenuActivated && (
+														<div className='secondaryMobileItem'>
+															<div className='secondaryMobileTitle'>
+																Diet Type
+															</div>
+															<div>
+																<FontAwesomeIcon
+																	icon={faChevronDown}
+																	onClick={handleTertiaryDietTypeMenu}
+																	className='chevron'
+																/>
+															</div>
+														</div>
+													)}
+													{tertiaryDietTypeMenuActivated && (
+														<div>
+															<div className='secondaryMobileItem'>
+																<div className='secondaryMobileTitle'>
+																	Diet Type
+																</div>
+																<div>
+																	<FontAwesomeIcon
+																		icon={faChevronUp}
+																		onClick={handleTertiaryDietTypeMenu}
+																		className='chevron'
+																	/>
+																</div>
+															</div>
+															<div className='tertiaryMobileMenu'>
+																<Link to='/dairyFree'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Dairy-Free
+																	</div>
+																</Link>
+																<Link to='/glutenFree'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Gluten-Free
+																	</div>
+																</Link>
+																<Link to='/lowCarb'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Low-Carb
+																	</div>
+																</Link>
+																<Link to='/paleo'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Paleo
+																	</div>
+																</Link>
+																<Link to='/plantBased'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Plant-Base
+																	</div>
+																</Link>
+																<Link to='/vegetarian'>
+																	<div
+																		className='tertiaryMobileItem'
+																		onClick={closeMobileMenu}
+																	>
+																		Vegetarian
+																	</div>
+																</Link>
+															</div>
+														</div>
+													)}
+													<Link to='/recipes'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Recipe Index
+														</div>
+													</Link>
 												</div>
-												<div className='tertiaryMobileMenu'>
-													<Link to='/appetizers'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Appetizers
-														</div>
-													</Link>
-													<Link to='/breakfast'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Breakfast
-														</div>
-													</Link>
-													<Link to='/lunch'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Lunch
-														</div>
-													</Link>
-													<Link to='/dinner'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Dinner
-														</div>
-													</Link>
-													<Link to='/dessert'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Dessert
-														</div>
-													</Link>
-													<Link to='/sides'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Sides
-														</div>
-													</Link>
-												</div>
-											</div>
+											</React.Fragment>
 										)}
 
-										{/* Dish Type Tertiary Menus */}
-										{!tertiaryDishTypeMenuActivated && (
-											<div className='secondaryMobileItem'>
-												<div className='secondaryMobileTitle'>Dish Type</div>
+										{/* Meal Planning Menu Not Expanded */}
+										{!secondaryMealPlanningMenuActivated && (
+											<li className='mobileNavButton'>
+												<Link to='/mealPlanning'>
+													<div onClick={closeMobileMenu}>Meal Planning</div>
+												</Link>
 												<div>
 													<FontAwesomeIcon
 														icon={faChevronDown}
-														onClick={handleTertiaryDishTypeMenu}
+														onClick={handleSecondaryMealPlanningMenu}
 														className='chevron'
 													/>
 												</div>
-											</div>
+											</li>
 										)}
-										{tertiaryDishTypeMenuActivated && (
-											<div>
-												<div className='secondaryMobileItem'>
-													<div className='secondaryMobileTitle'>Dish Type</div>
+										{/* Meal Planning Menu Expanded */}
+										{secondaryMealPlanningMenuActivated && (
+											<React.Fragment>
+												<li className='mobileNavButton'>
+													<Link to='/mealPlanning'>
+														<div onClick={closeMobileMenu}>Meal Planning</div>
+													</Link>
 													<div>
 														<FontAwesomeIcon
 															icon={faChevronUp}
-															onClick={handleTertiaryDishTypeMenu}
+															onClick={handleSecondaryMealPlanningMenu}
 															className='chevron'
 														/>
 													</div>
-												</div>
-												<div className='tertiaryMobileMenu'>
-													<Link to='/bowls'>
+												</li>
+												<div className='secondaryMobileMenu'>
+													<Link to='mealPlanning'>
 														<div
-															className='tertiaryMobileItem'
+															className='secondaryMobileItem secondaryMobileTitle'
 															onClick={closeMobileMenu}
 														>
-															Bowls
+															Meal Plans
 														</div>
 													</Link>
-													<Link to='/burgers'>
+													<Link to='lowCarb'>
 														<div
-															className='tertiaryMobileItem'
+															className='secondaryMobileItem secondaryMobileTitle'
 															onClick={closeMobileMenu}
 														>
-															Burgers
-														</div>
-													</Link>
-													<Link to='/onePotOrSkillet'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															One-Pot & Skillet
-														</div>
-													</Link>
-													<Link to='/pastaDishes'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Pasta Dishes
-														</div>
-													</Link>
-													<Link to='/pizza'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Pizza
-														</div>
-													</Link>
-													<Link to='/salads'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Salads
-														</div>
-													</Link>
-													<Link to='/sandwiches'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Sandwiches
-														</div>
-													</Link>
-													<Link to='/soupStewChili'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Soup, Stew, & Chili
-														</div>
-													</Link>
-													<Link to='/tacosBurritos'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Tacos
-														</div>
-													</Link>
-												</div>
-											</div>
-										)}
-
-										{/* Method Tertiary Menus */}
-										{!tertiaryMethodMenuActivated && (
-											<div className='secondaryMobileItem'>
-												<div className='secondaryMobileTitle'>Method</div>
-												<div>
-													<FontAwesomeIcon
-														icon={faChevronDown}
-														onClick={handleTertiaryMethodMenu}
-														className='chevron'
-													/>
-												</div>
-											</div>
-										)}
-										{tertiaryMethodMenuActivated && (
-											<div>
-												<div className='secondaryMobileItem'>
-													<div className='secondaryMobileTitle'>Method</div>
-													<div>
-														<FontAwesomeIcon
-															icon={faChevronUp}
-															onClick={handleTertiaryMethodMenu}
-															className='chevron'
-														/>
-													</div>
-												</div>
-												<div className='tertiaryMobileMenu'>
-													<div className='tertiaryMobileItem'>Baking</div>
-													<div className='tertiaryMobileItem'>
-														Barbeque & Grilling
-													</div>
-													<div className='tertiaryMobileItem'>Instant Pot</div>
-													<Link to='/noCook'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															No-Cook
-														</div>
-													</Link>
-													<div className='tertiaryMobileItem'>Stove Top</div>
-												</div>
-											</div>
-										)}
-
-										{/* Diet Type Tertiary Menus */}
-										{!tertiaryDietTypeMenuActivated && (
-											<div className='secondaryMobileItem'>
-												<div className='secondaryMobileTitle'>Diet Type</div>
-												<div>
-													<FontAwesomeIcon
-														icon={faChevronDown}
-														onClick={handleTertiaryDietTypeMenu}
-														className='chevron'
-													/>
-												</div>
-											</div>
-										)}
-										{tertiaryDietTypeMenuActivated && (
-											<div>
-												<div className='secondaryMobileItem'>
-													<div className='secondaryMobileTitle'>Diet Type</div>
-													<div>
-														<FontAwesomeIcon
-															icon={faChevronUp}
-															onClick={handleTertiaryDietTypeMenu}
-															className='chevron'
-														/>
-													</div>
-												</div>
-												<div className='tertiaryMobileMenu'>
-													<Link to='/dairyFree'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Dairy-Free
-														</div>
-													</Link>
-													<Link to='/glutenFree'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Gluten-Free
-														</div>
-													</Link>
-													<Link to='/lowCarb'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Low-Carb
-														</div>
-													</Link>
-													<Link to='/paleo'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Paleo
+															Low-Carb Menus
 														</div>
 													</Link>
 													<Link to='/plantBased'>
 														<div
-															className='tertiaryMobileItem'
+															className='secondaryMobileItem secondaryMobileTitle'
 															onClick={closeMobileMenu}
 														>
-															Plant-Base
-														</div>
-													</Link>
-													<Link to='/vegetarian'>
-														<div
-															className='tertiaryMobileItem'
-															onClick={closeMobileMenu}
-														>
-															Vegetarian
+															Plant-Based Menus
 														</div>
 													</Link>
 												</div>
-											</div>
+											</React.Fragment>
 										)}
-										<Link to='/recipes'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Recipe Index
-											</div>
-										</Link>
-									</div>
-								</React.Fragment>
-							)}
+										{/* Weight Loss Menu Not Expanded */}
+										{!secondaryWeightLossMenuActivated && (
+											<li className='mobileNavButton'>
+												<Link to='/weightLoss'>
+													<div onClick={closeMobileMenu}>Weight Loss</div>
+												</Link>
+												<div>
+													<FontAwesomeIcon
+														icon={faChevronDown}
+														onClick={handleSecondaryWeightLossMenu}
+														className='chevron'
+													/>
+												</div>
+											</li>
+										)}
+										{/* Weight Loss Menu Expanded */}
+										{secondaryWeightLossMenuActivated && (
+											<React.Fragment>
+												<li className='mobileNavButton'>
+													<Link to='/weightLoss'>
+														<div onClick={closeMobileMenu}>Weight Loss</div>
+													</Link>
+													<div>
+														<FontAwesomeIcon
+															icon={faChevronUp}
+															onClick={handleSecondaryWeightLossMenu}
+															className='chevron'
+														/>
+													</div>
+												</li>
+												<div className='secondaryMobileMenu'>
+													<Link to='weightLoss'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Weight Loss Foods
+														</div>
+													</Link>
+												</div>
+											</React.Fragment>
+										)}
+										{/* Fitness Menu Not Expanded */}
+										{!secondaryFitnessMenuActivated && (
+											<li className='mobileNavButton'>
+												<Link to='/fitness'>
+													<div onClick={closeMobileMenu}>Fitness</div>
+												</Link>
+												<div>
+													<FontAwesomeIcon
+														icon={faChevronDown}
+														onClick={handleSecondaryFitnessMenu}
+														className='chevron'
+													/>
+												</div>
+											</li>
+										)}
+										{/* Fitness Menu Expanded */}
+										{secondaryFitnessMenuActivated && (
+											<React.Fragment>
+												<li className='mobileNavButton'>
+													<Link to='/fitness'>
+														<div onClick={closeMobileMenu}>Fitness</div>
+													</Link>
+													<div>
+														<FontAwesomeIcon
+															icon={faChevronUp}
+															onClick={handleSecondaryFitnessMenu}
+															className='chevron'
+														/>
+													</div>
+												</li>
+												<div className='secondaryMobileMenu'>
+													<Link to='abAndCore'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Ab & Core
+														</div>
+													</Link>
+													<Link to='beginners'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Beginners
+														</div>
+													</Link>
+													<Link to='/advanced'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Advanced
+														</div>
+													</Link>
 
-							{/* Meal Planning Menu Not Expanded */}
-							{!secondaryMealPlanningMenuActivated && (
-								<li className='mobileNavButton'>
-									<Link to='/mealPlanning'>
-										<div onClick={closeMobileMenu}>Meal Planning</div>
-									</Link>
-									<div>
-										<FontAwesomeIcon
-											icon={faChevronDown}
-											onClick={handleSecondaryMealPlanningMenu}
-											className='chevron'
-										/>
-									</div>
-								</li>
-							)}
-							{/* Meal Planning Menu Expanded */}
-							{secondaryMealPlanningMenuActivated && (
-								<React.Fragment>
-									<li className='mobileNavButton'>
-										<Link to='/mealPlanning'>
-											<div onClick={closeMobileMenu}>Meal Planning</div>
-										</Link>
-										<div>
-											<FontAwesomeIcon
-												icon={faChevronUp}
-												onClick={handleSecondaryMealPlanningMenu}
-												className='chevron'
-											/>
-										</div>
-									</li>
-									<div className='secondaryMobileMenu'>
-										<Link to='mealPlanning'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Meal Plans
-											</div>
-										</Link>
-										<Link to='lowCarb'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Low-Carb Menus
-											</div>
-										</Link>
-										<Link to='/plantBased'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Plant-Based Menus
-											</div>
-										</Link>
-									</div>
-								</React.Fragment>
-							)}
-							{/* Weight Loss Menu Not Expanded */}
-							{!secondaryWeightLossMenuActivated && (
-								<li className='mobileNavButton'>
-									<Link to='/weightLoss'>
-										<div onClick={closeMobileMenu}>Weight Loss</div>
-									</Link>
-									<div>
-										<FontAwesomeIcon
-											icon={faChevronDown}
-											onClick={handleSecondaryWeightLossMenu}
-											className='chevron'
-										/>
-									</div>
-								</li>
-							)}
-							{/* Weight Loss Menu Expanded */}
-							{secondaryWeightLossMenuActivated && (
-								<React.Fragment>
-									<li className='mobileNavButton'>
-										<Link to='/weightLoss'>
-											<div onClick={closeMobileMenu}>Weight Loss</div>
-										</Link>
-										<div>
-											<FontAwesomeIcon
-												icon={faChevronUp}
-												onClick={handleSecondaryWeightLossMenu}
-												className='chevron'
-											/>
-										</div>
-									</li>
-									<div className='secondaryMobileMenu'>
-										<Link to='weightLoss'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Weight Loss Foods
-											</div>
-										</Link>
-									</div>
-								</React.Fragment>
-							)}
-							{/* Fitness Menu Not Expanded */}
-							{!secondaryFitnessMenuActivated && (
-								<li className='mobileNavButton'>
-									<Link to='/fitness'>
-										<div onClick={closeMobileMenu}>Fitness</div>
-									</Link>
-									<div>
-										<FontAwesomeIcon
-											icon={faChevronDown}
-											onClick={handleSecondaryFitnessMenu}
-											className='chevron'
-										/>
-									</div>
-								</li>
-							)}
-							{/* Fitness Menu Expanded */}
-							{secondaryFitnessMenuActivated && (
-								<React.Fragment>
-									<li className='mobileNavButton'>
-										<Link to='/fitness'>
-											<div onClick={closeMobileMenu}>Fitness</div>
-										</Link>
-										<div>
-											<FontAwesomeIcon
-												icon={faChevronUp}
-												onClick={handleSecondaryFitnessMenu}
-												className='chevron'
-											/>
-										</div>
-									</li>
-									<div className='secondaryMobileMenu'>
-										<Link to='abAndCore'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Ab & Core
-											</div>
-										</Link>
-										<Link to='beginners'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Beginners
-											</div>
-										</Link>
-										<Link to='/advanced'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Advanced
-											</div>
-										</Link>
+													<Link to='/homeWorkouts'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Home Workouts
+														</div>
+													</Link>
+													<Link to='/lowerBody'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Lower Body
+														</div>
+													</Link>
+													<Link to='/upperBody'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Upper Body
+														</div>
+													</Link>
 
-										<Link to='/homeWorkouts'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Home Workouts
-											</div>
-										</Link>
-										<Link to='/lowerBody'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Lower Body
-											</div>
-										</Link>
-										<Link to='/upperBody'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
-												onClick={closeMobileMenu}
-											>
-												Upper Body
-											</div>
-										</Link>
+													<Link to='/totalBody'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Total Body
+														</div>
+													</Link>
+													<Link to='/running'>
+														<div
+															className='secondaryMobileItem secondaryMobileTitle'
+															onClick={closeMobileMenu}
+														>
+															Running
+														</div>
+													</Link>
+												</div>
+											</React.Fragment>
+										)}
 
-										<Link to='/totalBody'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
+										<Link to='/selfCare'>
+											<li
+												id='mobileShop'
+												className='mobileNavButton'
 												onClick={closeMobileMenu}
 											>
-												Total Body
-											</div>
+												Self Care
+											</li>
 										</Link>
-										<Link to='/running'>
-											<div
-												className='secondaryMobileItem secondaryMobileTitle'
+										<Link to='/shop'>
+											<li
+												id='mobileShop'
+												className='mobileNavButton'
 												onClick={closeMobileMenu}
 											>
-												Running
-											</div>
+												Shop
+											</li>
 										</Link>
-									</div>
-								</React.Fragment>
+										<Link to='/search'>
+											<li
+												id='mobileSearch'
+												className='mobileNavButton'
+												onClick={closeMobileMenu}
+											>
+												Search
+											</li>
+										</Link>
+									</ul>
+								</div>
 							)}
-
-							<Link to='/selfCare'>
-								<li
-									id='mobileShop'
-									className='mobileNavButton'
-									onClick={closeMobileMenu}
-								>
-									Self Care
-								</li>
-							</Link>
-							<Link to='/shop'>
-								<li
-									id='mobileShop'
-									className='mobileNavButton'
-									onClick={closeMobileMenu}
-								>
-									Shop
-								</li>
-							</Link>
-							<Link to='/search'>
-								<li
-									id='mobileSearch'
-									className='mobileNavButton'
-									onClick={closeMobileMenu}
-								>
-									Search
-								</li>
-							</Link>
-						</ul>
-					</React.Fragment>
+						</div>
+					</div>
 				)}
 			</div>
 		</div>
