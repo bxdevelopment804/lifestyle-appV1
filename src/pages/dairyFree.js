@@ -55,7 +55,7 @@ const DairyFree = () => {
 					<Link to='/texmexPitaPizza'>
 						<SingleSquareCropped
 							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
-							url='/pictures/texMexPitaPizzaSquared.png'
+							url='/pictures/texmexPitaPizzaSquared.png'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
 							description='These will satisfy your taste buds and satiate your tum.'

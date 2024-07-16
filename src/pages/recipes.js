@@ -29,7 +29,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/healthyFrenchToast'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-french-toast-with-strawberries.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-french-toast-with-strawberries.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/healthyFrenchToastSquared.png'
 							section='Dinner'
 							title='Healthy French Toast With Strawberries'
 							description='When you want something a little sweet for supper, look no further than this French toast recipe.'
@@ -40,7 +41,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/asianChickenMeatballs.png'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
 							description='Get your tastebuds ready for some bold flavors we bring for a twist on a classic dish.'
@@ -51,7 +53,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/chickenZoodleSoup.png'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
 							description='Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.'
@@ -62,7 +65,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/italianTunaMelt'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-italian-tuna-melt.jpg?quality=82&strip=1&resize=970%2C546'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-italian-tuna-melt.jpg?quality=82&strip=1&resize=970%2C546'
+							url='/pictures/italianTunaMeltSquared.png'
 							section='Lunch'
 							title='Italian Tuna Melt'
 							description='A new and improved version of the classic sandwich that is ready to eat in minutes.'
@@ -73,7 +77,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/chickenSaladSandwich'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/chickenSaladSandwichSquared.png'
 							section='Lunch'
 							title='Chicken Salad Sandwich with Curry and Raisins'
 							description='Who said a chicken salad needs to be drowning in mayo to be tasty?'
@@ -84,7 +89,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/healthyUltimateBurger'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
+							url='/pictures/healthyUltimateBurgerSquared.png'
 							section='Dinner'
 							title='The Healthy Ultimate Burger'
 							description='Prepare for a true, first-class burger experience.'
@@ -95,7 +101,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							url='/pictures/texMexPitaPizzaSquared.png'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
 							description='Fresh flavours abound in this zingy pizza.'
@@ -106,7 +113,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							url='/pictures/creamyWildRiceSoupSquared.png'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
 							description='Our family loves this soup and chances are your family will love it too!'
@@ -117,7 +125,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							url='/pictures/veganBakedPotatoSquared.png'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
 							description='This recipe makes a great go-to meal when things are busy.'
@@ -128,7 +137,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							url='/pictures/veganMacaroniCheeseSquared.png'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
 							description='This classic vegan mac and cheese is ultra cheesy, saucy and creamy.'
@@ -139,7 +149,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/penneTomatoMushroom'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							url='/pictures/penneTomatoMushroomSquared.png'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'
 							description='Put an authentic Italian pasta dish on your dinner table in just 20 minutes.'
@@ -150,7 +161,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/burritosRiceBeans'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							url='/pictures/burritosRiceBeansSquared.png'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'
 							description='Quick and easy, vegan bean and rice burritos are a perfect vegetarian dinner idea.'

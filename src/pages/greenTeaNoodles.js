@@ -211,7 +211,8 @@ const GreenTeaNoodles = () => {
 			<div id='title2'>A Traditional Classic</div>
 			<img
 				id='image2'
-				src='https://mk0mydrtest3eri40dsq.kinstacdn.com/wp-content/uploads/2021/04/AdobeStock_78709581-1210x700.jpeg'
+				// src='https://mk0mydrtest3eri40dsq.kinstacdn.com/wp-content/uploads/2021/04/AdobeStock_78709581-1210x700.jpeg'
+				src='https://www.souschef.co.uk/cdn/shop/articles/3_fd6120be-1e74-45d5-8805-db7ebbfaf440.jpg?v=1705935998'
 				alt='green tea noodles'
 			/>
 			<p className='foodDescription'>
