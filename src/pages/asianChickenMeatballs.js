@@ -240,7 +240,7 @@ const AsianChickenMeatballs = () => {
 			<div id='title3'>Garnish with sesame seeds or fresh chopped parsley</div>
 			<img
 				id='image3'
-				src='https://www.goodfood.com.au/content/dam/images/h/0/z/q/r/8/image.related.articleLeadwide.620x349.h1051m.png/1528858543481.jpg'
+				src='/pictures/asianChickenMeatballs3.png'
 				alt='asian chicken meatballs'
 			/>
 			<p className='foodDescription'>

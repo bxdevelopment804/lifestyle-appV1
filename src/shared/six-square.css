@@ -3,6 +3,7 @@
 	flex-direction: column;
 	position: relative;
 	text-align: left;
+	overflow: hidden;
 }
 
 #six-square-section {

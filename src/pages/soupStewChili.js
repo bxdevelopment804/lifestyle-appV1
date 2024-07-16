@@ -18,7 +18,8 @@ const SoupStewChili = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/chickenZoodleSoup.png'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
 							description='Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.'
@@ -29,7 +30,8 @@ const SoupStewChili = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							url='/pictures/creamyWildRiceSoupSquared.png'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
 							description='	It’s like a chicken noodle soup but better.'

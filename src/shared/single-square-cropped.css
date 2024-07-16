@@ -1,5 +1,6 @@
 #single-square-cropped-container {
-	position: relative;
+	display: flex;
+	flex-direction: column;
 	justify-content: left;
 	text-align: left;
 	margin-bottom: 2vh;
@@ -25,12 +26,22 @@
 	top: -15px;
 	margin-top: 10px;
 }
-#single-square-photo-cropped {
-	width: 176%;
-	display: block;
-	height: 120%;
+
+.image-container{
+	display: flex;
 	position: relative;
-	left: -25%;
+	aspect-ratio: 1/1;
+	overflow: hidden;
+	box-sizing: border-box;
+	background-size: cover;
+}
+
+#single-square-photo-cropped {
+	display: block; 
+	position: relative; 
+	width: 176%; 
+	height: 120%; 
+	max-height: 100%;
 }
 
 #single-square-description,

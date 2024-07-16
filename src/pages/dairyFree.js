@@ -18,7 +18,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/asianChickenMeatballs.png'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
 							description='Get your tastebuds ready for some bold flavors we bring for a twist on a classic dish.'
@@ -29,7 +30,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/chickenZoodleSoup.png'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
 							description='Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.'
@@ -40,7 +42,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/healthyUltimateBurger'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
+							url='/pictures/healthyUltimateBurgerSquared.png'
 							section='Dinner'
 							title='The Healthy Ultimate Burger'
 							description='Prepare for a true, first-class burger experience.'
@@ -51,7 +54,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							url='/pictures/texMexPitaPizzaSquared.png'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
 							description='These will satisfy your taste buds and satiate your tum.'
@@ -62,7 +66,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							url='/pictures/creamyWildRiceSoupSquared.png'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
 							description='	It’s like a chicken noodle soup but better.'
@@ -73,7 +78,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							url='/pictures/veganBakedPotatoSquared.png'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
 							description='This recipe makes a great go-to meal when things are busy.'
@@ -84,7 +90,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							url='/pictures/veganMacaroniCheeseSquared.png'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
 							description='This classic vegan mac and cheese is ultra cheesy, saucy and creamy.'
@@ -95,7 +102,8 @@ const DairyFree = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/burritosRiceBeans'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							url='/pictures/burritosRiceBeansSquared.png'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'
 							description='Quick and easy, vegan bean and rice burritos are a perfect vegetarian dinner idea.'

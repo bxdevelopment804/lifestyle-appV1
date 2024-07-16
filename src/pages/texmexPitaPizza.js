@@ -230,7 +230,8 @@ const TexmexPitaPizza = () => {
 			</div>
 			<img
 				id='image3'
-				src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWYmKhWHC11TUyKDqjiki_Yu1JtNTuUG4d6Q&usqp=CAU'
+				// src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWYmKhWHC11TUyKDqjiki_Yu1JtNTuUG4d6Q&usqp=CAU'
+				src='https://customdistributors.com/wp-content/uploads/2021/09/Cerkl_TexMexPitaPizzas.jpg'
 				alt='texmex pita pizza'
 			/>
 

@@ -18,7 +18,8 @@ const NoCook = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/chickenSaladSandwich'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/chickenSaladSandwichSquared.png'
 							section='Lunch'
 							title='Chicken Salad Sandwich with Curry and Raisins'
 							description='Who said a chicken salad needs to be drowning in mayo to be tasty?'

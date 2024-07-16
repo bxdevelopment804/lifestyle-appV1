@@ -18,7 +18,8 @@ const Paleo = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/asianChickenMeatballs.png'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
 							description='Get your tastebuds ready for some bold flavors we bring for a twist on a classic dish.'
@@ -29,7 +30,8 @@ const Paleo = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/chickenZoodleSoup.png'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
 							description='Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.'

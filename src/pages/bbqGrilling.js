@@ -18,7 +18,8 @@ const BbqGrilling = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/asianChickenMeatballs'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/asianChickenMeatballs.png'
 							section='Lunch'
 							title='Asian Chicken Meatballs'
 							description='Get your tastebuds ready for some bold flavors we bring for a twist on a classic dish.'
@@ -29,7 +30,8 @@ const BbqGrilling = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/healthyUltimateBurger'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/the-healthy-ultimate-burger.jpg?quality=82&strip=1&resize=970%2C546'
+							url='/pictures/healthyUltimateBurgerSquared.png'
 							section='Dinner'
 							title='The Healthy Ultimate Burger'
 							description='Prepare for a true, first-class burger experience.'

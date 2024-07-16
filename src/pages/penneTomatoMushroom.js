@@ -218,7 +218,7 @@ const PenneTomatoMushroom = () => {
 			</div>
 			<img
 				id='image2'
-				src='https://www.americangarden.us/wp-content/uploads/2016/05/Penne-in-Tomato-Mushroom-sauce.jpg'
+				src='https://www.cookitrealgood.com/wp-content/uploads/2020/03/mushroomtomatopasta10.jpg'
 				alt='penne tomato mushroom'
 			/>
 			<p className='foodDescription'>

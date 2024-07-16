@@ -12,8 +12,7 @@ const Search = () => {
 			url: 'https://img.delicious.com.au/EEJ2ozkv/del/2020/10/green-tea-noodles-with-sticky-sweet-chilli-salmon-140868-2.jpg',
 			section: 'Dinner',
 			title: 'Green Tea Noodles with Sticky Sweet Chili Salmon',
-			description:
-				'Green tea noodles bring a pop of colour to this easy midweek dinner.',
+			description: 'Green tea noodles bring a pop of colour to this easy midweek dinner.',
 			author: 'Phoebe Wood',
 			link: '/greenTeaNoodles',
 		},
@@ -21,8 +20,7 @@ const Search = () => {
 			url: 'https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-french-toast-with-strawberries.jpg?quality=82&strip=1&resize=640%2C360',
 			section: 'Dinner',
 			title: 'Healthy French Toast With Strawberries',
-			description:
-				'When you want something a little sweet for supper, look no further than this French toast recipe.',
+			description: 'When you want something a little sweet for supper, look no further than this French toast recipe.',
 			author: 'David Zinczenko and Matt Goulding',
 			link: '/healthyFrenchToast',
 		},
@@ -30,8 +28,7 @@ const Search = () => {
 			url: 'https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-asian-chicken-meatballs.jpg?quality=82&strip=1&resize=640%2C360',
 			section: 'Lunch',
 			title: 'Asian Chicken Meatballs',
-			description:
-				'Get your tastebuds ready for some bold flavors we bring for a twist on a classic dish.',
+			description: 'Get your tastebuds ready for some bold flavors we bring for a twist on a classic dish.',
 			author: 'David Zinczenko and Matt Goulding',
 			link: '/asianChickenMeatballs',
 		},
@@ -39,8 +36,7 @@ const Search = () => {
 			url: 'https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360',
 			section: 'Dinner',
 			title: 'Instant Pot Chicken Zoodle Soup',
-			description:
-				'Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.',
+			description: 'Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.',
 			author: 'Posie Brien',
 			link: '/chickenZoodleSoup',
 		},
@@ -48,8 +44,7 @@ const Search = () => {
 			url: 'https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/healthy-italian-tuna-melt.jpg?quality=82&strip=1&resize=970%2C546',
 			section: 'Lunch',
 			title: 'Italian Tuna Melt',
-			description:
-				'A new and improved version of the classic sandwich that is ready to eat in minutes.',
+			description: 'A new and improved version of the classic sandwich that is ready to eat in minutes.',
 			author: 'David Zinczenko and Matt Goulding',
 			link: '/italianTunaMelt',
 		},
@@ -57,8 +52,7 @@ const Search = () => {
 			url: 'https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/chicken-salad-sandwich-curry-raisins.jpg?quality=82&strip=1&resize=640%2C360',
 			section: 'Lunch',
 			title: 'Chicken Salad Sandwich with Curry and Raisins',
-			description:
-				'Who said a chicken salad needs to be drowning in mayo to be tasty?',
+			description: 'Who said a chicken salad needs to be drowning in mayo to be tasty?',
 			author: 'David Zinczenko and Matt Goulding',
 			link: '/chickenSaladSandwich',
 		},
@@ -98,8 +92,7 @@ const Search = () => {
 			url: 'https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg',
 			section: 'Plant-Based Recipes',
 			title: 'Stove-Top Vegan Macaroni and Cheese',
-			description:
-				'This classic vegan mac and cheese is ultra cheesy, saucy and creamy.',
+			description: 'This classic vegan mac and cheese is ultra cheesy, saucy and creamy.',
 			author: 'Molly Patrick',
 			link: '/veganMacaroniCheese',
 		},
@@ -107,8 +100,7 @@ const Search = () => {
 			url: 'https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg',
 			section: 'Plant-Based Recipes',
 			title: 'Penne With Tomato-Mushroom Sauce',
-			description:
-				'Put an authentic Italian pasta dish on your dinner table in just 20 minutes.',
+			description: 'Put an authentic Italian pasta dish on your dinner table in just 20 minutes.',
 			author: 'Del Sroufe',
 			link: '/penneTomatoMushroom',
 		},
@@ -116,8 +108,7 @@ const Search = () => {
 			url: 'https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg',
 			section: 'Plant-Based Recipes',
 			title: 'Burritos With Spanish Rice And Black Beans',
-			description:
-				'Quick and easy, vegan bean and rice burritos are a perfect vegetarian dinner idea.',
+			description: 'Quick and easy, vegan bean and rice burritos are a perfect vegetarian dinner idea.',
 			author: 'Susan Voisin',
 			link: '/burritosRiceBeans',
 		},
@@ -133,8 +124,7 @@ const Search = () => {
 			url: 'https://blog.myfitnesspal.com/wp-content/uploads/2021/07/Four-Common-Types-of-Stretches-and-When-to-do-Each-930x550.jpg',
 			section: 'Fitness',
 			title: 'Four Common Types of Stretches and When to do Each',
-			description:
-				"There's a time and place for each kind of stretch, but not all stretches are for everyone.",
+			description: "There's a time and place for each kind of stretch, but not all stretches are for everyone.",
 			author: 'Kevin Gray',
 			link: '/fourCommonStretches',
 		},
@@ -142,8 +132,7 @@ const Search = () => {
 			url: 'https://blog.myfitnesspal.com/wp-content/uploads/2021/01/How-to-Breathe-Better-During-Cold-Weather-Running-752x472.jpg',
 			section: 'Fitness',
 			title: 'How to Breathe Better During Cold-Weather Running',
-			description:
-				"Breathing during winter runs is a struggle.  Here's how to cope.",
+			description: "Breathing during winter runs is a struggle.  Here's how to cope.",
 			author: 'Lauren Bedosky',
 			link: '/coldWeatherRunning',
 		},
@@ -151,8 +140,7 @@ const Search = () => {
 			url: 'https://blog.myfitnesspal.com/wp-content/uploads/2021/06/The-One-Exercise-You-Should-Add-to-Your-Workout-Routine-3-930x550.jpg',
 			section: 'Fitness',
 			title: 'The One Exercise You Should Add to Your Workout Routine',
-			description:
-				'This technical and challenging movement is well worth learning.',
+			description: 'This technical and challenging movement is well worth learning.',
 			author: 'Lauren Bedosky',
 			link: '/turkishGetUp',
 		},
@@ -165,11 +153,11 @@ const Search = () => {
 			link: '/honeyDijonChicken',
 		},
 		{
-			url: 'https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg',
+			// url: 'https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg',
+			url: '../pictures/resizedBeefStirFry.png',
 			section: 'Meal Planning',
 			title: 'Beef Stir Fry',
-			description:
-				'This is the EASIEST Beef Stir Fry recipe, with a 2-ingredient stir fry sauce.',
+			description: 'This is the EASIEST Beef Stir Fry recipe, with a 2-ingredient stir fry sauce.',
 			author: 'Taylor Stinson',
 			link: '/beefStirFry',
 		},
@@ -186,8 +174,7 @@ const Search = () => {
 			url: 'https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Chicken-Tandoori-Meal-Prep-Bowls-14-400x500-circle.jpg',
 			section: 'Meal Planning',
 			title: 'Indian Inspired Chicken Bowls',
-			description:
-				"These are a tasty sheet pan meal idea ready in 45 minutes – they've even got pakoras!",
+			description: "These are a tasty sheet pan meal idea ready in 45 minutes – they've even got pakoras!",
 			author: 'Taylor Stinson',
 			link: '/indianChickenBowl',
 		},
@@ -278,8 +265,7 @@ const Search = () => {
 			url: 'https://downshiftology.com/wp-content/uploads/2020/07/Salmon-Avocado-Salad-6-300x300.jpg',
 			section: 'Weight Loss Recipes',
 			title: 'Salmon Avocado Salad',
-			description:
-				'This salmon avocado salad is a healthy salad recipe that is big on nutrients and flavor.',
+			description: 'This salmon avocado salad is a healthy salad recipe that is big on nutrients and flavor.',
 			author: 'Lisa Bryan',
 			link: '/greekSalad',
 		},
@@ -305,8 +291,7 @@ const Search = () => {
 			url: 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Southwest-Chicken-Salad-6-450x450.jpg',
 			section: 'Weight Loss Recipes',
 			title: 'Southwest Chicken Salad',
-			description:
-				'Simple to make, filled with bold flavors, and hearty enough to fill you up.',
+			description: 'Simple to make, filled with bold flavors, and hearty enough to fill you up.',
 			author: 'Lisa Bryan',
 			link: '/southwestChickenSalad',
 		},
