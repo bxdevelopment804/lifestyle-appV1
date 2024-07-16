@@ -18,7 +18,8 @@ const Baking = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							url='/pictures/texMexPitaPizzaSquared.png'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
 							description='These will satisfy your taste buds and satiate your tum.'
@@ -29,7 +30,8 @@ const Baking = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							url='/pictures/veganBakedPotatoSquared.png'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
 							description='This recipe makes a great go-to meal when things are busy.'

@@ -18,7 +18,8 @@ const Vegetarian = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/texmexPitaPizza'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/66822/Tex-Mex-Pita-Pizzas_WP-688x387-c.jpg'
+							url='/pictures/texMexPitaPizzaSquared.png'
 							section='Plant-Based Recipes'
 							title='Tex-Mex Pita Pizzas'
 							description='These will satisfy your taste buds and satiate your tum.'
@@ -29,7 +30,8 @@ const Vegetarian = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/wildRiceSoup'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							url='/pictures/creamyWildRiceSoupSquared.png'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
 							description='	It’s like a chicken noodle soup but better.'
@@ -40,7 +42,8 @@ const Vegetarian = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganBakedPotato'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							url='/pictures/veganBakedPotatoSquared.png'
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
 							description='This recipe makes a great go-to meal when things are busy.'
@@ -51,7 +54,8 @@ const Vegetarian = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							url='/pictures/veganMacaroniCheeseSquared.png'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
 							description='This classic vegan mac and cheese is ultra cheesy, saucy and creamy.'
@@ -62,7 +66,8 @@ const Vegetarian = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/penneTomatoMushroom'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							url='/pictures/penneTomatoMushroomSquared.png'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'
 							description='Put an authentic Italian pasta dish on your dinner table in just 20 minutes.'
@@ -73,7 +78,8 @@ const Vegetarian = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/burritosRiceBeans'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							url='/pictures/burritosRiceBeansSquared.png'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'
 							description='Quick and easy, vegan bean and rice burritos are a perfect vegetarian dinner idea.'

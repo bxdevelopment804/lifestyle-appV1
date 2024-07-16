@@ -1,0 +1,78 @@
+#six-square-cropped-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+}
+
+.six-square-cropped-image-container{
+	border: solid blue 1px;
+	width: 100%;
+	height: clamp(14.4vw, 6vw, 6.5vw);
+	box-sizing: border-box;
+	overflow: hidden;
+	background-size: cover;
+}
+
+#six-square-cropped-photo {
+	display: block; 
+	position: relative; 
+	height: 120%; 
+	min-width: 100%;
+}
+
+#six-square-cropped-section {
+	font-size: large;
+	font-variant-caps: all-petite-caps;
+	color: red;
+	font-weight: 600;
+}
+
+#six-square-cropped-title {
+	font-size: medium;
+	font-weight: 700;
+	font-family: 'Times New Roman', Times, serif;
+	color: black;
+}
+
+#six-square-cropped-section,
+#six-square-cropped-title,
+#six-square-cropped-description,
+#six-square-cropped-author {
+	margin-top: 2px;
+}
+
+#six-square-cropped-description,
+#six-square-cropped-author {
+	color: grey;
+}
+
+/* Laptops*/
+@media (max-width: 1024px) and (min-width: 769px) {
+	#six-square-cropped-photo {
+		width: 100%;
+	}
+}
+
+/* Tablets*/
+@media (max-width: 768px) and (min-width: 481px) {
+	#six-square-cropped-photo {
+		width: 100%;
+	}
+}
+
+/* Mobile*/
+@media (max-width: 480px) {
+	#six-square-cropped-photo {
+		width: 100%;
+		min-width: 230px;
+	}
+
+	#six-square-cropped-section,
+	#six-square-cropped-title,
+	#six-square-cropped-description,
+	#six-square-cropped-author {
+		margin-top: 0px;
+	}
+}

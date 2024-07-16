@@ -222,7 +222,8 @@ const HealthyUltimateBurger = () => {
 			<div id='title2'>Prepare for a true, first-class burger experience</div>
 			<img
 				id='image2'
-				src='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5332204.jpg'
+				// src='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5332204.jpg'
+				src='/pictures/healthyUltimateBurger2.png'
 				alt='healthy ultimate burger'
 			/>
 			<p className='foodDescription'>
@@ -235,7 +236,8 @@ const HealthyUltimateBurger = () => {
 			<div id='title3'>Sirloin, brisket, and arugula are the best mix</div>
 			<img
 				id='image3'
-				src='https://www.kimscravings.com/wp-content/uploads/2021/06/Healthy-Burgers-6-640x437.jpg'
+				// src='https://www.kimscravings.com/wp-content/uploads/2021/06/Healthy-Burgers-6-640x437.jpg'
+				src='/pictures/healthyUltimateBurger3.png'
 				alt='healthy ultimate burger'
 			/>
 			<p className='foodDescription'>

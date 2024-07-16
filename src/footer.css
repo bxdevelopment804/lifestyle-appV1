@@ -1,5 +1,6 @@
 #footerContainer {
 	background-color: rgb(221, 221, 221);
+	box-sizing: border-box;
 }
 #topButton {
 	display: flex;
@@ -32,7 +33,7 @@ a {
 }
 
 .footerItem {
-	margin: 20px 0px;
+	padding: 10px 0px;
 }
 
 /*Tablets*/

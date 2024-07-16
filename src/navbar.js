@@ -12,6 +12,104 @@ import {
 import './navbar.css';
 
 const Navbar = () => {
+	//MAIN MENU CLICKAWAY HANDLER
+	function useMainMenuVisible(initialIsMainVisible) {
+		const [isMainMenuVisible, setIsMainMenuVisible] =
+			useState(initialIsMainVisible);
+		const mainRef = useRef(null);
+
+		const handleMainClickOutside = (event) => {
+			if (mainRef.current && !mainRef.current.contains(event.target)) {
+				closeMainMenu();
+			}
+		};
+
+		useEffect(() => {
+			document.addEventListener('click', handleMainClickOutside, true);
+			return () => {
+				document.removeEventListener('click', handleMainClickOutside, true);
+			};
+		}, []);
+
+		return { mainRef, isMainMenuVisible, setIsMainMenuVisible };
+	}
+
+	//State needed purely for the above clickaway hook to function.
+	const { mainRef, isMainMenuVisible } = useMainMenuVisible(true);
+
+	//State for hiding and showing the entire mobile dropdown menu
+	const [mainMenuActivated, setMainMenuActivated] = useState(false);
+	const handleMainMenu = () => {
+		setMainMenuActivated(!mainMenuActivated);
+	};
+
+	//State for hiding and showing the second levels of the main dropdown menu
+	const [secondaryRecipeMainMenuActivated, setSecondaryRecipeMainMenuActivated] =
+		useState(false);
+	const handleSecondaryRecipeMainMenu = () => {
+		setSecondaryRecipeMainMenuActivated(!secondaryRecipeMainMenuActivated);
+	};
+
+	const [
+		secondaryMealPlanningMainMenuActivated,
+		setSecondaryMealPlanningMainMenuActivated,
+	] = useState(false);
+	const handleSecondaryMealPlanningMainMenu = () => {
+		setSecondaryMealPlanningMainMenuActivated(!secondaryMealPlanningMainMenuActivated);
+	};
+
+	const [
+		secondaryWeightLossMainMenuActivated,
+		setSecondaryWeightLossMainMenuActivated,
+	] = useState(false);
+	const handleSecondaryWeightLossMainMenu = () => {
+		setSecondaryWeightLossMainMenuActivated(!secondaryWeightLossMainMenuActivated);
+	};
+
+	const [secondaryFitnessMainMenuActivated, setSecondaryFitnessMainMenuActivated] =
+		useState(false);
+	const handleSecondaryFitnessMainMenu = () => {
+		setSecondaryFitnessMainMenuActivated(!secondaryFitnessMainMenuActivated);
+	};
+
+	//State for hiding and showing the third levels of the mobile dropdown menu
+	const [tertiaryMealTypeMainMenuActivated, setTertiaryMealTypeMainMenuActivated] =
+		useState(false);
+	const handleTertiaryMealTypeMainMenu = () => {
+		setTertiaryMealTypeMainMenuActivated(!tertiaryMealTypeMainMenuActivated);
+	};
+
+	const [tertiaryDishTypeMainMenuActivated, setTertiaryDishTypeMainMenuActivated] =
+		useState(false);
+	const handleTertiaryDishTypeMainMenu = () => {
+		setTertiaryDishTypeMainMenuActivated(!tertiaryDishTypeMainMenuActivated);
+	};
+
+	const [tertiaryMethodMainMenuActivated, setTertiaryMethodMainMenuActivated] =
+		useState(false);
+	const handleTertiaryMethodMainMenu = () => {
+		setTertiaryMethodMainMenuActivated(!tertiaryMethodMainMenuActivated);
+	};
+
+	const [tertiaryDietTypeMainMenuActivated, setTertiaryDietTypeMainMenuActivated] =
+		useState(false);
+	const handleTertiaryDietTypeMainMenu = () => {
+		setTertiaryDietTypeMainMenuActivated(!tertiaryDietTypeMainMenuActivated);
+	};
+
+	// //Close all main menus and submenus
+	const closeMainMenu = () => {
+		setMainMenuActivated(false);
+		setSecondaryRecipeMainMenuActivated(false);
+		setSecondaryMealPlanningMainMenuActivated(false);
+		setSecondaryWeightLossMainMenuActivated(false);
+		setSecondaryFitnessMainMenuActivated(false);
+		setTertiaryMealTypeMainMenuActivated(false);
+		setTertiaryDishTypeMainMenuActivated(false);
+		setTertiaryMethodMainMenuActivated(false);
+		setTertiaryDietTypeMainMenuActivated(false);
+	};
+
 	//Mobile menu clickaway handler
 	function useMobileMenuVisible(initialIsVisible) {
 		const [isMobileMenuVisible, setIsMobileMenuVisible] =
@@ -118,201 +216,227 @@ const Navbar = () => {
 						<img
 							id='logo'
 							src='https://thumbs.dreamstime.com/b/healthy-lifestyle-vector-illustration-letters-banner-colorful-badge-illustration-white-background-healthy-lifestyle-stylized-165923548.jpg'
-							onClick={closeMobileMenu}
 							alt='Healthy Lifestyle Logo'
 						/>
 					</Link>
 				</div>
 
 				{/* Full Screen Nav Menu */}
-				<div id='recipes' className='navButton'>
+				<div 
+					id='recipes' 
+					className='navButton'
+				>
 					<Link
 						to='/recipes'
 						className='navLink'
 						style={{ textDecoration: 'none' }}
+						onClick={closeMainMenu}
+						onMouseEnter={() => setSecondaryRecipeMainMenuActivated(true)}
+						onKeyDown={closeMainMenu}
 					>
-						Recipes &nbsp;
-						<FontAwesomeIcon icon={faChevronDown} />
+							Recipes &nbsp;
+							<FontAwesomeIcon icon={faChevronDown} className='mainChevron'/>
 					</Link>
-					<ul id='recipeTypes' className='menuType'>
-						<li className='recipeMenuItem'>
-							Meal Type
-							<FontAwesomeIcon icon={faChevronRight} />
-							<ul id='recipeSubTypes'>
-								<Link to='/appetizers'>
-									<li className='recipeSubItem'>Appetizers</li>
-								</Link>
-								<Link to='/breakfast'>
-									<li className='recipeSubItem'>Breakfast</li>
-								</Link>
-								<Link to='/lunch'>
-									<li className='recipeSubItem'>Lunch</li>
-								</Link>
-								<Link to='/dinner'>
-									<li className='recipeSubItem'>Dinner</li>
-								</Link>
-								<Link to='/dessert'>
-									<li className='recipeSubItem'>Dessert</li>
-								</Link>
-								<Link to='/sides'>
-									<li className='recipeSubItem'>Sides</li>
-								</Link>
-							</ul>
-						</li>
-						<li className='recipeMenuItem'>
-							Dish Type
-							<FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
-							<ul id='recipeSubTypes'>
-								<Link to='/bowls'>
-									<li className='recipeSubItem'>Bowls</li>
-								</Link>
-								<Link to='/burgers'>
-									<li className='recipeSubItem'>Burgers</li>
-								</Link>
-								<Link to='/onePotOrSkillet'>
-									<li className='recipeSubItem'>One-Pot & Skillet</li>
-								</Link>
-								<Link to='/pastaDishes'>
-									<li className='recipeSubItem'>Pasta Dishes</li>
-								</Link>
-								<Link to='/pizza'>
-									<li className='recipeSubItem'>Pizza</li>
-								</Link>
-								<Link to='/salads'>
-									<li className='recipeSubItem'>Salads</li>
-								</Link>
-								<Link to='/sandwiches'>
-									<li className='recipeSubItem'>Sandwiches</li>
-								</Link>
-								<Link to='/soupStewChili'>
-									<li className='recipeSubItem'>Soup, Stew, & Chili</li>
-								</Link>
-								<Link to='/tacosBurritos'>
-									<li className='recipeSubItem'>Tacos & Burritos</li>
-								</Link>
-							</ul>
-						</li>
-						<li className='recipeMenuItem'>
-							Method
-							<FontAwesomeIcon icon={faChevronRight} />
-							<ul id='recipeSubTypes'>
-								<Link to='/baking'>
-									<li className='recipeSubItem'>Baking</li>
-								</Link>
-								<Link to='/bbqGrilling'>
-									<li className='recipeSubItem'>Barbeque & Grilling</li>
-								</Link>
-								<Link to='/instapot'>
-									<li className='recipeSubItem'>Instant Pot</li>
-								</Link>
-								<Link to='/noCook'>
-									<li className='recipeSubItem'>No-Cook</li>
-								</Link>
-								<Link to='/stoveTop'>
-									<li className='recipeSubItem'>Stove Top</li>
-								</Link>
-							</ul>
-						</li>
-						<li className='recipeMenuItem'>
-							Diet Type
-							<FontAwesomeIcon icon={faChevronRight} />
-							<ul id='recipeSubTypes'>
-								<Link to='/dairyFree'>
-									<li className='recipeSubItem'>Dairy-Free</li>
-								</Link>
-								<Link to='/glutenFree'>
-									<li className='recipeSubItem'>Gluten-Free</li>
-								</Link>
-								<Link to='/lowCarb'>
-									<li className='recipeSubItem'>Low-Carb</li>
-								</Link>
-								<Link to='/paleo'>
-									<li className='recipeSubItem'>Paleo</li>
-								</Link>
-								<Link to='/plantBased'>
-									<li className='recipeSubItem'>Plant-Based</li>
-								</Link>
-								<Link to='/vegetarian'>
-									<li className='recipeSubItem'>Vegetarian</li>
-								</Link>
-							</ul>
-						</li>
-						<Link to='/recipes'>
-							<li className='recipeMenuItem'>Recipe Index</li>
-						</Link>
-					</ul>
+
+					{secondaryRecipeMainMenuActivated && (
+						<ul id='recipeTypes' className='menuType'>
+							<li className='recipeMenuItem'>
+								Meal Type
+								<FontAwesomeIcon icon={faChevronRight} />
+								<ul id='recipeSubTypes'>
+									<Link to='/appetizers' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Appetizers</li>
+									</Link>
+									<Link to='/breakfast' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Breakfast</li>
+									</Link>
+									<Link to='/lunch' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Lunch</li>
+									</Link>
+									<Link to='/dinner' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Dinner</li>
+									</Link>
+									<Link to='/dessert' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Dessert</li>
+									</Link>
+									<Link to='/sides' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Sides</li>
+									</Link>
+								</ul>
+							</li>
+							<li className='recipeMenuItem'>
+								Dish Type
+								<FontAwesomeIcon icon={faChevronRight} className='mainChevron'></FontAwesomeIcon>
+								<ul id='recipeSubTypes'>
+									<Link to='/bowls' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Bowls</li>
+									</Link>
+									<Link to='/burgers' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Burgers</li>
+									</Link>
+									<Link to='/onePotOrSkillet' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>One-Pot & Skillet</li>
+									</Link>
+									<Link to='/pastaDishes' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Pasta Dishes</li>
+									</Link>
+									<Link to='/pizza' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Pizza</li>
+									</Link>
+									<Link to='/salads' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Salads</li>
+									</Link>
+									<Link to='/sandwiches' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Sandwiches</li>
+									</Link>
+									<Link to='/soupStewChili' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Soup, Stew, & Chili</li>
+									</Link>
+									<Link to='/tacosBurritos' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Tacos & Burritos</li>
+									</Link>
+								</ul>
+							</li>
+							<li className='recipeMenuItem'>
+								Method
+								<FontAwesomeIcon icon={faChevronRight} />
+								<ul id='recipeSubTypes'>
+									<Link to='/baking' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Baking</li>
+									</Link>
+									<Link to='/bbqGrilling' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Barbeque & Grilling</li>
+									</Link>
+									<Link to='/instapot' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Instant Pot</li>
+									</Link>
+									<Link to='/noCook' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>No-Cook</li>
+									</Link>
+									<Link to='/stoveTop' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Stove Top</li>
+									</Link>
+								</ul>
+							</li>
+							<li className='recipeMenuItem'>
+								Diet Type
+								<FontAwesomeIcon icon={faChevronRight} />
+								<ul id='recipeSubTypes'>
+									<Link to='/dairyFree' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Dairy-Free</li>
+									</Link>
+									<Link to='/glutenFree' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Gluten-Free</li>
+									</Link>
+									<Link to='/lowCarb' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Low-Carb</li>
+									</Link>
+									<Link to='/paleo' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Paleo</li>
+									</Link>
+									<Link to='/plantBased' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Plant-Based</li>
+									</Link>
+									<Link to='/vegetarian' onClick={() => closeMainMenu()}>
+										<li className='recipeSubItem'>Vegetarian</li>
+									</Link>
+								</ul>
+							</li>
+							<Link to='/recipes' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Recipe Index</li>
+							</Link>
+						</ul>
+					)}
 				</div>
-				<div id='meal-planning' className='navButton'>
+				<div 
+					id='meal-planning' 
+					className='navButton'
+					onClick={closeMainMenu}
+					onMouseEnter={() => setSecondaryMealPlanningMainMenuActivated(true)}
+				>
 					<Link
 						to='/mealPlanning'
 						className='navLink'
 						style={{ textDecoration: 'none' }}
 					>
 						Meal Planning &nbsp;
-						<FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
+						<FontAwesomeIcon icon={faChevronDown} className='mainChevron'></FontAwesomeIcon>
 					</Link>
-					<ul id='recipeTypes' className='menuType'>
-						<Link to='mealPlanning'>
-							<li className='recipeMenuItem'>Meal Plans</li>
-						</Link>
-						<Link to='lowCarb'>
-							<li className='recipeMenuItem'>Low-Carb Menus</li>
-						</Link>
-						<Link to='/plantBased'>
-							<li className='recipeMenuItem'>Plant-Based Menus</li>
-						</Link>
-					</ul>
+					{secondaryMealPlanningMainMenuActivated && (
+						<ul id='recipeTypes' className='menuType'>
+							<Link to='mealPlanning' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Meal Plans</li>
+							</Link>
+							<Link to='lowCarb' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Low-Carb Menus</li>
+							</Link>
+							<Link to='/plantBased' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Plant-Based Menus</li>
+							</Link>
+						</ul>
+					)}
 				</div>
-				<div id='weight-loss' className='navButton'>
+				<div 
+					id='weight-loss' 
+					className='navButton'
+					onClick={closeMainMenu}
+					onMouseEnter={() => setSecondaryWeightLossMainMenuActivated(true)}
+				>
 					<Link
 						to='/weightLoss'
 						className='navLink'
 						style={{ textDecoration: 'none' }}
 					>
 						Weight Loss &nbsp;
-						<FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
+						<FontAwesomeIcon icon={faChevronDown} className='mainChevron'></FontAwesomeIcon>
 					</Link>
-					<ul id='weightLossRecipeTypes' className='menuType'>
-						<Link to='weightLoss'>
-							<li className='recipeMenuItem'>Weight Loss Foods</li>
-						</Link>
-					</ul>
+					{secondaryWeightLossMainMenuActivated && (
+						<ul id='weightLossRecipeTypes' className='menuType'>
+							<Link to='weightLoss' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Weight Loss Foods</li>
+							</Link>
+						</ul>
+					)}
 				</div>
 				<div id='fitness' className='navButton'>
 					<Link
 						to='/fitness'
 						className='navLink'
 						style={{ textDecoration: 'none' }}
+						onClick={closeMainMenu}
+						onMouseEnter={() => setSecondaryFitnessMainMenuActivated(true)}
 					>
 						Fitness&nbsp;
-						<FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
+						<FontAwesomeIcon icon={faChevronDown} className='mainChevron fitnessChevron'></FontAwesomeIcon>
 					</Link>
-					<ul id='recipeTypes' className='menuType'>
-						<Link to='abAndCore'>
-							<li className='recipeMenuItem'>Ab & Core</li>
-						</Link>
-						<Link to='/beginners'>
-							<li className='recipeMenuItem'>Beginners</li>
-						</Link>
-						<Link to='/advanced'>
-							<li className='recipeMenuItem'>Advanced</li>
-						</Link>
-						<Link to='/homeWorkouts'>
-							<li className='recipeMenuItem'>Home Workouts</li>
-						</Link>
-						<Link to='/lowerBody'>
-							<li className='recipeMenuItem'>Lower Body</li>
-						</Link>
-						<Link to='/upperBody'>
-							<li className='recipeMenuItem'>Upper Body</li>
-						</Link>
-						<Link to='/totalBody'>
-							<li className='recipeMenuItem'>Total Body</li>
-						</Link>
-						<Link to='/running'>
-							<li className='recipeMenuItem'>Running</li>
-						</Link>
-					</ul>
+					{secondaryFitnessMainMenuActivated && ( 
+						<ul id='recipeTypes' className='menuType'>
+							<Link to='abAndCore' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Ab & Core</li>
+							</Link>
+							<Link to='/beginners' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Beginners</li>
+							</Link>
+							<Link to='/advanced' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Advanced</li>
+							</Link>
+							<Link to='/homeWorkouts' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Home Workouts</li>
+							</Link>
+							<Link to='/lowerBody' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Lower Body</li>
+							</Link>
+							<Link to='/upperBody' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Upper Body</li>
+							</Link>
+							<Link to='/totalBody' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Total Body</li>
+							</Link>
+							<Link to='/running' onClick={() => closeMainMenu()}>
+								<li className='recipeMenuItem'>Running</li>
+							</Link>
+						</ul>
+					)}
 				</div>
 				<div id='self-care' className='navButton'>
 					<Link

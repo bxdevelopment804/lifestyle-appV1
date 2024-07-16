@@ -18,7 +18,8 @@ const PastaDishes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/chickenZoodleSoup'>
 						<SingleSquareCropped
-							url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							// url='https://www.eatthis.com/wp-content/uploads/sites/4/2019/12/Whole30-IP-Chicken-Zoodle-Soup.jpg?quality=82&strip=1&resize=640%2C360'
+							url='/pictures/chickenZoodleSoup.png'
 							section='Dinner'
 							title='Instant Pot Chicken Zoodle Soup'
 							description='Use zucchini noodles instead of regular ones to make a gluten-free chicken noodle soup.'
@@ -29,7 +30,8 @@ const PastaDishes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/veganMacaroniCheese'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/67930/Super-Stove-Top-Mac-and-Cheese-103068713-WP-688x387-c.jpg'
+							url='/pictures/veganMacaroniCheeseSquared.png'
 							section='Plant-Based Recipes'
 							title='Stove-Top Vegan Macaroni and Cheese'
 							description='This classic vegan mac and cheese is ultra cheesy, saucy and creamy.'
@@ -40,7 +42,8 @@ const PastaDishes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/penneTomatoMushroom'>
 						<SingleSquareCropped
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							url='/pictures/penneTomatoMushroomSquared.png'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'
 							description='Put an authentic Italian pasta dish on your dinner table in just 20 minutes.'

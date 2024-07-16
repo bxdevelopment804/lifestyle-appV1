@@ -214,14 +214,16 @@ const Home = () => {
 					</Link>
 					<Link to='/wildRiceSoup'>
 						<SixSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/80859/Creamy-Wild-Rice-Soup-for-website-688x387-c.jpg'
+							url='/pictures/creamyWildRiceSoup.png'
 							section='Plant-Based Recipes'
 							title='Creamy Wild Rice Soup'
 						/>
 					</Link>
 					<Link to='/veganBakedPotato'>
 						<SixSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/42933/Nacho-and-Baked-Potato1561-WPedit-688x387-c.jpg'
+							url='/pictures/nachoVeganBakedPotato.png' 
 							section='Plant-Based Recipes'
 							title='"Nacho" Vegan Baked Potato'
 						/>
@@ -235,14 +237,16 @@ const Home = () => {
 					</Link>
 					<Link to='/penneTomatoMushroom'>
 						<SixSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/41259/Penne-with-Tomato-Mushroom-Cream-Sauce-wp-edit-688x387-c.jpg'
+							url='/pictures/penneTomatoMushroom.jpg'
 							section='Plant-Based Recipes'
 							title='Penne With Tomato-Mushroom Sauce'
 						/>
 					</Link>
 					<Link to='/burritosRiceBeans'>
 						<SixSquare
-							url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							// url='https://www.forksoverknives.com/wp-content/uploads/fly-images/22661/burrito-fok-300kb-688x387-c.jpg'
+							url='/pictures/burritosRiceBeans.png'
 							section='Plant-Based Recipes'
 							title='Burritos With Spanish Rice And Black Beans'
 						/>
@@ -300,7 +304,8 @@ const Home = () => {
 					</Link>
 					<Link to='/beefStirFry'>
 						<ThreeSquare
-							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+							// url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+							url='/pictures/resizedBeefStirFry.png'
 							section='Meal Planning'
 							title='Beef Stir Fry'
 							description='This is the EASIEST Beef Stir Fry recipe, with a 2-ingredient stir fry sauce.'

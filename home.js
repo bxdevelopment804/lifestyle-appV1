@@ -41,25 +41,37 @@ const Home = () => {
 				</div>
 
 				<div id='four-box-grid-container'>
-					<div id='four-box-grid-item1' className='four-box-grid-item'>
+					<div
+						id='four-box-grid-item1'
+						className='four-box-grid-item'
+					>
 						<HoverIcon
 							url='https://img.buzzfeed.com/buzzfeed-static/static/2021-02/25/20/asset/8a98f7f0d02c/sub-buzz-6394-1614285314-17.jpg?output-format=auto&output-quality=auto'
 							title='5-Ingredient'
 						/>
 					</div>
-					<div id='four-box-grid-item2' className='four-box-grid-item'>
+					<div
+						id='four-box-grid-item2'
+						className='four-box-grid-item'
+					>
 						<HoverIcon
 							url='https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/air-fryer-shrimp-boil-for-two-recipe.jpg'
 							title='Air Fryer'
 						/>
 					</div>
-					<div id='four-box-grid-item3' className='four-box-grid-item'>
+					<div
+						id='four-box-grid-item3'
+						className='four-box-grid-item'
+					>
 						<HoverIcon
 							url='https://img.delicious.com.au/Q8jQkgVW/del/2016/05/butternut-spaghetti-with-prosciutto-and-brown-butter-30846-2.jpg'
 							title='Keto'
 						/>
 					</div>
-					<div id='four-box-grid-item4' className='four-box-grid-item'>
+					<div
+						id='four-box-grid-item4'
+						className='four-box-grid-item'
+					>
 						<HoverIcon
 							url='https://images.themodernproper.com/billowy-turkey/production/posts/2019/Lentil-Soup-with-Quinoa-and-Mushrooms-10_191012_000659.jpg?w=1200&auto=compress%2Cformat&fit=crop&fp-x=0.5&fp-y=0.5&dm=1610375259&s=e9ccb039a532d89ed4ff052f96ae3dcc'
 							title='Vegetarian'
@@ -128,9 +140,7 @@ const Home = () => {
 				</div>
 				<div id='signup-bar'>
 					<h1 id='signup-header-h1'>SAVE YOUR FAVORITE RECIPES</h1>
-					<h3 id='signup-header-h3'>
-						Create a FREE account for quick & easy access
-					</h3>
+					<h3 id='signup-header-h3'>Create a FREE account for quick & easy access</h3>
 					<div id='signup-bar-inputs'>
 						<input type='text' />
 						<button>START SAVING</button>
@@ -233,7 +243,8 @@ const Home = () => {
 					</Link>
 					<Link to='/beefStirFry'>
 						<ThreeSquare
-							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+							// url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+							url='./public/pictures/The-best-Beef-stir-fry-3.jpg'
 							section='Meal Planning'
 							title='Beef Stir Fry'
 							description='This is the EASIEST Beef Stir Fry recipe, with a 2-ingredient stir fry sauce.'
@@ -279,7 +290,10 @@ const Home = () => {
 						/>
 					</Link>
 				</div>
-				<p id='home-workouts' className='subtitle'>
+				<p
+					id='home-workouts'
+					className='subtitle'
+				>
 					Home Workouts
 				</p>
 				<div className='six-square-container'>
@@ -418,30 +432,46 @@ const Home = () => {
 				</div>
 				<div id='signup-bar2'>
 					<h1 id='signup2-header-h1'>SAVE YOUR FAVORITE RECIPES</h1>
-					<h3 id='signup2-header-h1'>
-						Create a FREE account for quick & easy access
-					</h3>
+					<h3 id='signup2-header-h1'>Create a FREE account for quick & easy access</h3>
 					<div id='signup2-bar-inputs'>
-						<input id='signUpEmailField' type='text' />
+						<input
+							id='signUpEmailField'
+							type='text'
+						/>
 						<button id='signUpButton'>START SAVING</button>
 					</div>
 				</div>
 				<h2>Featured On</h2>
 				<div id='linkBanner'>
 					<a href='https://www.blogger.com'>
-						<FontAwesomeIcon icon={faBlogger} className='linkItems' />
+						<FontAwesomeIcon
+							icon={faBlogger}
+							className='linkItems'
+						/>
 					</a>
 					<a href='https://www.delicious.com.au'>
-						<FontAwesomeIcon icon={faDelicious} className='linkItems' />
+						<FontAwesomeIcon
+							icon={faDelicious}
+							className='linkItems'
+						/>
 					</a>
 					<a href='https://www.goodreads.com/'>
-						<FontAwesomeIcon icon={faGoodreads} className='linkItems' />
+						<FontAwesomeIcon
+							icon={faGoodreads}
+							className='linkItems'
+						/>
 					</a>
 					<a href='https://www.reddit.com/'>
-						<FontAwesomeIcon icon={faRedditSquare} className='linkItems' />
+						<FontAwesomeIcon
+							icon={faRedditSquare}
+							className='linkItems'
+						/>
 					</a>
 					<a href='https://www.tiktok.com/en/'>
-						<FontAwesomeIcon icon={faTiktok} className='linkItems' />
+						<FontAwesomeIcon
+							icon={faTiktok}
+							className='linkItems'
+						/>
 					</a>
 				</div>
 			</div>

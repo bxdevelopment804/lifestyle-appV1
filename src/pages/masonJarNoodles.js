@@ -215,7 +215,10 @@ const MasonJarNoodles = () => {
 						width='75px'
 						height='75px'
 					/>
-					<div id='authorName' className='authorName'>
+					<div
+						id='authorName'
+						className='authorName'
+					>
 						by <strong>{authorName}</strong>
 					</div>
 				</div>
@@ -225,18 +228,31 @@ const MasonJarNoodles = () => {
 			</div>
 			<div id='media'>
 				<a href='https://www.pinterest.com/'>
-					<FontAwesomeIcon icon={faPinterest} className='titleIcon' />
+					<FontAwesomeIcon
+						icon={faPinterest}
+						className='titleIcon'
+					/>
 				</a>
 				<a href='https://www.facebook.com/'>
-					<FontAwesomeIcon icon={faFacebook} className='titleIcon' />
+					<FontAwesomeIcon
+						icon={faFacebook}
+						className='titleIcon'
+					/>
 				</a>
 				<a href='https://www.instagram.com/'>
-					<FontAwesomeIcon icon={faInstagram} className='titleIcon' />
+					<FontAwesomeIcon
+						icon={faInstagram}
+						className='titleIcon'
+					/>
 				</a>
 			</div>
 			<div id='date'>Published: {recipeDate}</div>
 			<p id='description'>{recipeDescription}</p>
-			<img id='image1' src={recipePhoto} alt={altText} />
+			<img
+				id='image1'
+				src={recipePhoto}
+				alt={altText}
+			/>
 			<p id='videoHeader'>OUR LATEST VIDEOS</p>
 
 			{/*REMINDER - Remember to insert id='video1' below whenever pasting embeds from Youtube. */}
@@ -252,10 +268,18 @@ const MasonJarNoodles = () => {
 				allowFullScreen
 			></iframe>
 			<div id='title2'>{title2}</div>
-			<img id='image2' src={recipePhoto2} alt={altText} />
+			<img
+				id='image2'
+				src={recipePhoto2}
+				alt={altText}
+			/>
 			<p className='foodDescription'>{description1}</p>
 			<div id='title3'>{title3}</div>
-			<img id='image3' src={recipePhoto3} alt={altText} />
+			<img
+				id='image3'
+				src={recipePhoto3}
+				alt={altText}
+			/>
 			<p className='foodDescription'>{description2}</p>
 
 			<div id='recipeSection'>
@@ -271,10 +295,16 @@ const MasonJarNoodles = () => {
 					/>
 				</div>
 				<div id='headerContainer'>
-					<div id='block1' className='headerItem'>
+					<div
+						id='block1'
+						className='headerItem'
+					>
 						{mealTitle}
 					</div>
-					<div id='block2' className='imageContainerWithButtons'>
+					<div
+						id='block2'
+						className='imageContainerWithButtons'
+					>
 						<img
 							className='headerItem'
 							src={recipePhoto}
@@ -291,16 +321,28 @@ const MasonJarNoodles = () => {
 								<strong>Pin Recipe</strong>
 							</div>
 						</a>
-						<div id='printRecipe' onClick={printRecipe}>
-							<FontAwesomeIcon icon={faPrint} className='printIcon' />
+						<div
+							id='printRecipe'
+							onClick={printRecipe}
+						>
+							<FontAwesomeIcon
+								icon={faPrint}
+								className='printIcon'
+							/>
 							&nbsp;&nbsp;
 							<strong>Print Recipe</strong>
 						</div>
 					</div>
-					<div id='block3' className='headerItem'>
+					<div
+						id='block3'
+						className='headerItem'
+					>
 						{recipeDescription2}
 					</div>
-					<div id='block4' className='headerItem'>
+					<div
+						id='block4'
+						className='headerItem'
+					>
 						<div className='timeHeaders'>
 							<strong>Prep Time</strong>
 						</div>
@@ -314,31 +356,46 @@ const MasonJarNoodles = () => {
 						<div className='cookTimes'>{cookTime}</div>
 						<div className='cookTimes'>{totalTime}</div>
 					</div>
-					<div id='block5' className='headerItem'>
+					<div
+						id='block5'
+						className='headerItem'
+					>
 						<div className='subBlock-1'>
 							<strong>Serves</strong>
 						</div>
 						<div className='subBlock-2'>{peopleServed}</div>
 					</div>
-					<div id='block6' className='headerItem'>
+					<div
+						id='block6'
+						className='headerItem'
+					>
 						<div className='subBlock-1'>
 							<strong>Serving Size</strong>
 						</div>
 						<div className='subBlock-2'>1</div>
 					</div>
-					<div id='block7' className='headerItem'>
+					<div
+						id='block7'
+						className='headerItem'
+					>
 						<div className='subBlock-1'>
 							<strong>Course</strong>
 						</div>
 						<div className='subBlock-2'>{mealType}</div>
 					</div>
-					<div id='block8' className='headerItem'>
+					<div
+						id='block8'
+						className='headerItem'
+					>
 						<div className='subBlock-1'>
 							<strong>Cuisine</strong>
 						</div>
 						<div className='subBlock-2'>{cuisineType}</div>
 					</div>
-					<div id='block9' className='headerItem'>
+					<div
+						id='block9'
+						className='headerItem'
+					>
 						<div className='subBlock-1'>
 							<strong>Author</strong>
 						</div>
@@ -348,74 +405,84 @@ const MasonJarNoodles = () => {
 					</div>
 				</div>
 				<div id='instructionContainer'>
-					<div id='block16' className='instructionItem'>
+					<div
+						id='block16'
+						className='instructionItem'
+					>
 						Ingredients
 					</div>
-					<div id='block17' className='instructionItem'>
+					<div
+						id='block17'
+						className='instructionItem'
+					>
 						<ul>
 							<li className='ingredient'>4 (1 L) Mason jars</li>
-							<li className='ingredient'>
-								2 chicken breasts cooked and shredded
-							</li>
+							<li className='ingredient'>2 chicken breasts cooked and shredded</li>
 							<li className='ingredient'>4 tsp soy sauce or tamari</li>
-							<li className='ingredient'>
-								4 tsp Sriracha chili garlic hot sauce
-							</li>
+							<li className='ingredient'>4 tsp Sriracha chili garlic hot sauce</li>
 							<li className='ingredient'>4 tsp lime juice</li>
 							<li className='ingredient'>4 vegetable bouillon cubes</li>
 							<li className='ingredient'>
-								1/2 cup each julienned broccoli stems, carrots, bell peppers and
-								green onions
+								1/2 cup each julienned broccoli stems, carrots, bell peppers and green onions
 							</li>
-							<li className='ingredient'>
-								1 lb package rice vermicelli noodles
-							</li>
-							<li className='ingredient'>
-								Sunflower sprouts or cilantro for garnish
-							</li>
+							<li className='ingredient'>1 lb package rice vermicelli noodles</li>
+							<li className='ingredient'>Sunflower sprouts or cilantro for garnish</li>
 						</ul>
 					</div>
-					<div id='block18' className='instructionItem'>
+					<div
+						id='block18'
+						className='instructionItem'
+					>
 						Ad Space
 					</div>
-					<div id='block19' className='instructionItem'>
+					<div
+						id='block19'
+						className='instructionItem'
+					>
 						Instructions
 					</div>
-					<div id='block20' className='instructionItem'>
-						<ol id='instructionList' className='instructions'>
+					<div
+						id='block20'
+						className='instructionItem'
+					>
+						<ol
+							id='instructionList'
+							className='instructions'
+						>
 							<li className='instruction'>
-								To shred chicken, boil breasts in a large pot of hot water for
-								12-15 minutes until chicken is cooked through. Pull apart with
-								your hands or with a fork once cooled.
+								To shred chicken, boil breasts in a large pot of hot water for 12-15 minutes until chicken is cooked
+								through. Pull apart with your hands or with a fork once cooled.
 							</li>
 							<li className='instruction'>
-								Divide the shredded chicken into each mason jar evenly, then add
-								1 tsp of soy sauce, Sriracha and lime juice to each jar.
+								Divide the shredded chicken into each mason jar evenly, then add 1 tsp of soy sauce, Sriracha and lime
+								juice to each jar.
 							</li>
 							<li className='instruction'>
-								Layer in vegetables, then drop in bouillon cubes. Finally,
-								finish by dividing vermicelli noodles evenly among each jar and
-								keep in fridge until ready to eat.
+								Layer in vegetables, then drop in bouillon cubes. Finally, finish by dividing vermicelli noodles evenly
+								among each jar and keep in fridge until ready to eat.
 							</li>
 							<li className='instruction'>
-								When ready to serve, pour boiling water in to fill jar and
-								carefully stir contents, making sure to dissolve bouillon cube
-								completely and saturate noodles. You may also need to microwave
-								the jar for 1-2 minutes depending on the type of noodles used
-								(some varieties of vermicelli are harder than others). Let the
-								jar sit for 5 minutes before serving.
+								When ready to serve, pour boiling water in to fill jar and carefully stir contents, making sure to
+								dissolve bouillon cube completely and saturate noodles. You may also need to microwave the jar for 1-2
+								minutes depending on the type of noodles used (some varieties of vermicelli are harder than others). Let
+								the jar sit for 5 minutes before serving.
 							</li>
 							<li className='instruction'>
-								Pour contents of the jar into large bowl when ready to eat
-								(should be within 5 minutes of pouring boiling water) and eat
-								right away!
+								Pour contents of the jar into large bowl when ready to eat (should be within 5 minutes of pouring
+								boiling water) and eat right away!
 							</li>
 						</ol>
 					</div>
-					<div id='block21' className='instructionItem'>
+					<div
+						id='block21'
+						className='instructionItem'
+					>
 						Nutrition Information
 					</div>
-					<div id='block22' className='instructionItem'>
+					<div
+						id='block22'
+						className='instructionItem'
+					>
 						<div id='nutritionList'>
 							<div className='nutritionItem'>Serving: 1serving |&nbsp;</div>
 							<div className='nutritionItem'>Calories: 369kcal |&nbsp;</div>
@@ -435,36 +502,45 @@ const MasonJarNoodles = () => {
 							<div className='nutritionItem'>Iron: 1mg |&nbsp;</div>
 						</div>
 					</div>
-					<div id='block23' className='instructionItem'>
+					<div
+						id='block23'
+						className='instructionItem'
+					>
 						<strong>Keywords</strong>&nbsp; {keywordList}
 					</div>
-					<div id='block24' className='instructionItem'>
+					<div
+						id='block24'
+						className='instructionItem'
+					>
 						<div id='instagramPlaceholder'>
 							<a href='https://www.instagram.com/'>
-								<FontAwesomeIcon icon={faInstagram} className='instagramIcon' />
+								<FontAwesomeIcon
+									icon={faInstagram}
+									className='instagramIcon'
+								/>
 							</a>
 						</div>
 						<div id='instagramText'>
 							<div>
 								<strong>Have you made this recipe?</strong>
 							</div>
-							<div>
-								Tag @healthylifestyle on Instagram or hashtag it
-								#healthlylifestyle
-							</div>
+							<div>Tag @healthylifestyle on Instagram or hashtag it #healthlylifestyle</div>
 						</div>
 					</div>
-					<div id='block25' className='instructionItem'>
-						For more tasty recipes and lifestyle advice, make sure to like us on
-						our <strong>Facebook</strong> page and follow us on{' '}
-						<strong>Pinterest</strong>!
+					<div
+						id='block25'
+						className='instructionItem'
+					>
+						For more tasty recipes and lifestyle advice, make sure to like us on our <strong>Facebook</strong> page and
+						follow us on <strong>Pinterest</strong>!
 					</div>
-					<div id='block26' className='instructionItem'>
+					<div
+						id='block26'
+						className='instructionItem'
+					>
 						<div id='signup-bar'>
 							<h1 id='signup-header-h1'>SAVE YOUR FAVORITE RECIPES</h1>
-							<h3 id='signup-header-h3'>
-								Create a FREE account for quick & easy access
-							</h3>
+							<h3 id='signup-header-h3'>Create a FREE account for quick & easy access</h3>
 							<div id='signup-bar-inputs'>
 								<input
 									id='signUpEmailField'
@@ -484,23 +560,38 @@ const MasonJarNoodles = () => {
 							>
 								<h2>The following email has been added to our mailing list!</h2>
 								<div id='signUpModalEmail'> Email: {signUpEmail}</div>
-								<button className='buttonItem' onClick={closeSignUpModal}>
+								<button
+									className='buttonItem'
+									onClick={closeSignUpModal}
+								>
 									Close
 								</button>
 							</Modal>
 						</div>
 					</div>
-					<div id='block27' className='instructionItem'>
+					<div
+						id='block27'
+						className='instructionItem'
+					>
 						Share this recipe
 					</div>
-					<div id='block28' className='instructionItem'>
+					<div
+						id='block28'
+						className='instructionItem'
+					>
 						<a
 							href='https://www.facebook.com/'
 							id='facebookAnchor'
 							className='socialMediaAnchors'
 						>
-							<div id='facebookButton' className='socialMediaButtons'>
-								<FontAwesomeIcon icon={faFacebookSquare} className='icon' />
+							<div
+								id='facebookButton'
+								className='socialMediaButtons'
+							>
+								<FontAwesomeIcon
+									icon={faFacebookSquare}
+									className='icon'
+								/>
 								&nbsp;&nbsp;Facebook
 							</div>
 						</a>
@@ -509,8 +600,14 @@ const MasonJarNoodles = () => {
 							id='pinterestAnchor'
 							className='socialMediaAnchors'
 						>
-							<div id='pintrestButton' className='socialMediaButtons'>
-								<FontAwesomeIcon icon={faPinterestSquare} className='icon' />
+							<div
+								id='pintrestButton'
+								className='socialMediaButtons'
+							>
+								<FontAwesomeIcon
+									icon={faPinterestSquare}
+									className='icon'
+								/>
 								&nbsp;&nbsp;Pin
 							</div>
 						</a>
@@ -519,8 +616,14 @@ const MasonJarNoodles = () => {
 							id='instagramAnchor'
 							className='socialMediaAnchors'
 						>
-							<div id='instagramButton' className='socialMediaButtons'>
-								<FontAwesomeIcon icon={faInstagram} className='icon' />
+							<div
+								id='instagramButton'
+								className='socialMediaButtons'
+							>
+								<FontAwesomeIcon
+									icon={faInstagram}
+									className='icon'
+								/>
 								&nbsp;&nbsp;Instagram
 							</div>
 						</a>
@@ -536,16 +639,28 @@ const MasonJarNoodles = () => {
 							height='100px'
 						/>
 					</div>
-					<div id='block30' className='footerAuthInfo'>
+					<div
+						id='block30'
+						className='footerAuthInfo'
+					>
 						{authorName}
 					</div>
-					<div id='block31' className='footerAuthInfo'>
+					<div
+						id='block31'
+						className='footerAuthInfo'
+					>
 						{authorDescription}
 					</div>
-					<div id='block32' className='footerAuthInfo'>
+					<div
+						id='block32'
+						className='footerAuthInfo'
+					>
 						More by {authorNickname}
 					</div>
-					<div id='block33' className='footerAuthInfo'>
+					<div
+						id='block33'
+						className='footerAuthInfo'
+					>
 						<div id='recipeKeywordList'>
 							<div className='recipeKeyword'>{keyword1}</div>
 							<div className='recipeKeyword'>{keyword2}</div>
@@ -557,7 +672,10 @@ const MasonJarNoodles = () => {
 				</div>
 				<div id='block34'>Related Recipes</div>
 				<div id='footerLinkContainer'>
-					<div id='block35' className='footerLinks'>
+					<div
+						id='block35'
+						className='footerLinks'
+					>
 						<Link to='/honeyDijonChicken'>
 							<SingleSquare
 								url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Sheet-Pan-Honey-Mustard-Chicken-3-400x500-circle.jpg'
@@ -568,10 +686,14 @@ const MasonJarNoodles = () => {
 							/>
 						</Link>
 					</div>
-					<div id='block36' className='footerLinks'>
+					<div
+						id='block36'
+						className='footerLinks'
+					>
 						<Link to='/beefStirFry'>
 							<SingleSquare
-								url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+								// url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+								url='../pictures/resizedBeefStirFry.png'
 								section='Meal Planning'
 								title='Beef Stir Fry'
 								description='This is the EASIEST Beef Stir Fry recipe, with a 2-ingredient stir fry sauce.'
@@ -579,7 +701,10 @@ const MasonJarNoodles = () => {
 							/>
 						</Link>
 					</div>
-					<div id='block37' className='footerLinks'>
+					<div
+						id='block37'
+						className='footerLinks'
+					>
 						<Link to='/chickenSouvlakiBowl'>
 							<SingleSquare
 								url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Meal-Prep-Chicken-Souvlaki-Bowls-5-1-400x500-circle.jpg'
@@ -590,7 +715,10 @@ const MasonJarNoodles = () => {
 							/>
 						</Link>
 					</div>
-					<div id='block38' className='footerLinks'>
+					<div
+						id='block38'
+						className='footerLinks'
+					>
 						<Link to='/indianChickenBowl'>
 							<SingleSquare
 								url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/Chicken-Tandoori-Meal-Prep-Bowls-14-400x500-circle.jpg'
@@ -601,7 +729,10 @@ const MasonJarNoodles = () => {
 							/>
 						</Link>
 					</div>
-					<div id='block39' className='footerLinks'>
+					<div
+						id='block39'
+						className='footerLinks'
+					>
 						<Link to='/masonJarNoodles'>
 							<SingleSquare
 								url='https://thegirlonbloor.com/wp-content/uploads/2016/01/Mason-Jar-Instant-Noodle-Soups-500x500.jpg'
@@ -612,7 +743,10 @@ const MasonJarNoodles = () => {
 							/>
 						</Link>
 					</div>
-					<div id='block40' className='footerLinks'>
+					<div
+						id='block40'
+						className='footerLinks'
+					>
 						<Link to='/koreanChickenBowl'>
 							<SingleSquare
 								url='https://thegirlonbloor.com/wp-content/uploads/2017/12/Korean-Chicken-Meal-Prep-Bowls-3-500x500.jpg'
@@ -623,14 +757,22 @@ const MasonJarNoodles = () => {
 							/>
 						</Link>
 					</div>
-					<div id='leaveReply' className='replyItem'>
+					<div
+						id='leaveReply'
+						className='replyItem'
+					>
 						Leave A Reply
 					</div>
-					<div id='emailMessage' className='replyItem'>
-						Your email address will not be published. Required fields are marked
-						*
+					<div
+						id='emailMessage'
+						className='replyItem'
+					>
+						Your email address will not be published. Required fields are marked *
 					</div>
-					<div id='rating' className='replyItem'>
+					<div
+						id='rating'
+						className='replyItem'
+					>
 						<div id='rating3'>Recipe Rating</div>
 						<div>
 							<FiveStarRating
@@ -644,8 +786,15 @@ const MasonJarNoodles = () => {
 							/>
 						</div>
 					</div>
-					<form id='commentForm' ref={form} onSubmit={sendEmail}>
-						<div id='commentText' className='replyItem'>
+					<form
+						id='commentForm'
+						ref={form}
+						onSubmit={sendEmail}
+					>
+						<div
+							id='commentText'
+							className='replyItem'
+						>
 							Comment*
 							<textarea
 								name='enteredComment'
@@ -655,7 +804,10 @@ const MasonJarNoodles = () => {
 							></textarea>
 						</div>
 						<div id='nameAndEmailContainer'>
-							<div id='nameText' className='replyItem'>
+							<div
+								id='nameText'
+								className='replyItem'
+							>
 								Name*
 								<div className='replyItem'>
 									<input
@@ -667,7 +819,10 @@ const MasonJarNoodles = () => {
 									></input>
 								</div>
 							</div>
-							<div id='emailText' className='replyItem'>
+							<div
+								id='emailText'
+								className='replyItem'
+							>
 								Email*
 								<div className='replyItem'>
 									<input
@@ -709,7 +864,10 @@ const MasonJarNoodles = () => {
 						<div> Comment: {recipeComment}</div>
 						<div> Name: {reviewerName}</div>
 						<div> Email: {reviewerEmail}</div>
-						<button className='buttonItem' onClick={closeCommentModal}>
+						<button
+							className='buttonItem'
+							onClick={closeCommentModal}
+						>
 							Close
 						</button>
 					</Modal>

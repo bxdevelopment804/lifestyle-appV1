@@ -172,7 +172,8 @@ const Recipes = () => {
 				<div className='compilationContainerItem'>
 					<Link to='/beefStirFry'>
 						<SingleSquare
-							url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+							// url='https://thegirlonbloor.com/wp-content/uploads/bb-plugin/cache/The-best-Beef-stir-fry-5-400x500-circle.jpg'
+							url='../pictures/resizedBeefStirFry.png'
 							section='Meal Planning'
 							title='Beef Stir Fry'
 							description='This is the EASIEST Beef Stir Fry recipe, with a 2-ingredient stir fry sauce.'

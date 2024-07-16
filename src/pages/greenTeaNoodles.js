@@ -449,7 +449,7 @@ const GreenTeaNoodles = () => {
 					<div id='block25' className='instructionItem'>
 						For more tasty recipes and lifestyle advice, make sure to like us on
 						our <strong>Facebook</strong> page and follow us on
-						<strong>Pinterest</strong>!
+						<strong> Pinterest</strong>!
 					</div>
 					<div id='block26' className='instructionItem'>
 						<div id='signup-bar'>
